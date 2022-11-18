@@ -1,18 +1,29 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+
 
 public class MobBrain : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public static MobBrain instance;
+    public Names nameList;
+
+    public string MyName;
+
     void Start()
     {
-        
+
+
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        //Identity
+        {
+
+        }
     }
+
 }
