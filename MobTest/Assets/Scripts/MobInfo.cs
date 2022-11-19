@@ -1,0 +1,105 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class MobInfo : MonoBehaviour
+{
+    public static MobInfo instance;
+
+    [Header("Components")]
+    public Names NameSource;
+    public Rigidbody theRB;
+    public Animator anim;
+    //public SpriteRenderer theBody;
+    //public Transform emotePoint;
+
+    [Header("Mob Body")]
+    public MobBrain Brain;
+    public MobInfo Info;
+    public MobMotor Motor;
+
+    [Header("Identity")]
+    public string MyName;
+
+    [Header("Bools")]
+    public bool shouldIdle;
+    public bool shouldCharge;
+    public bool shouldWander;
+    public bool shouldShoot;
+    public bool shouldFlee;
+    public bool shouldCower;
+    public bool shouldMelee;
+    public bool shouldGib;
+    public bool shouldDropItems;
+    public bool shouldEmote;
+    public bool shouldPanic;
+
+    [Header("Timers and Ranges")]
+    public float fleeLength;
+    public float idleLength;
+    public float wanderLength;
+    public float panicLength;
+    public float cowerLength;
+    public float meleeTimeLength;
+    public float stunLength;
+    public float chargeLength;
+    public float rangeToChase;
+    public int rangeToFlee;
+
+    [Header("Relations")]
+    public List<GameObject> friendsList;
+    public int maxFriends;
+    public string foe;
+    public string friend;
+
+    [Header("Threat and Morale")]
+    public float moraleBase;
+    private float curMorale;
+    public float threatBase;
+    private float curThreat;
+    private float targetThreat;
+
+    [Header("Shoot")]
+    public GameObject bullet;
+    public Transform firePoint;
+
+    [Header("Emotes")]
+    public GameObject[] emotions;
+    public float timeBetweenEmotes;
+    private float emoteCounter;
+    private bool emoteTick;
+
+    [Header("Gibbing")]
+    public bool shouldLeaveCorpse;
+    public GameObject hitEffect;
+    public GameObject[] splatters;
+
+    [Header("Drops")]
+    public GameObject[] itemsToDrop;
+    public float itemDropPercent;
+
+    [Header("Sprites")]
+    public Sprite[] bodies;
+    public int curSpriteCount;
+    private Sprite curSprite;
+
+    [Header("Tools")]
+    public bool showDebug;
+    public bool showEmoteDebug;
+
+    void Start()
+    {
+        
+    }
+
+
+    void Update()
+    {
+        //Identity
+        if(MyName == "" && NameSource.firstNames.Length > 0)
+        {
+            MyName = NameSource.firstNames[UnityEngine.Random.Range(0, NameSource.firstNames.Length)];
+        }
+
+    }
+}

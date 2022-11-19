@@ -177,7 +177,7 @@ public class MobLogic : MonoBehaviour
         if(shouldIdle) { idleTick = true; }
         if(shouldFlee) { fleeTick = true; }
         if(shouldCower) { cowerTick = true; }
-        if (shouldEmote) { emoteTick = true; }
+        if(shouldEmote) { emoteTick = true; }
 
         //Starting appearance of mob
         curSpriteCount = 0;

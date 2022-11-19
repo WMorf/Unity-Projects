@@ -11,9 +11,7 @@ public class Names : MonoBehaviour
 
 void Start()
     {
-        //firstNames.Add("Bob"); firstNames.Add("Larry"); firstNames.Add("Mark");
-        //firstNames.Add("Luke"); firstNames.Add("John"); firstNames.Add("Peter");
-        //firstNames.Add("Paul"); firstNames.Add("Saul"); firstNames.Add("Tom");
+        //Adds 1 name per line from the text file
         firstNames = System.IO.File.ReadAllLines(@"Names.txt");
     }
 
