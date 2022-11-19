@@ -8,9 +8,7 @@ using UnityEngine;
 public class MobBrain : MonoBehaviour
 {
     public static MobBrain instance;
-    public Names nameList;
-
-    public string MyName;
+    
 
     void Start()
     {
@@ -20,10 +18,7 @@ public class MobBrain : MonoBehaviour
 
     void Update()
     {
-        //Identity
-        {
 
-        }
     }
 
 }

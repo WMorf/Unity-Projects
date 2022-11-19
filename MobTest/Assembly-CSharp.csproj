@@ -57,9 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\MobBrain.cs" />
+    <Compile Include="Assets\MobInfo.cs" />
     <Compile Include="Assets\Names.cs" />
     <Compile Include="Assets\MobLogic.cs" />
-    <Compile Include="Assets\MobInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
