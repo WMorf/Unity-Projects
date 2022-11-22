@@ -21,6 +21,14 @@ public class MobInfo : MonoBehaviour
     [Header("Identity")]
     public string MyName;
 
+    [Header("Stats")]
+    public float moveSpeed;
+    public float curSpeed;
+    //public int endurance;
+    //private int curEndurance;
+    //private bool isPanicking;
+    //private bool isCowering;
+
     [Header("Bools")]
     public bool shouldIdle;
     public bool shouldCharge;
@@ -46,42 +54,40 @@ public class MobInfo : MonoBehaviour
     public float rangeToChase;
     public int rangeToFlee;
 
-    [Header("Relations")]
-    public List<GameObject> friendsList;
-    public int maxFriends;
-    public string foe;
-    public string friend;
+    //[Header("Relations")]
+    //public List<GameObject> friendsList;
+    //public int maxFriends;
+    //public string foe;
+    //public string friend;
 
-    [Header("Threat and Morale")]
-    public float moraleBase;
-    private float curMorale;
-    public float threatBase;
-    private float curThreat;
-    private float targetThreat;
+    //[Header("Threat and Morale")]
+    //public float moraleBase;
+    //private float curMorale;
+    //public float threatBase;
+    //private float curThreat;
+    //private float targetThreat;
 
-    [Header("Shoot")]
-    public GameObject bullet;
-    public Transform firePoint;
+    //[Header("Shoot")]
+    //public GameObject bullet;
+    //public Transform firePoint;
 
-    [Header("Emotes")]
-    public GameObject[] emotions;
+    //[Header("Emotes")]
+    //public GameObject[] emotions;
     public float timeBetweenEmotes;
-    private float emoteCounter;
-    private bool emoteTick;
 
-    [Header("Gibbing")]
-    public bool shouldLeaveCorpse;
-    public GameObject hitEffect;
-    public GameObject[] splatters;
+    //[Header("Gibbing")]
+    //public bool shouldLeaveCorpse;
+    //public GameObject hitEffect;
+    //public GameObject[] splatters;
 
-    [Header("Drops")]
-    public GameObject[] itemsToDrop;
-    public float itemDropPercent;
+    //[Header("Drops")]
+    //public GameObject[] itemsToDrop;
+    //public float itemDropPercent;
 
-    [Header("Sprites")]
-    public Sprite[] bodies;
-    public int curSpriteCount;
-    private Sprite curSprite;
+    //[Header("Sprites")]
+    //public Sprite[] bodies;
+    //public int curSpriteCount;
+    //private Sprite curSprite;
 
     [Header("Tools")]
     public bool showDebug;
@@ -89,7 +95,7 @@ public class MobInfo : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
 
