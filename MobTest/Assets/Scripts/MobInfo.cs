@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class MobInfo : MonoBehaviour
@@ -95,7 +96,7 @@ public class MobInfo : MonoBehaviour
 
     void Start()
     {
-
+        GameObject NameSource = Selection.activeGameObject;
     }
 
 

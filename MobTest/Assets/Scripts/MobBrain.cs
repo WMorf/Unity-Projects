@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 
 public class MobBrain : MonoBehaviour
@@ -65,13 +66,7 @@ public class MobBrain : MonoBehaviour
 
     void Start()
     {
-        //Timers
-        wanderCounter = Info.wanderLength;
-        emoteCounter = Info.timeBetweenEmotes;
-        meleeCounter = Info.meleeTimeLength;
-        idleCounter = Info.idleLength;
-        fleeCounter = Info.fleeLength;
-        panicCounter = Info.panicLength;
+        ResetTimers();
 
         //Bools
         if (Info.shouldWander) { wanderTick = true; }
@@ -84,6 +79,21 @@ public class MobBrain : MonoBehaviour
         Motor.homePoint = this.transform.position;
     }
 
+    public void ResetTimers()
+    {
+        wanderCounter = Info.wanderLength;
+        emoteCounter = Info.timeBetweenEmotes;
+        meleeCounter = Info.meleeTimeLength;
+        idleCounter = Info.idleLength;
+        fleeCounter = Info.fleeLength;
+        panicCounter = Info.panicLength;
+    }
+
+    public void ResetTrips()
+    {
+
+    }
+
     void FixedUpdate()
     {
 
@@ -93,20 +103,89 @@ public class MobBrain : MonoBehaviour
         switch(curState)
         {
 
+            /*----------------------------------------------------------------------------*/
+            case State.Ready:
+
+                switch(lastState)
+                {
+                    case State.Idle:
+
+                        if (idleTick)
+                        {
+                            curState = State.Wander;
+                        }
+                        else
+                        {
+                            curState = State.Idle;
+                        }
+
+                        break;
+                    /*-----------------------*/
+                    case State.Wander:
+
+                        if(idleTick)
+                        {
+                            curState = State.Idle;
+                        }
+                        else
+                        {
+                            curState = State.Wander;
+                        }
+                        break;
+                    /*-----------------------*/
+                }
+
+                break;
 
     /*----------------------------------------------------------------------------*/
             case State.Idle:
 
-                //first time through
+                //first time tripwire
                 if(!idleTrip)
                 {
-                    if (Info.showEmoteDebug) { Debug.Log("I am bored"); }
+                    if (Info.showDebug) { Debug.Log(Info.MyName + ": I am bored"); }
                     idleTrip = true;
                 }
 
-                idleCounter -= Time.deltaTime;
-                Info.anim.SetBool("isMoving", false);
+                //While counter above zero. Mob will remain in this state and do various tasks
+                if(idleCounter > 0f)
+                {
+                    idleCounter -= Time.deltaTime;
+                    //Info.anim.SetBool("isMoving", false);
+                }
+                else 
+                {
+                    idleCounter = Info.idleLength; //reset counter to established length from attached MobInfo obj.
+                    lastState = curState;
+                    curState = State.Ready; //sets current state to Ready, which acts as a decision tree
+                    idleTrip = false; //reset tripwire so first time run will trigger again
+                }
+                break;
 
+            /*----------------------------------------------------------------------------*/
+            case State.Wander:
+
+                if(!wanderTrip)
+                {
+                    if (Info.showDebug) { Debug.Log(Info.MyName + ": I'm wandering around"); }
+                    Motor.moveDirection = new Vector3(UnityEngine.Random.Range(-1f, 1f), 0f, UnityEngine.Random.Range(-1f, 1f));
+                    wanderTrip = true;
+                }
+
+                if (wanderCounter > 0f)
+                {
+                    wanderCounter -= Time.deltaTime;
+                    //Info.anim.SetBool("isMoving", true);
+                    Motor.Move();
+                }
+                else
+                {
+                    wanderCounter = Info.idleLength;
+                    lastState = curState;
+                    curState = State.Ready;
+                    wanderTrip = false;
+                }
+                break;
 
         }
 

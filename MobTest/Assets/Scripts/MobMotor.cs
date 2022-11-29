@@ -12,20 +12,20 @@ public class MobMotor : MonoBehaviour
     public MobMotor Motor;
 
     [Header("Movement")]
-    private Vector3 moveDirection;
+    public Vector3 moveDirection;
     private Vector3 wanderDirection;
     public Vector3 homePoint;
     private bool holdPlace;
 
     void Start()
     {
-        moveDirection = new Vector3(Random.Range(-1f, 1f), 0f, Random.Range(-1f, 1f));
+        
     }
 
     public void Move()
     {
         Info.curSpeed = Info.moveSpeed;
-        Info.anim.SetBool("isMoving", true);
+        //Info.anim.SetBool("isMoving", true);
         Info.theRB.velocity = moveDirection * Info.curSpeed;
         moveDirection.Normalize();
     }
@@ -33,6 +33,5 @@ public class MobMotor : MonoBehaviour
     void Update()
     {
 
-        Move();
     }
 }

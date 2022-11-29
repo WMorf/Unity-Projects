@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3036811929880685503}
   - component: {fileID: 3036811929880685502}
   - component: {fileID: 3036811929880685500}
+  - component: {fileID: 7840373397398323792}
   m_Layer: 0
   m_Name: Rat
   m_TagString: Untagged
@@ -113,7 +114,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &3036811929880685503
 MonoBehaviour:
@@ -129,14 +130,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NameSource: {fileID: 0}
   theRB: {fileID: 3036811929880685497}
-  anim: {fileID: 0}
+  anim: {fileID: 7840373397398323792}
   Brain: {fileID: 3036811929880685502}
   Info: {fileID: 3036811929880685503}
   Motor: {fileID: 3036811929880685500}
   MyName: 
-  shouldIdle: 0
+  moveSpeed: 1
+  curSpeed: 0
+  shouldIdle: 1
   shouldCharge: 0
-  shouldWander: 0
+  shouldWander: 1
   shouldShoot: 0
   shouldFlee: 0
   shouldCower: 0
@@ -146,8 +149,8 @@ MonoBehaviour:
   shouldEmote: 0
   shouldPanic: 0
   fleeLength: 0
-  idleLength: 0
-  wanderLength: 0
+  idleLength: 2
+  wanderLength: 2
   panicLength: 0
   cowerLength: 0
   meleeTimeLength: 0
@@ -155,14 +158,7 @@ MonoBehaviour:
   chargeLength: 0
   rangeToChase: 0
   rangeToFlee: 0
-  friendsList: []
-  maxFriends: 0
-  foe: 
-  friend: 
-  emotions: []
   timeBetweenEmotes: 0
-  moraleBase: 0
-  threatBase: 0
   showDebug: 0
   showEmoteDebug: 0
 --- !u!114 &3036811929880685502
@@ -180,7 +176,6 @@ MonoBehaviour:
   Brain: {fileID: 3036811929880685502}
   Info: {fileID: 3036811929880685503}
   Motor: {fileID: 3036811929880685500}
-  mobTarget: {fileID: 0}
 --- !u!114 &3036811929880685500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,3 +191,24 @@ MonoBehaviour:
   Brain: {fileID: 3036811929880685502}
   Info: {fileID: 3036811929880685503}
   Motor: {fileID: 3036811929880685500}
+  moveDirection: {x: 0, y: 0, z: 0}
+  homePoint: {x: 0, y: 0, z: 0}
+--- !u!95 &7840373397398323792
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3036811929880685444}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5492f9e9e85f52142884d48ba6c8d3e6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
