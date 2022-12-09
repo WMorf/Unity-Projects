@@ -47,6 +47,11 @@ public class MobBrain : MonoBehaviour
     [Header("Emote")]
     private float emoteCounter;
 
+    //Trash Test
+    private int trashLimit, trashAmount;
+    private float trashCounter;
+    private bool trashTick;
+
     //Ticks and Trips
     private bool idleTick, idleTrip;
     private bool wanderTick, wanderTrip;
@@ -76,6 +81,9 @@ public class MobBrain : MonoBehaviour
         if (Info.shouldCower) { cowerTick = true; }
         if (Info.shouldEmote) { emoteTick = true; }
 
+        //Trash Test
+        if (Info.shouldTrash) { trashTick = true; }
+
         //Starting position
         Motor.homePoint = this.transform.position;
     }
@@ -88,6 +96,9 @@ public class MobBrain : MonoBehaviour
         idleCounter = Info.idleLength;
         fleeCounter = Info.fleeLength;
         panicCounter = Info.panicLength;
+
+        //Trash Test
+        trashCounter = Info.trashFrequency;
     }
 
     public void ResetTrips()
@@ -97,11 +108,26 @@ public class MobBrain : MonoBehaviour
 
     void FixedUpdate()
     {
+        //Trash Test
+        if(trashTick && trashCounter > 0f)
+        {
+            trashCounter -= Time.deltaTime;
+        }
 
-    /*--------------------------------------------------------*/
-    /*-----------------Switches and Logic---------------------*/
+        //Trash Test
+        if (trashTick && trashCounter < 0f)
+        {
+            if (Info.showDebug) { Debug.Log(Info.MyName + ": Trash it!"); }
+            Instantiate(Info.trashBit, Info.EmotePoint.transform.position, Info.EmotePoint.transform.rotation);
+            trashCounter = Info.trashFrequency;
+            trashAmount++;
+        }
 
-        switch(curState)
+
+        /*--------------------------------------------------------*/
+        /*-----------------Switches and Logic---------------------*/
+
+        switch (curState)
         {
 
             /*----------------------------------------------------------------------------*/
@@ -161,6 +187,8 @@ public class MobBrain : MonoBehaviour
                     curState = State.Ready; //sets current state to Ready, which acts as a decision tree
                     idleTrip = false; //reset tripwire so first time run will trigger again
                 }
+
+
                 break;
 
             /*----------------------------------------------------------------------------*/

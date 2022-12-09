@@ -59,7 +59,7 @@
     <Compile Include="Assets\Scripts\MobBrain.cs" />
     <Compile Include="Assets\Scripts\MobInfo.cs" />
     <Compile Include="Assets\Scripts\Names.cs" />
-    <Compile Include="Assets\Scripts\MobLogic.cs" />
+    <Compile Include="Assets\Scripts\Relics\MobLogic.cs" />
     <Compile Include="Assets\Scripts\MobMotor.cs" />
   </ItemGroup>
   <ItemGroup>

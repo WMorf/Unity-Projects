@@ -8,7 +8,7 @@ public class MobInfo : MonoBehaviour
     public static MobInfo instance;
 
     [Header("Components")]
-    public Names NameSource;
+    public GameObject NameSource;
     public Rigidbody theRB;
     public Animator anim;
     //public SpriteRenderer theBody;
@@ -18,6 +18,7 @@ public class MobInfo : MonoBehaviour
     public MobBrain Brain;
     public MobInfo Info;
     public MobMotor Motor;
+    public GameObject EmotePoint;
 
     [Header("Identity")]
     public string MyName;
@@ -54,6 +55,12 @@ public class MobInfo : MonoBehaviour
     public float chargeLength;
     public float rangeToChase;
     public int rangeToFlee;
+
+    //Trash Test
+    public bool shouldTrash;
+    public float trashFrequency;
+    public int trashLimit;
+    public GameObject trashBit;
 
     //[Header("Relations")]
     //public List<GameObject> friendsList;
@@ -102,11 +109,16 @@ public class MobInfo : MonoBehaviour
 
     void Update()
     {
+
         //Identity
-        if(MyName == "" && NameSource.firstNames.Length > 0)
-        {
-            MyName = NameSource.firstNames[UnityEngine.Random.Range(0, NameSource.firstNames.Length)];
-        }
+        NameSource = FindObjectOfType<Names>().gameObject;
+
+        MyName = NameSource.;
+
+        //if (MyName == "" && NameSource.Names.firstNames.Length > 0)
+        //{
+        //    MyName = NameSource.firstNames[UnityEngine.Random.Range(0, NameSource.firstNames.Length)];
+        //}
 
     }
 }
