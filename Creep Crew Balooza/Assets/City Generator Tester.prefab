@@ -1,0 +1,148 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6116133796616196764
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6116133796616196767}
+  m_Layer: 0
+  m_Name: Generation Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6116133796616196767
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6116133796616196764}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6116133797346086225}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6116133797346086239
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6116133797346086225}
+  - component: {fileID: 6263739630494873036}
+  m_Layer: 0
+  m_Name: City Generator Tester
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6116133797346086225
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6116133797346086239}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -66.54749, y: 29.489971, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 6116133796616196767}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6263739630494873036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6116133797346086239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 368fb1190e7aa364e828ae9cb9c25c1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layoutRoom: {fileID: 5928675215102908618, guid: 91ab65a2b61c4c4409cfceebcca2ec63,
+    type: 3}
+  highwayColor: {r: 0.107133225, g: 0.08121216, b: 0.6886792, a: 0}
+  townHallColor: {r: 0.6320754, g: 0.062611245, b: 0.062611245, a: 0}
+  churchColor: {r: 0.15001239, g: 0.49056602, b: 0.11338555, a: 0}
+  milBaseColor: {r: 0.6805244, g: 0.7075472, b: 0.27033645, a: 0}
+  distanceToTownHall: 11
+  includeChurch: 1
+  includeMilBase: 1
+  minDistanceToChurch: 2
+  maxDistanceToChurch: 10
+  minDistanceToMilBase: 2
+  maxDistanceToMilBase: 10
+  generationPoint: {fileID: 6116133796616196767}
+  makeOutline: 1
+  selectedDirection: 0
+  xOffset: 11
+  yOffset: 11
+  whatIsRoom:
+    serializedVersion: 2
+    m_Bits: 32768
+  blocks:
+    singleUp: {fileID: 129415489112494777, guid: 485cb1778627e354e826afe0dd4e9e6b,
+      type: 3}
+    singleDown: {fileID: 4490718317599997584, guid: f503ac2ecd389e44192bf47572713df8,
+      type: 3}
+    singleRight: {fileID: 2342121016571981253, guid: c6022f9feb3d466409ce4c6e3716b06e,
+      type: 3}
+    singleLeft: {fileID: 6694560865347654925, guid: 217e93fd255d04b448bc14feb394c121,
+      type: 3}
+    doubleLeftDown: {fileID: 5391525188332173135, guid: 038240fc9af18ff4a8551bcc1f65207a,
+      type: 3}
+    doubleUpDown: {fileID: 1787422223803922523, guid: db11edc27a2086b4cb9460008ad27706,
+      type: 3}
+    doubleLeftRight: {fileID: 62873458228561754, guid: 403eaec064641a0479bf9e102aee66fd,
+      type: 3}
+    doubleUpRight: {fileID: 3237481512598045913, guid: 77ba62b60804da64e8825b7ad2855e2d,
+      type: 3}
+    doubleRightDown: {fileID: 7305162864092925244, guid: bf7db09bb8555af4ea4895383517c845,
+      type: 3}
+    doubleLeftUp: {fileID: 7684082992473125407, guid: 2ea617b780a8fd24298e017c0c779c5d,
+      type: 3}
+    tripleUpRightDown: {fileID: 7038714717237410535, guid: 2f1efb66afbf9b44da4da51d633c2839,
+      type: 3}
+    tripleRightDownLeft: {fileID: 2972784545181806029, guid: 54fe61cd62684af49a9153d4e231bca6,
+      type: 3}
+    tripleDownLeftUp: {fileID: 7825223306093900235, guid: 65d87ac027f891443bbfe3193fb9125b,
+      type: 3}
+    tripleLeftUpRight: {fileID: 8180150380228902470, guid: 2126763fec7569a42ae2fd4dd6cd73a2,
+      type: 3}
+    fourway: {fileID: 4739861536361152278, guid: 8e503d24bae22634a9990828e8bdce37,
+      type: 3}
+  centerHighway: {fileID: 3848559087008632750, guid: 1f2c252046bc6804a98f481d705af219,
+    type: 3}
+  centerTownHall: {fileID: 1913420924801284386, guid: c4b2a568f95355b43bb5370d3568a6ca,
+    type: 3}
+  centerChurch: {fileID: 39307278954977348, guid: 94bf9b635fc9a7d43aaa45cced34ccea,
+    type: 3}
+  centerMilBase: {fileID: 1577831982037740257, guid: 134ba9787b67ab043ba83fb1298c6857,
+    type: 3}
+  potentialCenters:
+  - {fileID: 3377814703378227950, guid: 379c956f425acc04d93906e67c3285e5, type: 3}
+  - {fileID: 5026520726701689945, guid: 75c9e2a737534ed4a9a653f7df702c85, type: 3}
+  - {fileID: 2144292775064285172, guid: 6b316ee1b2cc2694a8ee1ad27e2371b9, type: 3}
+  - {fileID: 3844620413311987826, guid: 5a81e8b6aef8f7a4891bb0a5b7bff931, type: 3}
+  - {fileID: 971460816240154911, guid: 913c8de51bb79a74ebeac49c8d7e4f9f, type: 3}
+  - {fileID: 5932599956757645557, guid: 4f8e3830628c9e540bbfa523595299f9, type: 3}
+  - {fileID: 3377814703378227950, guid: 379c956f425acc04d93906e67c3285e5, type: 3}
+  - {fileID: 3377814703378227950, guid: 379c956f425acc04d93906e67c3285e5, type: 3}
+  - {fileID: 971460816240154911, guid: 913c8de51bb79a74ebeac49c8d7e4f9f, type: 3}
+  - {fileID: 5932599956757645557, guid: 4f8e3830628c9e540bbfa523595299f9, type: 3}
+  - {fileID: 5932599956757645557, guid: 4f8e3830628c9e540bbfa523595299f9, type: 3}
