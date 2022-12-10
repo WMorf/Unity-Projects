@@ -10,6 +10,8 @@ public class MobMotor : MonoBehaviour
     public MobBrain Brain;
     public MobInfo Info;
     public MobMotor Motor;
+    public MobSense Sense;
+    public GameObject EmotePoint;
 
     [Header("Movement")]
     public Vector3 moveDirection;

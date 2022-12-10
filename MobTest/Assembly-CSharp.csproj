@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\Names.cs" />
     <Compile Include="Assets\Scripts\Relics\MobLogic.cs" />
     <Compile Include="Assets\Scripts\MobMotor.cs" />
+    <Compile Include="Assets\Scripts\MobSense.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

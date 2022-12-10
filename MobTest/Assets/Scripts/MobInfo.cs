@@ -18,6 +18,7 @@ public class MobInfo : MonoBehaviour
     public MobBrain Brain;
     public MobInfo Info;
     public MobMotor Motor;
+    public MobSense Sense;
     public GameObject EmotePoint;
 
     [Header("Identity")]
@@ -56,7 +57,7 @@ public class MobInfo : MonoBehaviour
     public float rangeToChase;
     public int rangeToFlee;
 
-    //Trash Test
+    [Header("Trash Test")]
     public bool shouldTrash;
     public float trashFrequency;
     public int trashLimit;
@@ -111,14 +112,15 @@ public class MobInfo : MonoBehaviour
     {
 
         //Identity
-        NameSource = FindObjectOfType<Names>().gameObject;
+        NameSource = FindObjectOfType<Names>().gameObject; // Searches for GameLogic object
 
-        MyName = NameSource.;
+        Names nameComp = NameSource.GetComponent<Names>(); // gets Names component from GameLogic
 
-        //if (MyName == "" && NameSource.Names.firstNames.Length > 0)
-        //{
-        //    MyName = NameSource.firstNames[UnityEngine.Random.Range(0, NameSource.firstNames.Length)];
-        //}
+        // Assigns name after list is populated
+        if (MyName == "" && nameComp.firstNames.Length > 0)
+        {
+            MyName = nameComp.firstNames[UnityEngine.Random.Range(0, nameComp.firstNames.Length)];
+        }
 
     }
 }

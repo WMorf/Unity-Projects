@@ -14,6 +14,8 @@ public class MobBrain : MonoBehaviour
     public MobBrain Brain;
     public MobInfo Info;
     public MobMotor Motor;
+    public MobSense Sense;
+    public GameObject EmotePoint;
 
     /*-------------------------STATES--------------------------*/
 
@@ -55,9 +57,9 @@ public class MobBrain : MonoBehaviour
     //Ticks and Trips
     private bool idleTick, idleTrip;
     private bool wanderTick, wanderTrip;
-    private bool fleeTick, fleeTrip;
-    private bool cowerTick, cowerTrip;
-    private bool emoteTick, emoteTrip;
+    //private bool fleeTick, fleeTrip;
+    //private bool cowerTick, cowerTrip;
+    //private bool emoteTick, emoteTrip;
 
     
 
@@ -77,9 +79,9 @@ public class MobBrain : MonoBehaviour
         //Bools
         if (Info.shouldWander) { wanderTick = true; }
         if (Info.shouldIdle) { idleTick = true; }
-        if (Info.shouldFlee) { fleeTick = true; }
-        if (Info.shouldCower) { cowerTick = true; }
-        if (Info.shouldEmote) { emoteTick = true; }
+        //if (Info.shouldFlee) { fleeTick = true; }
+        //if (Info.shouldCower) { cowerTick = true; }
+        //if (Info.shouldEmote) { emoteTick = true; }
 
         //Trash Test
         if (Info.shouldTrash) { trashTick = true; }
@@ -137,7 +139,7 @@ public class MobBrain : MonoBehaviour
                 {
                     case State.Idle:
 
-                        if (idleTick)
+                        if (wanderTick)
                         {
                             curState = State.Wander;
                         }
