@@ -59,9 +59,9 @@
     <Compile Include="Assets\Scripts\MobBrain.cs" />
     <Compile Include="Assets\Scripts\MobInfo.cs" />
     <Compile Include="Assets\Scripts\Names.cs" />
+    <Compile Include="Assets\Scripts\MobSense.cs" />
     <Compile Include="Assets\Scripts\Relics\MobLogic.cs" />
     <Compile Include="Assets\Scripts\MobMotor.cs" />
-    <Compile Include="Assets\Scripts\MobSense.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

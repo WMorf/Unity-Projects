@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class MobInfo : MonoBehaviour
 {
+    //Overall Stats, Rates, Ranges, and other info for each Mob
+    //Acts as a Big Switchboard for other Mob body parts to
+
     public static MobInfo instance;
 
     [Header("Components")]
@@ -32,7 +35,8 @@ public class MobInfo : MonoBehaviour
     //private bool isPanicking;
     //private bool isCowering;
 
-    [Header("Bools")]
+    //Allows user to check boxes which will affect MobBrain
+    [Header("Bools")] 
     public bool shouldIdle;
     public bool shouldCharge;
     public bool shouldWander;
@@ -45,7 +49,7 @@ public class MobInfo : MonoBehaviour
     public bool shouldEmote;
     public bool shouldPanic;
 
-    [Header("Timers and Ranges")]
+    [Header("Timers")]
     public float fleeLength;
     public float idleLength;
     public float wanderLength;
@@ -54,6 +58,8 @@ public class MobInfo : MonoBehaviour
     public float meleeTimeLength;
     public float stunLength;
     public float chargeLength;
+
+    [Header("Ranges")]
     public float rangeToChase;
     public int rangeToFlee;
 
@@ -104,7 +110,7 @@ public class MobInfo : MonoBehaviour
 
     void Start()
     {
-        GameObject NameSource = Selection.activeGameObject;
+
     }
 
 
