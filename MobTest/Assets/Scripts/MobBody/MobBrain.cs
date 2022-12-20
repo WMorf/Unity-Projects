@@ -67,7 +67,6 @@ public class MobBrain : MonoBehaviour
     //Enums
     enum State { Ready, Idle, Wander, Flee, Cower, Patrol, Shoot, Melee, Charge, Stun };
     enum Alert { Aware, Distracted, Oblivious}//affects the size and strength of their search radius
-    //enum Bump { Friend, Foe, Building }
     State curState = State.Idle;
     State lastState;
 
@@ -129,7 +128,7 @@ public class MobBrain : MonoBehaviour
         /*--------------------------------------------------------*/
         /*-----------------Switches and Logic---------------------*/
 
-        switch (curState)
+        switch(curState)
         {
 
             /*----------------------------------------------------------------------------*/

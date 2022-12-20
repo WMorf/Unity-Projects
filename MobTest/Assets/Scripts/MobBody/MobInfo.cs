@@ -11,7 +11,9 @@ public class MobInfo : MonoBehaviour
     public static MobInfo instance;
 
     [Header("Components")]
-    public GameObject NameSource;
+    public GameObject GameSource;
+    public Names nameComp;
+    public Mobs mobComp;
     public Rigidbody theRB;
     public Animator anim;
     //public SpriteRenderer theBody;
@@ -108,25 +110,33 @@ public class MobInfo : MonoBehaviour
     public bool showDebug;
     public bool showEmoteDebug;
 
+
     void Start()
     {
+        //Identity
+        GameSource = FindObjectOfType<Names>().gameObject; // Searches for GameLogic object
 
+        mobComp = GameSource.GetComponent<Mobs>(); // gets Mobs component from GameLogic
+        nameComp = GameSource.GetComponent<Names>(); // gets Names component from GameLogic
+
+        // Add mob to mobList
+        mobComp.mobList.Add(this.gameObject);
+
+    }
+
+    // Called from Game Logic as List Populates
+    public void UpdateName()
+    {
+        // Assigns name after list is populated
+        if (MyName == "" && this.nameComp.firstNames.Length > 0)
+        {
+            MyName = this.nameComp.firstNames[UnityEngine.Random.Range(0, this.nameComp.firstNames.Length)];
+        }
     }
 
 
     void Update()
     {
-
-        //Identity
-        NameSource = FindObjectOfType<Names>().gameObject; // Searches for GameLogic object
-
-        Names nameComp = NameSource.GetComponent<Names>(); // gets Names component from GameLogic
-
-        // Assigns name after list is populated
-        if (MyName == "" && nameComp.firstNames.Length > 0)
-        {
-            MyName = nameComp.firstNames[UnityEngine.Random.Range(0, nameComp.firstNames.Length)];
-        }
 
     }
 }

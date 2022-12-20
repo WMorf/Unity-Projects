@@ -56,12 +56,15 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\MobBrain.cs" />
-    <Compile Include="Assets\Scripts\MobInfo.cs" />
-    <Compile Include="Assets\Scripts\Names.cs" />
-    <Compile Include="Assets\Scripts\MobSense.cs" />
+    <Compile Include="Assets\Scripts\MobBody\MobBrain.cs" />
+    <Compile Include="Assets\Scripts\MobBody\MobInfo.cs" />
+    <Compile Include="Assets\Scripts\GameLogic\Names.cs" />
+    <Compile Include="Assets\Scripts\MobBody\MobSense.cs" />
     <Compile Include="Assets\Scripts\Relics\MobLogic.cs" />
-    <Compile Include="Assets\Scripts\MobMotor.cs" />
+    <Compile Include="Assets\Scripts\MobBody\MobMotor.cs" />
+    <Compile Include="Assets\Scripts\GameLogic\Mobs.cs" />
+    <Compile Include="Assets\Scripts\Trash.cs" />
+    <Compile Include="Assets\Scripts\GameLogic\Props.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
