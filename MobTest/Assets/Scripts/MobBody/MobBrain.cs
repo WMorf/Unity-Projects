@@ -31,6 +31,11 @@ public class MobBrain : MonoBehaviour
     [Header("Wander")]
     private float wanderCounter;
 
+    [Header("Search")]
+    public bool needSearch;
+    private float searchCounter;
+    public GameObject searchTarget;
+
     [Header("Flee")]
     private bool fleeChange;
     private float fleeCounter;
@@ -57,15 +62,16 @@ public class MobBrain : MonoBehaviour
     //Ticks and Trips
     private bool idleTick, idleTrip;
     private bool wanderTick, wanderTrip;
-    //private bool fleeTick, fleeTrip;
-    //private bool cowerTick, cowerTrip;
-    //private bool emoteTick, emoteTrip;
+    private bool searchTick, searchTrip;
+    private bool fleeTick, fleeTrip;
+    private bool cowerTick, cowerTrip;
+    private bool emoteTick, emoteTrip;
 
-    
+
 
 
     //Enums
-    enum State { Ready, Idle, Wander, Flee, Cower, Patrol, Shoot, Melee, Charge, Stun };
+    enum State { Ready, Idle, Wander, Flee, Cower, Patrol, Shoot, Melee, Charge, Stun , Search};
     enum Alert { Aware, Distracted, Oblivious}//affects the size and strength of their search radius
     State curState = State.Idle;
     State lastState;
@@ -78,9 +84,9 @@ public class MobBrain : MonoBehaviour
         //Bools
         if (Info.shouldWander) { wanderTick = true; }
         if (Info.shouldIdle) { idleTick = true; }
-        //if (Info.shouldFlee) { fleeTick = true; }
-        //if (Info.shouldCower) { cowerTick = true; }
-        //if (Info.shouldEmote) { emoteTick = true; }
+        if (Info.shouldFlee) { fleeTick = true; }
+        if (Info.shouldCower) { cowerTick = true; }
+        if (Info.shouldEmote) { emoteTick = true; }
 
         //Trash Test
         if (Info.shouldTrash) { trashTick = true; }
@@ -92,6 +98,7 @@ public class MobBrain : MonoBehaviour
     public void ResetTimers()
     {
         wanderCounter = Info.wanderLength;
+        searchCounter = Info.searchLength;
         emoteCounter = Info.timeBetweenEmotes;
         meleeCounter = Info.meleeTimeLength;
         idleCounter = Info.idleLength;
@@ -104,6 +111,20 @@ public class MobBrain : MonoBehaviour
 
     public void ResetTrips()
     {
+        idleTrip = false;
+        wanderTrip = false;
+        searchTrip = false;
+        fleeTrip = false;
+        cowerTrip = false;
+        emoteTrip = false;
+    }
+
+    public void ShiftState()
+    {
+        ResetTimers();
+        ResetTrips(); //reset tripwire so first time run will trigger again
+        lastState = curState;
+        curState = State.Ready; //sets current state to Ready, which acts as a decision tree
 
     }
 
@@ -134,34 +155,42 @@ public class MobBrain : MonoBehaviour
             /*----------------------------------------------------------------------------*/
             case State.Ready:
 
-                switch(lastState)
+                if (searchTick && needSearch)
                 {
-                    case State.Idle:
-
-                        if (wanderTick)
-                        {
-                            curState = State.Wander;
-                        }
-                        else
-                        {
-                            curState = State.Idle;
-                        }
-
-                        break;
-                    /*-----------------------*/
-                    case State.Wander:
-
-                        if(idleTick)
-                        {
-                            curState = State.Idle;
-                        }
-                        else
-                        {
-                            curState = State.Wander;
-                        }
-                        break;
-                    /*-----------------------*/
+                    curState= State.Search;
                 }
+                else //Idle and Wander (If nothing pressing, do these
+                {
+                    switch (lastState)
+                    {
+                        case State.Idle:
+
+                            if (wanderTick)
+                            {
+                                curState = State.Wander;
+                            }
+                            else
+                            {
+                                curState = State.Idle;
+                            }
+
+                            break;
+                        /*-----------------------*/
+                        case State.Wander:
+
+                            if (idleTick)
+                            {
+                                curState = State.Idle;
+                            }
+                            else
+                            {
+                                curState = State.Wander;
+                            }
+                            break;
+                            /*-----------------------*/
+                    }
+                }
+
 
                 break;
 
@@ -183,12 +212,8 @@ public class MobBrain : MonoBehaviour
                 }
                 else 
                 {
-                    idleCounter = Info.idleLength; //reset counter to established length from attached MobInfo obj.
-                    lastState = curState;
-                    curState = State.Ready; //sets current state to Ready, which acts as a decision tree
-                    idleTrip = false; //reset tripwire so first time run will trigger again
+                    ShiftState();
                 }
-
 
                 break;
 
@@ -210,11 +235,29 @@ public class MobBrain : MonoBehaviour
                 }
                 else
                 {
-                    wanderCounter = Info.idleLength;
-                    lastState = curState;
-                    curState = State.Ready;
-                    wanderTrip = false;
+                    ShiftState();
                 }
+
+                break;
+
+            /*----------------------------------------------------------------------------*/
+            case State.Search:
+
+                if(!searchTrip)
+                {
+                    if (Info.showDebug) { Debug.Log(Info.MyName + ": Where is it"); }
+                    searchTarget = FindObjectOfType<Trash>().gameObject;
+                }
+
+                if (searchCounter > 0f)
+                {
+                    searchCounter -= Time.deltaTime;
+                }
+                else
+                {
+                    ShiftState();
+                }
+
                 break;
 
         }

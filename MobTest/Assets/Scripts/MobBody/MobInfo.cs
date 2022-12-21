@@ -40,8 +40,9 @@ public class MobInfo : MonoBehaviour
     //Allows user to check boxes which will affect MobBrain
     [Header("Bools")] 
     public bool shouldIdle;
-    public bool shouldCharge;
     public bool shouldWander;
+    public bool shouldSearch;
+    public bool shouldCharge;
     public bool shouldShoot;
     public bool shouldFlee;
     public bool shouldCower;
@@ -52,9 +53,10 @@ public class MobInfo : MonoBehaviour
     public bool shouldPanic;
 
     [Header("Timers")]
-    public float fleeLength;
     public float idleLength;
     public float wanderLength;
+    public float searchLength;
+    public float fleeLength;
     public float panicLength;
     public float cowerLength;
     public float meleeTimeLength;
