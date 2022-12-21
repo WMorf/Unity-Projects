@@ -71,7 +71,7 @@ public class MobBrain : MonoBehaviour
 
 
     //Enums
-    enum State { Ready, Idle, Wander, Flee, Cower, Patrol, Shoot, Melee, Charge, Stun , Search};
+    enum State { Ready, Idle, Wander, Flee, Cower, Patrol, Shoot, Melee, Charge, Stun , Search, Hunt};
     enum Alert { Aware, Distracted, Oblivious}//affects the size and strength of their search radius
     State curState = State.Idle;
     State lastState;
@@ -80,10 +80,12 @@ public class MobBrain : MonoBehaviour
     void Start()
     {
         ResetTimers();
+        trashCounter = Info.trashFrequency;
 
         //Bools
-        if (Info.shouldWander) { wanderTick = true; }
         if (Info.shouldIdle) { idleTick = true; }
+        if (Info.shouldWander) { wanderTick = true; }
+        if (Info.shouldSearch) { searchTick = true; }
         if (Info.shouldFlee) { fleeTick = true; }
         if (Info.shouldCower) { cowerTick = true; }
         if (Info.shouldEmote) { emoteTick = true; }
@@ -106,7 +108,7 @@ public class MobBrain : MonoBehaviour
         panicCounter = Info.panicLength;
 
         //Trash Test
-        trashCounter = Info.trashFrequency;
+        //trashCounter = Info.trashFrequency;
     }
 
     public void ResetTrips()
@@ -155,7 +157,7 @@ public class MobBrain : MonoBehaviour
             /*----------------------------------------------------------------------------*/
             case State.Ready:
 
-                if (searchTick && needSearch)
+                if (searchTick && needSearch && lastState != State.Search)
                 {
                     curState= State.Search;
                 }
@@ -187,7 +189,21 @@ public class MobBrain : MonoBehaviour
                                 curState = State.Wander;
                             }
                             break;
-                            /*-----------------------*/
+                        /*-----------------------*/
+                        case State.Search:
+
+                            if (idleTick)
+                            {
+                                curState = State.Idle;
+                            }
+                            else
+                            {
+                                curState = State.Wander;
+                            }
+                            break;
+
+
+                        /*-----------------------*/
                     }
                 }
 
@@ -246,12 +262,23 @@ public class MobBrain : MonoBehaviour
                 if(!searchTrip)
                 {
                     if (Info.showDebug) { Debug.Log(Info.MyName + ": Where is it"); }
-                    searchTarget = FindObjectOfType<Trash>().gameObject;
+
+                    try //try and look for object
+                    {
+                        searchTarget = FindObjectOfType<Trash>().gameObject;
+                        Motor.moveDirection = searchTarget.transform.position;
+                    }
+                    catch
+                    {
+                        ShiftState();
+                    }
+                    searchTrip = true;
                 }
 
                 if (searchCounter > 0f)
                 {
                     searchCounter -= Time.deltaTime;
+                    Motor.Move();
                 }
                 else
                 {

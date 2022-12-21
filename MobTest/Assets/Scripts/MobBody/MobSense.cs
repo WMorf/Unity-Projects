@@ -12,7 +12,7 @@ public class MobSense : MonoBehaviour
     public MobSense Sense;
     public GameObject EmotePoint;
 
-    enum Bump { Trash, Friend, Foe, Building }
+    enum Bump { Null, Trash, Friend, Foe, Building }
     Bump beenBumped;
 
     void Start()
@@ -29,12 +29,21 @@ public class MobSense : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
 
-        switch(beenBumped)
+        if (other.gameObject.tag == "Trash") { beenBumped = Bump.Trash;}
+        if (other.gameObject.tag == "Building") { beenBumped = Bump.Building; }
+
+        switch (beenBumped)
         {
 
             case Bump.Trash:
 
                 if (Info.showDebug) { Debug.Log(string.Format(Info.MyName + " Collided With: " + other.gameObject.name)); }
+
+                break;
+
+            case Bump.Building:
+
+                if (Info.showDebug) { Debug.Log(string.Format(Info.MyName + "Who put that " + other.gameObject.name + " there?")); }
 
                 break;
         }
