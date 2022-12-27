@@ -45,6 +45,8 @@ public class MobSense : MonoBehaviour
 
                 if (Info.showDebug) { Debug.Log(string.Format(Info.MyName + "Who put that " + other.gameObject.name + " there?")); }
 
+                //if
+
                 break;
         }
 
