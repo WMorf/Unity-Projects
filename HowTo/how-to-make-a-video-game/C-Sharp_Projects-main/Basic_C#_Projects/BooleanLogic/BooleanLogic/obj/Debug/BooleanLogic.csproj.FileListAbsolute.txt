@@ -1,0 +1,7 @@
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\BooleanLogic\BooleanLogic\bin\Debug\BooleanLogic.exe.config
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\BooleanLogic\BooleanLogic\bin\Debug\BooleanLogic.exe
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\BooleanLogic\BooleanLogic\bin\Debug\BooleanLogic.pdb
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\BooleanLogic\BooleanLogic\obj\Debug\BooleanLogic.csproj.AssemblyReference.cache
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\BooleanLogic\BooleanLogic\obj\Debug\BooleanLogic.csproj.CoreCompileInputs.cache
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\BooleanLogic\BooleanLogic\obj\Debug\BooleanLogic.exe
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\BooleanLogic\BooleanLogic\obj\Debug\BooleanLogic.pdb

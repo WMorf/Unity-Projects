@@ -1,0 +1,6 @@
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\ArraysAndLists\ArraysAndLists\bin\Debug\ArraysAndLists.exe.config
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\ArraysAndLists\ArraysAndLists\bin\Debug\ArraysAndLists.exe
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\ArraysAndLists\ArraysAndLists\bin\Debug\ArraysAndLists.pdb
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\ArraysAndLists\ArraysAndLists\obj\Debug\ArraysAndLists.csproj.CoreCompileInputs.cache
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\ArraysAndLists\ArraysAndLists\obj\Debug\ArraysAndLists.exe
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\ArraysAndLists\ArraysAndLists\obj\Debug\ArraysAndLists.pdb

@@ -1,0 +1,7 @@
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\IterationAssignment\IterationAssignment\bin\Debug\IterationAssignment.exe.config
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\IterationAssignment\IterationAssignment\bin\Debug\IterationAssignment.exe
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\IterationAssignment\IterationAssignment\bin\Debug\IterationAssignment.pdb
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\IterationAssignment\IterationAssignment\obj\Debug\IterationAssignment.csproj.AssemblyReference.cache
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\IterationAssignment\IterationAssignment\obj\Debug\IterationAssignment.csproj.CoreCompileInputs.cache
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\IterationAssignment\IterationAssignment\obj\Debug\IterationAssignment.exe
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\IterationAssignment\IterationAssignment\obj\Debug\IterationAssignment.pdb

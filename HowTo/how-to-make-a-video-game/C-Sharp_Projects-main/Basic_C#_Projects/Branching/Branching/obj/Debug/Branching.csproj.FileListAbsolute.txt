@@ -1,0 +1,6 @@
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\Branching\Branching\bin\Debug\Branching.exe.config
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\Branching\Branching\bin\Debug\Branching.exe
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\Branching\Branching\bin\Debug\Branching.pdb
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\Branching\Branching\obj\Debug\Branching.csproj.CoreCompileInputs.cache
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\Branching\Branching\obj\Debug\Branching.exe
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\Branching\Branching\obj\Debug\Branching.pdb

@@ -1,0 +1,7 @@
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\ClassMethodAssignment\ClassMethodAssignment\bin\Debug\ClassMethodAssignment.exe.config
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\ClassMethodAssignment\ClassMethodAssignment\bin\Debug\ClassMethodAssignment.exe
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\ClassMethodAssignment\ClassMethodAssignment\bin\Debug\ClassMethodAssignment.pdb
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\ClassMethodAssignment\ClassMethodAssignment\obj\Debug\ClassMethodAssignment.csproj.AssemblyReference.cache
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\ClassMethodAssignment\ClassMethodAssignment\obj\Debug\ClassMethodAssignment.csproj.CoreCompileInputs.cache
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\ClassMethodAssignment\ClassMethodAssignment\obj\Debug\ClassMethodAssignment.exe
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\ClassMethodAssignment\ClassMethodAssignment\obj\Debug\ClassMethodAssignment.pdb

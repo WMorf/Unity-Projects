@@ -1,0 +1,7 @@
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\WhileLoopAssignment\WhileLoopAssignment\bin\Debug\WhileLoopAssignment.exe.config
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\WhileLoopAssignment\WhileLoopAssignment\bin\Debug\WhileLoopAssignment.exe
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\WhileLoopAssignment\WhileLoopAssignment\bin\Debug\WhileLoopAssignment.pdb
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\WhileLoopAssignment\WhileLoopAssignment\obj\Debug\WhileLoopAssignment.csproj.AssemblyReference.cache
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\WhileLoopAssignment\WhileLoopAssignment\obj\Debug\WhileLoopAssignment.csproj.CoreCompileInputs.cache
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\WhileLoopAssignment\WhileLoopAssignment\obj\Debug\WhileLoopAssignment.exe
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\WhileLoopAssignment\WhileLoopAssignment\obj\Debug\WhileLoopAssignment.pdb

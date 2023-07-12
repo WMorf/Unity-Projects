@@ -1,0 +1,7 @@
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\MethodAssignment3\MethodAssignment3\bin\Debug\MethodAssignment3.exe.config
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\MethodAssignment3\MethodAssignment3\bin\Debug\MethodAssignment3.exe
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\MethodAssignment3\MethodAssignment3\bin\Debug\MethodAssignment3.pdb
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\MethodAssignment3\MethodAssignment3\obj\Debug\MethodAssignment3.csproj.AssemblyReference.cache
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\MethodAssignment3\MethodAssignment3\obj\Debug\MethodAssignment3.csproj.CoreCompileInputs.cache
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\MethodAssignment3\MethodAssignment3\obj\Debug\MethodAssignment3.exe
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\MethodAssignment3\MethodAssignment3\obj\Debug\MethodAssignment3.pdb

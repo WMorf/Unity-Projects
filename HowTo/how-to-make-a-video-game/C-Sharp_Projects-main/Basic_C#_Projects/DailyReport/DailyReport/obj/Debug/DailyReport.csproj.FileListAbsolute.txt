@@ -1,0 +1,7 @@
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\DailyReport\DailyReport\bin\Debug\DailyReport.exe.config
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\DailyReport\DailyReport\bin\Debug\DailyReport.exe
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\DailyReport\DailyReport\bin\Debug\DailyReport.pdb
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\DailyReport\DailyReport\obj\Debug\DailyReport.csproj.AssemblyReference.cache
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\DailyReport\DailyReport\obj\Debug\DailyReport.csproj.CoreCompileInputs.cache
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\DailyReport\DailyReport\obj\Debug\DailyReport.exe
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\DailyReport\DailyReport\obj\Debug\DailyReport.pdb

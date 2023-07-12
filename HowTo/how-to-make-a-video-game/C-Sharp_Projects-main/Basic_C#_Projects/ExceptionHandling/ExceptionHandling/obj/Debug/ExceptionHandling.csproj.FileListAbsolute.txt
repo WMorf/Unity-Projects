@@ -1,0 +1,6 @@
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\ExceptionHandling\ExceptionHandling\bin\Debug\ExceptionHandling.exe.config
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\ExceptionHandling\ExceptionHandling\bin\Debug\ExceptionHandling.exe
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\ExceptionHandling\ExceptionHandling\bin\Debug\ExceptionHandling.pdb
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\ExceptionHandling\ExceptionHandling\obj\Debug\ExceptionHandling.csproj.CoreCompileInputs.cache
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\ExceptionHandling\ExceptionHandling\obj\Debug\ExceptionHandling.exe
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\ExceptionHandling\ExceptionHandling\obj\Debug\ExceptionHandling.pdb

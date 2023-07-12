@@ -1,0 +1,6 @@
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\Loops\Loops\bin\Debug\Loops.exe.config
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\Loops\Loops\bin\Debug\Loops.exe
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\Loops\Loops\bin\Debug\Loops.pdb
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\Loops\Loops\obj\Debug\Loops.csproj.CoreCompileInputs.cache
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\Loops\Loops\obj\Debug\Loops.exe
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\Loops\Loops\obj\Debug\Loops.pdb

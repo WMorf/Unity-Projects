@@ -1,0 +1,7 @@
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\myConsoleProject\myConsoleProject.cs\bin\Debug\myConsoleProject.cs.exe.config
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\myConsoleProject\myConsoleProject.cs\bin\Debug\myConsoleProject.cs.exe
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\myConsoleProject\myConsoleProject.cs\bin\Debug\myConsoleProject.cs.pdb
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\myConsoleProject\myConsoleProject.cs\obj\Debug\myConsoleProject.cs.csproj.AssemblyReference.cache
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\myConsoleProject\myConsoleProject.cs\obj\Debug\myConsoleProject.cs.csproj.CoreCompileInputs.cache
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\myConsoleProject\myConsoleProject.cs\obj\Debug\myConsoleProject.cs.exe
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\myConsoleProject\myConsoleProject.cs\obj\Debug\myConsoleProject.cs.pdb

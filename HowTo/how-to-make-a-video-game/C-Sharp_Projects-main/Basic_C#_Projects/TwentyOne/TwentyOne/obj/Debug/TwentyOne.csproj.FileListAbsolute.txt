@@ -1,0 +1,7 @@
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\TwentyOne\TwentyOne\bin\Debug\TwentyOne.exe.config
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\TwentyOne\TwentyOne\bin\Debug\TwentyOne.exe
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\TwentyOne\TwentyOne\bin\Debug\TwentyOne.pdb
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\TwentyOne\TwentyOne\obj\Debug\TwentyOne.csproj.AssemblyReference.cache
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\TwentyOne\TwentyOne\obj\Debug\TwentyOne.csproj.CoreCompileInputs.cache
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\TwentyOne\TwentyOne\obj\Debug\TwentyOne.exe
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\TwentyOne\TwentyOne\obj\Debug\TwentyOne.pdb

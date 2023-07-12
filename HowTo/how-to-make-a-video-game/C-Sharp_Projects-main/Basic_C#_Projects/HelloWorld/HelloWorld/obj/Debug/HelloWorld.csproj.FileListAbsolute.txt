@@ -1,0 +1,7 @@
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\HelloWorld\HelloWorld\bin\Debug\HelloWorld.exe.config
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\HelloWorld\HelloWorld\bin\Debug\HelloWorld.exe
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\HelloWorld\HelloWorld\bin\Debug\HelloWorld.pdb
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\HelloWorld\HelloWorld\obj\Debug\HelloWorld.csproj.AssemblyReference.cache
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\HelloWorld\HelloWorld\obj\Debug\HelloWorld.csproj.CoreCompileInputs.cache
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\HelloWorld\HelloWorld\obj\Debug\HelloWorld.exe
+C:\Users\keefe\source\repos\C-Sharp_Projects\Basic_C#_Projects\HelloWorld\HelloWorld\obj\Debug\HelloWorld.pdb

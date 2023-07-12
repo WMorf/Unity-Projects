@@ -48,14 +48,17 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\MobBody\MobBrain.cs" />
+     <Compile Include="Assets\Test\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\MobBody\MobInfo.cs" />
      <Compile Include="Assets\Scripts\GameLogic\Names.cs" />
      <Compile Include="Assets\Scripts\MobBody\MobSense.cs" />
+     <Compile Include="Assets\Test\Scripts\NPCController2.cs" />
      <Compile Include="Assets\Scripts\Trash.cs" />
      <Compile Include="Assets\Scripts\Relics\MobLogic.cs" />
      <Compile Include="Assets\Scripts\MobBody\MobMotor.cs" />
      <Compile Include="Assets\Scripts\GameLogic\Mobs.cs" />
      <Compile Include="Assets\Scripts\GameLogic\Props.cs" />
+     <Compile Include="Assets\Test\Scripts\MouseManager3.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Github/Unity/2020.3.41f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
