@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &337445981635314667
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 337445981635314664}
+  m_Layer: 0
+  m_Name: Generation Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &337445981635314664
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337445981635314667}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 337445981828373542}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &337445981828373544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 337445981828373542}
+  - component: {fileID: 478296475667702971}
+  m_Layer: 0
+  m_Name: City Generator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &337445981828373542
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337445981828373544}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 29.674677, y: 9.330888, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 337445981635314664}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &478296475667702971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337445981828373544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 368fb1190e7aa364e828ae9cb9c25c1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layoutRoom: {fileID: 0}
+  highwayColor: {r: 0, g: 0, b: 0, a: 0}
+  townHallColor: {r: 0, g: 0, b: 0, a: 0}
+  churchColor: {r: 0, g: 0, b: 0, a: 0}
+  milBaseColor: {r: 0, g: 0, b: 0, a: 0}
+  distanceToTownHall: 0
+  includeChurch: 0
+  includeMilBase: 0
+  minDistanceToChurch: 0
+  maxDistanceToChurch: 0
+  minDistanceToMilBase: 0
+  maxDistanceToMilBase: 0
+  generationPoint: {fileID: 0}
+  makeOutline: 0
+  selectedDirection: 0
+  xOffset: 18
+  yOffset: 10
+  whatIsRoom:
+    serializedVersion: 2
+    m_Bits: 0
+  blocks:
+    singleUp: {fileID: 0}
+    singleDown: {fileID: 0}
+    singleRight: {fileID: 0}
+    singleLeft: {fileID: 0}
+    doubleLeftDown: {fileID: 0}
+    doubleUpDown: {fileID: 0}
+    doubleLeftRight: {fileID: 0}
+    doubleUpRight: {fileID: 0}
+    doubleRightDown: {fileID: 0}
+    doubleLeftUp: {fileID: 0}
+    tripleUpRightDown: {fileID: 0}
+    tripleRightDownLeft: {fileID: 0}
+    tripleDownLeftUp: {fileID: 0}
+    tripleLeftUpRight: {fileID: 0}
+    fourway: {fileID: 0}
+  centerHighway: {fileID: 0}
+  centerTownHall: {fileID: 0}
+  centerChurch: {fileID: 0}
+  centerMilBase: {fileID: 0}
+  potentialCenters: []
