@@ -15,7 +15,7 @@ C:/Github/Unity-Projects/Castle Conquest 2D
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-19713
+14380
 Successfully changed project path to: C:/Github/Unity-Projects/Castle Conquest 2D
 C:/Github/Unity-Projects/Castle Conquest 2D
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,11 +49,11 @@ C:/Github/Unity-Projects/Castle Conquest 2D
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [16656] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 1490116880 [EditorId] 1490116880 [Version] 1048832 [Id] WindowsEditor(7,Area4) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [19008] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 2141681615 [EditorId] 2141681615 [Version] 1048832 [Id] WindowsEditor(7,Area4) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [16656] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 1490116880 [EditorId] 1490116880 [Version] 1048832 [Id] WindowsEditor(7,Area4) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [19008] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 2141681615 [EditorId] 2141681615 [Version] 1048832 [Id] WindowsEditor(7,Area4) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 9.52 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 36.60 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.7f1 (b16b3b16c7a0)
 [Subsystems] Discovering subsystems at path C:/Github/Unity/2022.3.7f1/Editor/Data/Resources/UnitySubsystems
@@ -69,44 +69,44 @@ Initialize mono
 Mono path[0] = 'C:/Github/Unity/2022.3.7f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Github/Unity/2022.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Github/Unity/2022.3.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56528
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56232
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Github/Unity/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.005489 seconds.
-- Loaded All Assemblies, in  0.594 seconds
+Registered in 0.007624 seconds.
+- Loaded All Assemblies, in  0.797 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.352 seconds
-Domain Reload Profiling: 945ms
-	BeginReloadAssembly (235ms)
+- Finished resetting the current domain, in  0.457 seconds
+Domain Reload Profiling: 1253ms
+	BeginReloadAssembly (382ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (52ms)
-	RebuildNativeTypeToScriptingClass (15ms)
-	initialDomainReloadingComplete (81ms)
-	LoadAllAssembliesAndSetupDomain (209ms)
-		LoadAssemblies (232ms)
+		CreateAndSetChildDomain (4ms)
+	RebuildCommonClasses (61ms)
+	RebuildNativeTypeToScriptingClass (18ms)
+	initialDomainReloadingComplete (85ms)
+	LoadAllAssembliesAndSetupDomain (250ms)
+		LoadAssemblies (377ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (206ms)
-			TypeCache.Refresh (205ms)
-				TypeCache.ScanAssembly (189ms)
+		AnalyzeDomain (247ms)
+			TypeCache.Refresh (245ms)
+				TypeCache.ScanAssembly (225ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (353ms)
+	FinalizeReload (458ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (267ms)
+		SetupLoadedEditorAssemblies (353ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (10ms)
-			SetLoadedEditorAssemblies (12ms)
+			InitializePlatformSupportModulesInManaged (15ms)
+			SetLoadedEditorAssemblies (13ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (3ms)
-			ProcessInitializeOnLoadAttributes (174ms)
-			ProcessInitializeOnLoadMethodAttributes (69ms)
+			ProcessInitializeOnLoadAttributes (229ms)
+			ProcessInitializeOnLoadMethodAttributes (93ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -116,80 +116,139 @@ Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Github\Unity-Projects\Castle Conquest 2D\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Github\Unity-Projects\Castle Conquest 2D\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  0.961 seconds
-Refreshing native plugins compatible for Editor in 31.81 ms, found 4 plugins.
+- Loaded All Assemblies, in  1.184 seconds
+Refreshing native plugins compatible for Editor in 6.02 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.187 seconds
-Domain Reload Profiling: 2146ms
-	BeginReloadAssembly (241ms)
+- Finished resetting the current domain, in  1.332 seconds
+Domain Reload Profiling: 2513ms
+	BeginReloadAssembly (277ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (12ms)
+		DisableScriptedObjects (11ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (32ms)
-	RebuildCommonClasses (45ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (64ms)
-	LoadAllAssembliesAndSetupDomain (594ms)
-		LoadAssemblies (441ms)
+		CreateAndSetChildDomain (39ms)
+	RebuildCommonClasses (61ms)
+	RebuildNativeTypeToScriptingClass (21ms)
+	initialDomainReloadingComplete (66ms)
+	LoadAllAssembliesAndSetupDomain (756ms)
+		LoadAssemblies (637ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (262ms)
-			TypeCache.Refresh (222ms)
-				TypeCache.ScanAssembly (200ms)
-			ScanForSourceGeneratedMonoScriptInfo (32ms)
-			ResolveRequiredComponents (6ms)
-	FinalizeReload (1188ms)
+		AnalyzeDomain (284ms)
+			TypeCache.Refresh (246ms)
+				TypeCache.ScanAssembly (219ms)
+			ScanForSourceGeneratedMonoScriptInfo (30ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (1333ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (886ms)
+		SetupLoadedEditorAssemblies (987ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (10ms)
-			SetLoadedEditorAssemblies (5ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (7ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (95ms)
-			ProcessInitializeOnLoadAttributes (638ms)
-			ProcessInitializeOnLoadMethodAttributes (125ms)
-			AfterProcessingInitializeOnLoad (12ms)
-			EditorAssembliesLoaded (1ms)
+			BeforeProcessingInitializeOnLoad (218ms)
+			ProcessInitializeOnLoadAttributes (681ms)
+			ProcessInitializeOnLoadMethodAttributes (64ms)
+			AfterProcessingInitializeOnLoad (5ms)
+			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (17ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
-Refreshing native plugins compatible for Editor in 20.29 ms, found 4 plugins.
+		AwakeInstancesAfterBackupRestoration (11ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.12 seconds
+Refreshing native plugins compatible for Editor in 3.77 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3999 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 69 unused Assets / (244.6 KB). Loaded Objects now: 4455.
-Memory consumption went from 135.9 MB to 135.6 MB.
-Total: 54.154600 ms (FindLiveObjects: 5.175900 ms CreateObjectMapping: 1.080500 ms MarkObjects: 46.967200 ms  DeleteObjects: 0.926100 ms)
+Unloading 69 unused Assets / (244.8 KB). Loaded Objects now: 4455.
+Memory consumption went from 135.9 MB to 135.7 MB.
+Total: 5.824200 ms (FindLiveObjects: 0.566000 ms CreateObjectMapping: 0.277100 ms MarkObjects: 4.642400 ms  DeleteObjects: 0.333400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
   custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 517568.770654 seconds.
-  path: Assets/Sprites/Terrain+(32x32).png
-  artifactKey: Guid(1ba09937be9966d4cb532eb9c6964748) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Terrain+(32x32).png using Guid(1ba09937be9966d4cb532eb9c6964748) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '221a030ea115631e64bc6d468305bca2') in 0.430613 seconds
+  Time since last request: 590461.251172 seconds.
+  path: ProjectSettings/TagManager.asset
+  artifactKey: Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing ProjectSettings/TagManager.asset using Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b9326e97e2461385864aa44f9e28ada') in 0.017134 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1144.408435 seconds.
+  path: Assets/Tutorial/2.PNG
+  artifactKey: Guid(216c4746ccf86944ea0def86802d0f19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tutorial/2.PNG using Guid(216c4746ccf86944ea0def86802d0f19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fe30e55369ca369c10acad34bb4f17d') in 0.133439 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Tutorial/4.PNG
+  artifactKey: Guid(a091983e49e2fe14d9de81c7a4b3b917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tutorial/4.PNG using Guid(a091983e49e2fe14d9de81c7a4b3b917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a04f282307954ee14ffb7a099407c4e6') in 0.035473 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 3
 ========================================================================
 Received Prepare
-Refreshing native plugins compatible for Editor in 5.02 ms, found 4 plugins.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Github\Unity-Projects\Castle Conquest 2D\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Github\Unity-Projects\Castle Conquest 2D\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.780 seconds
+Refreshing native plugins compatible for Editor in 5.64 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.912 seconds
+Domain Reload Profiling: 2690ms
+	BeginReloadAssembly (201ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (14ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (43ms)
+	RebuildCommonClasses (43ms)
+	RebuildNativeTypeToScriptingClass (18ms)
+	initialDomainReloadingComplete (31ms)
+	LoadAllAssembliesAndSetupDomain (485ms)
+		LoadAssemblies (579ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (18ms)
+			TypeCache.Refresh (9ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (1912ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (337ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (62ms)
+			ProcessInitializeOnLoadAttributes (229ms)
+			ProcessInitializeOnLoadMethodAttributes (35ms)
+			AfterProcessingInitializeOnLoad (5ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (12ms)
+Refreshing native plugins compatible for Editor in 2.93 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7 unused Assets / (196.1 KB). Loaded Objects now: 4462.
-Memory consumption went from 77.5 MB to 77.3 MB.
-Total: 7.725000 ms (FindLiveObjects: 0.763100 ms CreateObjectMapping: 0.665000 ms MarkObjects: 5.998800 ms  DeleteObjects: 0.295900 ms)
+Unloading 3993 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 41 unused Assets / (216.5 KB). Loaded Objects now: 4468.
+Memory consumption went from 138.7 MB to 138.5 MB.
+Total: 5.589900 ms (FindLiveObjects: 0.485500 ms CreateObjectMapping: 0.319000 ms MarkObjects: 4.449200 ms  DeleteObjects: 0.334600 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -208,265 +267,717 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 781.516745 seconds.
-  path: Assets/Tiles/Terrain+(32x32)_0.asset
-  artifactKey: Guid(193d90cc9d95e9d4d9d52f94cc2fd635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/Terrain+(32x32)_0.asset using Guid(193d90cc9d95e9d4d9d52f94cc2fd635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe08ca613f323e3c963363f350693e0b') in 0.061026 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/Tiles/Terrain+(32x32)_26.asset
-  artifactKey: Guid(07c8f75c7bf34f748a1c5a73523b6960) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/Terrain+(32x32)_26.asset using Guid(07c8f75c7bf34f748a1c5a73523b6960) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee32f00690513c03faa216d665aa45a3') in 0.021681 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/Tiles/Terrain+(32x32)_31.asset
-  artifactKey: Guid(cf5e8facfddf73f4db42f6349eb32bb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/Terrain+(32x32)_31.asset using Guid(cf5e8facfddf73f4db42f6349eb32bb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb4d4918944f814e94f59151d74e816c') in 0.014087 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000165 seconds.
-  path: Assets/Tiles/Terrain+(32x32)_49.asset
-  artifactKey: Guid(7d9dff18694cb204fabd64b9423f5988) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/Terrain+(32x32)_49.asset using Guid(7d9dff18694cb204fabd64b9423f5988) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11d9d36641a91c3488ff121e543f9021') in 0.020064 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Tiles/Terrain+(32x32)_20.asset
-  artifactKey: Guid(76001af4193bae246adbd3149d62072d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/Terrain+(32x32)_20.asset using Guid(76001af4193bae246adbd3149d62072d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bb86a3cbeb480561a6513de39d04523') in 0.018163 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Tiles/Terrain+(32x32)_22.asset
-  artifactKey: Guid(465267f27f25fc347aed124522db0b50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/Terrain+(32x32)_22.asset using Guid(465267f27f25fc347aed124522db0b50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79ac38652b9817f581e6c3e95c30275d') in 0.015835 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000043 seconds.
-  path: Assets/Tiles/Terrain+(32x32)_17.asset
-  artifactKey: Guid(510f2098f9895a84e9c6ef591114a9c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/Terrain+(32x32)_17.asset using Guid(510f2098f9895a84e9c6ef591114a9c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c70ac057f03a2ef044b27c1bdacce60') in 0.018382 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000103 seconds.
-  path: Assets/Tiles/Terrain+(32x32)_59.asset
-  artifactKey: Guid(f7bde77116f5e6a4cbae42411821243c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/Terrain+(32x32)_59.asset using Guid(f7bde77116f5e6a4cbae42411821243c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef132e7fc26ad2ec2b3c72b1235810b6') in 0.017697 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Tiles/Terrain+(32x32)_5.asset
-  artifactKey: Guid(64c9aa944bb51b943b5888621f42aad1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/Terrain+(32x32)_5.asset using Guid(64c9aa944bb51b943b5888621f42aad1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd17160e18696a48253a73268f1d28eb5') in 0.019847 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Tiles/Terrain+(32x32)_11.asset
-  artifactKey: Guid(a8bd0f198f72cc9499a7caf23e963e63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/Terrain+(32x32)_11.asset using Guid(a8bd0f198f72cc9499a7caf23e963e63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41f5ad68a106216d0430040682dbf997') in 0.017227 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Tiles/Terrain+(32x32)_63.asset
-  artifactKey: Guid(24e19fddaa759e948a32e9f000a04756) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/Terrain+(32x32)_63.asset using Guid(24e19fddaa759e948a32e9f000a04756) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78b6a1115751972567cbb2f37abe1d0d') in 0.022451 seconds
+  Time since last request: 288.795417 seconds.
+  path: Assets/Tiles/Terrain+(32x32)_66.asset
+  artifactKey: Guid(e829d7e27b8636a4482ef2cd750f95da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Terrain+(32x32)_66.asset using Guid(e829d7e27b8636a4482ef2cd750f95da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ed84bc04ab5b79033caad8c5ee05450') in 0.110494 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
   Time since last request: 0.000046 seconds.
-  path: Assets/Tiles/Terrain+(32x32)_4.asset
-  artifactKey: Guid(02d53779d98bb404a84b3c1a94de837b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/Terrain+(32x32)_4.asset using Guid(02d53779d98bb404a84b3c1a94de837b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '762a3fe2c0ba6f1525fa3ef63a2de93a') in 0.014452 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Tiles/Terrain+(32x32)_15.asset
-  artifactKey: Guid(8dc3df42fcf8a074ab45fb52624031d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/Terrain+(32x32)_15.asset using Guid(8dc3df42fcf8a074ab45fb52624031d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1b522f13ee6a06a5b74ad28cfc3e951') in 0.019747 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Tiles/Terrain+(32x32)_58.asset
-  artifactKey: Guid(3bc2cf36fda68874bba4df70154d3592) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/Terrain+(32x32)_58.asset using Guid(3bc2cf36fda68874bba4df70154d3592) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24388e0fc5abe5a2edec87c7b47ac9d3') in 0.018508 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/Tiles/Terrain+(32x32)_23.asset
-  artifactKey: Guid(a3cf9d5db3786e842848a982d418d660) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/Terrain+(32x32)_23.asset using Guid(a3cf9d5db3786e842848a982d418d660) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8d9dbcc00c185b12f95a014c07c7bbe') in 0.016990 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Tiles/Terrain+(32x32)_28.asset
-  artifactKey: Guid(e4402166c61a85a4a9f5617b8137cb9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/Terrain+(32x32)_28.asset using Guid(e4402166c61a85a4a9f5617b8137cb9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd7f32726d3051d95178433f36e57ebf') in 0.017117 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000076 seconds.
-  path: Assets/Tiles/Terrain+(32x32)_57.asset
-  artifactKey: Guid(0f1653b147b873f47a3f5c750a3e151c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/Terrain+(32x32)_57.asset using Guid(0f1653b147b873f47a3f5c750a3e151c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6aa84e1a941c9485cf1e3efcc353606') in 0.019510 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Tiles/Terrain+(32x32)_44.asset
-  artifactKey: Guid(cd90c48de65da3c48b747a61b8fcd8a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/Terrain+(32x32)_44.asset using Guid(cd90c48de65da3c48b747a61b8fcd8a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2283b41b89a156397c4fb9dabcafa430') in 0.025016 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Tiles/Terrain+(32x32)_19.asset
-  artifactKey: Guid(91630970cdf9be749a0c73629902b5d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/Terrain+(32x32)_19.asset using Guid(91630970cdf9be749a0c73629902b5d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a57c2d9d467e301735957a71bb3a049f') in 0.030330 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/Tiles/Terrain+(32x32)_46.asset
-  artifactKey: Guid(aa54a8da783fd29438ac0504f4cec458) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/Terrain+(32x32)_46.asset using Guid(aa54a8da783fd29438ac0504f4cec458) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79b31de1f91af982dadaa7f1311a6247') in 0.019694 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Tiles/Terrain+(32x32)_12.asset
-  artifactKey: Guid(3eb8faf03de07ed4eb33ce10c81f1f92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/Terrain+(32x32)_12.asset using Guid(3eb8faf03de07ed4eb33ce10c81f1f92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b91fe3a72b97dffd2c09e4894be6fcb9') in 0.019401 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000123 seconds.
-  path: Assets/Tiles/Terrain+(32x32)_9.asset
-  artifactKey: Guid(979e857452676a1419886dcb464e5c96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/Terrain+(32x32)_9.asset using Guid(979e857452676a1419886dcb464e5c96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f21014efcafb8429fd3df4d41b446954') in 0.016760 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/Tiles/Terrain+(32x32)_25.asset
-  artifactKey: Guid(f73b0c510b2bc8c4f8c2400887dd2fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/Terrain+(32x32)_25.asset using Guid(f73b0c510b2bc8c4f8c2400887dd2fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c32ad1153cbe87c9a1a4389ab1b2198c') in 0.017309 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Tiles/Terrain+(32x32)_1.asset
-  artifactKey: Guid(9edbac6c68dd09d4ab320a1d191b37c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/Terrain+(32x32)_1.asset using Guid(9edbac6c68dd09d4ab320a1d191b37c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56219cb08249a44770489ff33d30f8dc') in 0.017881 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000082 seconds.
-  path: Assets/Tiles/Terrain+(32x32)_56.asset
-  artifactKey: Guid(4cf67b64ccc433541be6e0adc2c7cbae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/Terrain+(32x32)_56.asset using Guid(4cf67b64ccc433541be6e0adc2c7cbae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1b17d869602c398075ef978d07c00cb') in 0.018871 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Tiles/Terrain+(32x32)_30.asset
-  artifactKey: Guid(62f47530013293b4c8f9648971f23c96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/Terrain+(32x32)_30.asset using Guid(62f47530013293b4c8f9648971f23c96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d5c09c18a7803e0b9bcc44d8d326e78') in 0.020683 seconds
+  path: Assets/Tiles/Terrain+(32x32)_83.asset
+  artifactKey: Guid(5ce751f572277e741a1363e431e9e0d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Terrain+(32x32)_83.asset using Guid(5ce751f572277e741a1363e431e9e0d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfdf48ea8844dab723cad4b7f8633e27') in 0.029699 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
   Time since last request: 0.000033 seconds.
-  path: Assets/Tiles/Terrain+(32x32)_24.asset
-  artifactKey: Guid(e58f2b2842fc05041a3cbdf9a9e085bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/Terrain+(32x32)_24.asset using Guid(e58f2b2842fc05041a3cbdf9a9e085bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2780d629ee67bba0ff343b195f674dd7') in 0.017824 seconds
+  path: Assets/Tiles/Terrain+(32x32)_91.asset
+  artifactKey: Guid(02afc6800cda9fb459ee115ec59ef78d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Terrain+(32x32)_91.asset using Guid(02afc6800cda9fb459ee115ec59ef78d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7ef20cbea8988b2634a555d4c3de44f') in 0.030231 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Tiles/Terrain+(32x32)_93.asset
+  artifactKey: Guid(55a6dcc110c32c44291d9bcff0402a92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Terrain+(32x32)_93.asset using Guid(55a6dcc110c32c44291d9bcff0402a92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ecbb207903306a865017517594fada4') in 0.025576 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Tiles/Terrain+(32x32)_87.asset
+  artifactKey: Guid(5a509a608ed06fe448f5c44ed3af3fbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Terrain+(32x32)_87.asset using Guid(5a509a608ed06fe448f5c44ed3af3fbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ecd84369131e094cd216c57e556129b') in 0.026747 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/Tiles/Terrain+(32x32)_76.asset
+  artifactKey: Guid(df50b2d7c0e7e1d4bad980799dccfd87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Terrain+(32x32)_76.asset using Guid(df50b2d7c0e7e1d4bad980799dccfd87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6eb5fb7348bb384b0a4a0fb8cbc82d5') in 0.026017 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Tiles/Terrain+(32x32)_75.asset
+  artifactKey: Guid(b6481fd51290fcf4780da714f33c10df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Terrain+(32x32)_75.asset using Guid(b6481fd51290fcf4780da714f33c10df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f893dc093a62663ee76d0922ce880f31') in 0.031755 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Tiles/Terrain+(32x32)_78.asset
+  artifactKey: Guid(d179869e0a216e649bd04e5968bc6cde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Terrain+(32x32)_78.asset using Guid(d179869e0a216e649bd04e5968bc6cde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05e42b751aa36751559920f1e84c3760') in 0.027556 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Tiles/Terrain+(32x32)_81.asset
+  artifactKey: Guid(111b16078ffa3694fbeef43ee38363c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Terrain+(32x32)_81.asset using Guid(111b16078ffa3694fbeef43ee38363c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c08d0909b5e29b200d2c0751d948ea43') in 0.023855 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Tiles/Terrain+(32x32)_88.asset
+  artifactKey: Guid(85db1feeb3290dd47aa2cdd2e784a056) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Terrain+(32x32)_88.asset using Guid(85db1feeb3290dd47aa2cdd2e784a056) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7600d93e8673e5b9f84d24622dc32ce5') in 0.027642 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Tiles/Terrain+(32x32)_82.asset
+  artifactKey: Guid(6ad07262108db5e49a8e96d735c90702) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Terrain+(32x32)_82.asset using Guid(6ad07262108db5e49a8e96d735c90702) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9413e48fa52071c7a98630976a15540a') in 0.025391 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Tiles/Terrain+(32x32)_79.asset
+  artifactKey: Guid(67528bb439a36454e8180ac0c58470f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Terrain+(32x32)_79.asset using Guid(67528bb439a36454e8180ac0c58470f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '906c1fe366151f1fd05e6b3d646f9805') in 0.022683 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Tiles/Terrain+(32x32)_77.asset
+  artifactKey: Guid(ae811f4a509c57748bcb4afb230808ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Terrain+(32x32)_77.asset using Guid(ae811f4a509c57748bcb4afb230808ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1287eec1869fb22a3c738d0bf7846f9') in 0.028838 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 255.392160 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/13-Dialogue Boxes/!!! Out (24x8).png
+  artifactKey: Guid(0979f751807ce5344ab35c1a88327616) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/13-Dialogue Boxes/!!! Out (24x8).png using Guid(0979f751807ce5344ab35c1a88327616) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07d6fd46984873b0073a06471a1edfb2') in 0.054771 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
   Time since last request: 0.000030 seconds.
-  path: Assets/Tiles/Terrain+(32x32)_8.asset
-  artifactKey: Guid(56bb9616408cf6d43ac752ef0a6482b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/Terrain+(32x32)_8.asset using Guid(56bb9616408cf6d43ac752ef0a6482b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65ba912a3536ee7be5a0fc3b9d09a7ae') in 0.023142 seconds
+  path: Assets/Sprites/Kings and Pigs/Aseprite/01-Artboard.aseprite
+  artifactKey: Guid(25b2baf0658092344a4c61cd61d01757) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Aseprite/01-Artboard.aseprite using Guid(25b2baf0658092344a4c61cd61d01757) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5cfdf316f618e33873079da7a4c434d0') in 0.101082 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 4.735337 seconds.
+  path: Assets/Sprites/Kings and Pigs/Aseprite/06-PigHide.aseprite
+  artifactKey: Guid(f415285b2019fb44b8208a253b8ad0ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Aseprite/06-PigHide.aseprite using Guid(f415285b2019fb44b8208a253b8ad0ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f541567adf6fb438876f48a35733b0d5') in 0.051861 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 30
+========================================================================
+Received Import Request.
+  Time since last request: 0.379489 seconds.
+  path: Assets/Sprites/Kings and Pigs/Aseprite/09-Box.aseprite
+  artifactKey: Guid(8c286989963a1b24e949c3a595c2b7eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Aseprite/09-Box.aseprite using Guid(8c286989963a1b24e949c3a595c2b7eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c8c7ec5f9b4a55c4dc60abc88701f0b') in 0.036559 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 16
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Sprites/Kings and Pigs/Aseprite/10-Cannon and Pig.aseprite
+  artifactKey: Guid(cd98f0fe999358548bee10b84ddae4c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Aseprite/10-Cannon and Pig.aseprite using Guid(cd98f0fe999358548bee10b84ddae4c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '442611b37d52543661c6dae832898029') in 0.075367 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 36
+========================================================================
+Received Import Request.
+  Time since last request: 1.190222 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/02-King Pig/Attack (38x28).png
+  artifactKey: Guid(a973636116c2c6946983132d6ab133f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/02-King Pig/Attack (38x28).png using Guid(a973636116c2c6946983132d6ab133f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e353c9f6910f76f9c143e14978115b99') in 0.022500 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000144 seconds.
-  path: Assets/Tiles/Terrain+(32x32)_34.asset
-  artifactKey: Guid(7598fb1a4d95e19459405ace522da868) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/Terrain+(32x32)_34.asset using Guid(7598fb1a4d95e19459405ace522da868) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb367080fa4ce6ce60fc26724c1f6cda') in 0.019852 seconds
+  Time since last request: 0.000030 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/01-King Human/Attack (78x58).png
+  artifactKey: Guid(3ef574de7417850428bb5916dbfba6c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/01-King Human/Attack (78x58).png using Guid(3ef574de7417850428bb5916dbfba6c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15f2b975cd2065a0e8eb785dceaa560b') in 0.028195 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/13-Dialogue Boxes/Attack Out (24x8).png
+  artifactKey: Guid(a41cd5bbfa9437f47a3653f631a7b5c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/13-Dialogue Boxes/Attack Out (24x8).png using Guid(a41cd5bbfa9437f47a3653f631a7b5c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6abf4a5d9070e9d609fad3d0d436ba6') in 0.023435 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/12-Live and Coins/Big Heart Hit (18x14).png
+  artifactKey: Guid(664b71819d54be445a408ac8287ddf4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/12-Live and Coins/Big Heart Hit (18x14).png using Guid(664b71819d54be445a408ac8287ddf4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f5e12c09578e348b22c0051a5face8a') in 0.027490 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/13-Dialogue Boxes/Boom In (24x8).png
+  artifactKey: Guid(880dd54a3487a574c8c1769cff597a8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/13-Dialogue Boxes/Boom In (24x8).png using Guid(880dd54a3487a574c8c1769cff597a8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9607af8edde0f28096a9d4d4091d7ab') in 0.019099 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/13-Dialogue Boxes/Boom Out (24x8).png
+  artifactKey: Guid(9967b13697dcee14ea95f6f783f0bc8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/13-Dialogue Boxes/Boom Out (24x8).png using Guid(9967b13697dcee14ea95f6f783f0bc8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c5fd78f5f060bc30071e03a7c921be3') in 0.026876 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/09-Bomb/Bomb On (52x56).png
+  artifactKey: Guid(8994996b71557f244b2c85adb78ea38b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/09-Bomb/Bomb On (52x56).png using Guid(8994996b71557f244b2c85adb78ea38b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1838a78de108952cc68e4a7788696d1a') in 0.022822 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/13-Dialogue Boxes/Dead In (24x8).png
+  artifactKey: Guid(c5ba7b178d490ef4aa3a5d6d20982b30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/13-Dialogue Boxes/Dead In (24x8).png using Guid(c5ba7b178d490ef4aa3a5d6d20982b30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '661a4d986eadb01497bbe8828f2b8729') in 0.024167 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/01-King Human/Door In (78x58).png
+  artifactKey: Guid(23dfca74fe0248441970ea4a0a29fa02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/01-King Human/Door In (78x58).png using Guid(23dfca74fe0248441970ea4a0a29fa02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94297f5b88ef42f3c58981d58ef5dc3c') in 0.026871 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/03-Pig/Dead (34x28).png
+  artifactKey: Guid(2e25e796991acb3418f6abfacb6b617e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/03-Pig/Dead (34x28).png using Guid(2e25e796991acb3418f6abfacb6b617e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5cd4eede51d5c533fd5f61d2a38534b0') in 0.020493 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/01-King Human/Fall (78x58).png
+  artifactKey: Guid(1d5fbe098de25484d844ed562d95d412) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/01-King Human/Fall (78x58).png using Guid(1d5fbe098de25484d844ed562d95d412) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6babeabd6ece31b869f3e7cb2519b83') in 0.023677 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/11-Door/Closiong (46x56).png
+  artifactKey: Guid(0c413835000ab5249834bcbe0ec7f156) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/11-Door/Closiong (46x56).png using Guid(0c413835000ab5249834bcbe0ec7f156) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e50a295068a73ca34f033144f22881e') in 0.023898 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/13-Dialogue Boxes/Hello Out (24x8).png
+  artifactKey: Guid(2ac78ae722660cf4a9b2d500131959d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/13-Dialogue Boxes/Hello Out (24x8).png using Guid(2ac78ae722660cf4a9b2d500131959d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de361743705fc9d768d97ee1723dcd73') in 0.020531 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
   Time since last request: 0.000029 seconds.
-  path: Assets/Tiles/Terrain+(32x32)_62.asset
-  artifactKey: Guid(ef64d20d8e267714baa69519a29b7deb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/Terrain+(32x32)_62.asset using Guid(ef64d20d8e267714baa69519a29b7deb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef5c93d1ce7ff89e5ade3a1b25bd18ee') in 0.016464 seconds
+  path: Assets/Sprites/Kings and Pigs/Sprites/02-King Pig/Hit (38x28).png
+  artifactKey: Guid(0a82dc7395c319349b63704340ec014e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/02-King Pig/Hit (38x28).png using Guid(0a82dc7395c319349b63704340ec014e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dedbf09461bf894cd679a2d3e4dd8388') in 0.022506 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/10-Cannon/Idle.png
+  artifactKey: Guid(cc0b67f4a04ce6f4da2fe3160104666d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/10-Cannon/Idle.png using Guid(cc0b67f4a04ce6f4da2fe3160104666d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9ce3f1d8b182731ee0d71ce414e847a') in 0.028957 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
   Time since last request: 0.000022 seconds.
-  path: Assets/Tiles/Terrain+(32x32)_43.asset
-  artifactKey: Guid(57fb1fdb91e8cf64098db8a657fcc494) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/Terrain+(32x32)_43.asset using Guid(57fb1fdb91e8cf64098db8a657fcc494) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e52034e4b3a12c04c062e6b14bf4f9c') in 0.018839 seconds
+  path: Assets/Sprites/Kings and Pigs/Sprites/03-Pig/Hit (34x28).png
+  artifactKey: Guid(fa204db45b67b3e4c8d8f22c55a03096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/03-Pig/Hit (34x28).png using Guid(fa204db45b67b3e4c8d8f22c55a03096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b826493b99164221452d6c7434feeee') in 0.030166 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/Tiles/Terrain+(32x32)_40.asset
-  artifactKey: Guid(36548316d1491c9408f717f75cb6bbe4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/Terrain+(32x32)_40.asset using Guid(36548316d1491c9408f717f75cb6bbe4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87ef6c3b7edd2215655f9e07c226179f') in 0.021946 seconds
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/12-Live and Coins/Big Heart Idle (18x14).png
+  artifactKey: Guid(9c17ed2471bc3dc4182fbacf3a05ff94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/12-Live and Coins/Big Heart Idle (18x14).png using Guid(9c17ed2471bc3dc4182fbacf3a05ff94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31ff68a2277dd36760c39a9854eecfcb') in 0.024281 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/08-Box/Idle.png
+  artifactKey: Guid(f1896e37426a6d64f8d1445e0edc0633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/08-Box/Idle.png using Guid(f1896e37426a6d64f8d1445e0edc0633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28d6f7bc0a55b8340e173a9d15c44d17') in 0.021112 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/02-King Pig/Idle (38x28).png
+  artifactKey: Guid(6eb1462affdf41c4a82170d9aca9316c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/02-King Pig/Idle (38x28).png using Guid(6eb1462affdf41c4a82170d9aca9316c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea46f6b0b2350b48622fb8b9eaab000b') in 0.020619 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/13-Dialogue Boxes/Interrogation Out (24x8).png
+  artifactKey: Guid(5525a526d3637c4478f76cb15edaa917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/13-Dialogue Boxes/Interrogation Out (24x8).png using Guid(5525a526d3637c4478f76cb15edaa917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f890e733caf3541bd4d1381a88fdf6ee') in 0.021902 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/Kings and Pigs.png
+  artifactKey: Guid(2bd3cceb4bc070346b406de469965381) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/Kings and Pigs.png using Guid(2bd3cceb4bc070346b406de469965381) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc512d8ebd70b2f5bad42afd14536b70') in 0.023384 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
   Time since last request: 0.000026 seconds.
-  path: Assets/Tiles/Terrain+(32x32)_64.asset
-  artifactKey: Guid(2fbd17f53cb72dd4ea6d3ef67924bb7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/Terrain+(32x32)_64.asset using Guid(2fbd17f53cb72dd4ea6d3ef67924bb7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e6115692ba8cca78610ec7e3e1cd015') in 0.018401 seconds
+  path: Assets/Sprites/Kings and Pigs/Sprites/06-Pig Hide in the Box/Looking Out (26x20).png
+  artifactKey: Guid(125599229c9a27045adc346e5769f96d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/06-Pig Hide in the Box/Looking Out (26x20).png using Guid(125599229c9a27045adc346e5769f96d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f12aeb80de8bf4138cc572889e94c4a') in 0.023942 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/13-Dialogue Boxes/Loser In (24x8).png
+  artifactKey: Guid(0e51535b39f6ded4194967e91ef872be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/13-Dialogue Boxes/Loser In (24x8).png using Guid(0e51535b39f6ded4194967e91ef872be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e33e8b305e309cb42cceedccd8e2de1') in 0.020227 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/11-Door/Opening (46x56).png
+  artifactKey: Guid(894bffc5d1808f64b9a0e7a954805d31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/11-Door/Opening (46x56).png using Guid(894bffc5d1808f64b9a0e7a954805d31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0274e522ddee17306c59b7299af8b999') in 0.023241 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/04-Pig Throwing a Box/Picking Box (26x30).png
+  artifactKey: Guid(74e27ca4ff9e4fb438bb3b301d7c8815) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/04-Pig Throwing a Box/Picking Box (26x30).png using Guid(74e27ca4ff9e4fb438bb3b301d7c8815) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83bf983226bbb41743a33f5ff01860ac') in 0.024657 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/04-Pig Throwing a Box/Run (26x30).png
+  artifactKey: Guid(70aba6ce8c52cc24b8b352a6175de6dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/04-Pig Throwing a Box/Run (26x30).png using Guid(70aba6ce8c52cc24b8b352a6175de6dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8f88683bbd60ba3454fc3022e1fce73') in 0.027227 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/01-King Human/Idle (78x58).png
+  artifactKey: Guid(59ccb3ffe78b7bf49a798cd68ab142ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/01-King Human/Idle (78x58).png using Guid(59ccb3ffe78b7bf49a798cd68ab142ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '051d56fd3dadc1c12aef8933d87ac7b6') in 0.023330 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/12-Live and Coins/Small Diamond (18x14).png
+  artifactKey: Guid(f9f2ee1960b97df4894a17de96704f7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/12-Live and Coins/Small Diamond (18x14).png using Guid(f9f2ee1960b97df4894a17de96704f7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54df05332eec6cacf3a5f9e4e1a354a2') in 0.030798 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/14-TileSets/Terrain (32x32).png
+  artifactKey: Guid(b0175ed9ad881ef43a5aaa34562f865e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/14-TileSets/Terrain (32x32).png using Guid(b0175ed9ad881ef43a5aaa34562f865e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17a887245830d7f41392e3642ddf2427') in 0.031145 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/10-Cannon/Cannon Ball.png
+  artifactKey: Guid(e9b0ca269cb107d4dba92154bca95390) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/10-Cannon/Cannon Ball.png using Guid(e9b0ca269cb107d4dba92154bca95390) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa01934f3f87879d864bb9bdc5278cc7') in 0.024733 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/13-Dialogue Boxes/No In (24x8).png
+  artifactKey: Guid(dd6c98036c603644ab16edc0bb12c786) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/13-Dialogue Boxes/No In (24x8).png using Guid(dd6c98036c603644ab16edc0bb12c786) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b9e94729f454b8bb17df87db544f5d1') in 0.024015 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/08-Box/Box Pieces 4.png
+  artifactKey: Guid(463413bf46cb1ff43b8216046f8ddc40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/08-Box/Box Pieces 4.png using Guid(463413bf46cb1ff43b8216046f8ddc40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69d6882aace5f48ee636a6e88c32987a') in 0.025413 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/02-King Pig/Dead (38x28).png
+  artifactKey: Guid(9119c48610b4ce74fb4f771ef7c53798) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/02-King Pig/Dead (38x28).png using Guid(9119c48610b4ce74fb4f771ef7c53798) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f1566b77d00423c02cfb1a5d64a305b') in 0.025803 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/12-Live and Coins/Live Bar.png
+  artifactKey: Guid(21e976356f4110949a2ea97fba9f9e9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/12-Live and Coins/Live Bar.png using Guid(21e976356f4110949a2ea97fba9f9e9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbd5a0bd9ec89e4f6fb929fc205ae2b0') in 0.025037 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/12-Live and Coins/Small Heart Idle (18x14).png
+  artifactKey: Guid(5e4aac937ce6a0842ad6c9d07a48472b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/12-Live and Coins/Small Heart Idle (18x14).png using Guid(5e4aac937ce6a0842ad6c9d07a48472b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '461a79e796e8440ea03661c988232c45') in 0.025869 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/13-Dialogue Boxes/Loser Out (24x8).png
+  artifactKey: Guid(7f401781339c5aa4cb90fc84313040f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/13-Dialogue Boxes/Loser Out (24x8).png using Guid(7f401781339c5aa4cb90fc84313040f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '575f6266361d804c385e35a4bb7eaa4c') in 0.023728 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/05-Pig Thowing a Bomb/Idle (26x26).png
+  artifactKey: Guid(56256bad694a83f42beebbe4aef80768) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/05-Pig Thowing a Bomb/Idle (26x26).png using Guid(56256bad694a83f42beebbe4aef80768) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84abc7c1281231578f5cf9ca80b2dce7') in 0.026259 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/02-King Pig/Run (38x28).png
+  artifactKey: Guid(845df2b3b45d5d34abd8490d7ddef5a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/02-King Pig/Run (38x28).png using Guid(845df2b3b45d5d34abd8490d7ddef5a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '875e2f74beb68fc226a29b3e6c69d369') in 0.024591 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/06-Pig Hide in the Box/Fall (26x20).png
+  artifactKey: Guid(a029e1b0cbd655546b3d6abd72f79243) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/06-Pig Hide in the Box/Fall (26x20).png using Guid(a029e1b0cbd655546b3d6abd72f79243) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58a738c8a41600d9461f96f768517e07') in 0.024150 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/06-Pig Hide in the Box/Ground (26x20).png
+  artifactKey: Guid(6a99e011d91be4f458a255a2eccc3d63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/06-Pig Hide in the Box/Ground (26x20).png using Guid(6a99e011d91be4f458a255a2eccc3d63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c29ffe0bc6055ace3614487e0692cfe0') in 0.025605 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/13-Dialogue Boxes/Hello In (24x8).png
+  artifactKey: Guid(afb8c98c5ebada94b8c3e97e5a7c911f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/13-Dialogue Boxes/Hello In (24x8).png using Guid(afb8c98c5ebada94b8c3e97e5a7c911f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e80efc06ec89e0e20d42414e46297281') in 0.023306 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.505940 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/04-Pig Throwing a Box/Throwing Box (26x30).png
+  artifactKey: Guid(d00dbbc1c4e9fbd46a25d37faa0507c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/04-Pig Throwing a Box/Throwing Box (26x30).png using Guid(d00dbbc1c4e9fbd46a25d37faa0507c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f85c0dbfd4e023c08b3321385a97d6c') in 0.031739 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprites/Kings and Pigs/Sprites/13-Dialogue Boxes/WTF Out (24x8).png
+  artifactKey: Guid(fc0f80a8ca603c841b1a535bdbb0a6e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Kings and Pigs/Sprites/13-Dialogue Boxes/WTF Out (24x8).png using Guid(fc0f80a8ca603c841b1a535bdbb0a6e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f9b9fcdc62487b8a6f960df77b91757') in 0.032434 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Internal: deleting an allocation that is older than its permitted lifetime of 4 frames (age = 12)
+Internal: deleting an allocation that is older than its permitted lifetime of 4 frames (age = 12)
+Internal: deleting an allocation that is older than its permitted lifetime of 4 frames (age = 13)
+Internal: deleting an allocation that is older than its permitted lifetime of 4 frames (age = 13)
+Internal: deleting an allocation that is older than its permitted lifetime of 4 frames (age = 14)
+Internal: deleting an allocation that is older than its permitted lifetime of 4 frames (age = 14)
+Symbol file LoadedFromMemory doesn't match image C:\Github\Unity-Projects\Castle Conquest 2D\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Github\Unity-Projects\Castle Conquest 2D\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.496 seconds
+Refreshing native plugins compatible for Editor in 5.48 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.155 seconds
+Domain Reload Profiling: 2650ms
+	BeginReloadAssembly (170ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (11ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (37ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (29ms)
+	LoadAllAssembliesAndSetupDomain (249ms)
+		LoadAssemblies (328ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (13ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (2156ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (695ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (11ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (118ms)
+			ProcessInitializeOnLoadAttributes (489ms)
+			ProcessInitializeOnLoadMethodAttributes (62ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (26ms)
+Refreshing native plugins compatible for Editor in 4.56 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3993 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 41 unused Assets / (217.1 KB). Loaded Objects now: 4546.
+Memory consumption went from 139.1 MB to 138.9 MB.
+Total: 7.325000 ms (FindLiveObjects: 0.703700 ms CreateObjectMapping: 0.204000 ms MarkObjects: 5.762100 ms  DeleteObjects: 0.652900 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Github\Unity-Projects\Castle Conquest 2D\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Github\Unity-Projects\Castle Conquest 2D\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.571 seconds
+Refreshing native plugins compatible for Editor in 3.52 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.332 seconds
+Domain Reload Profiling: 1901ms
+	BeginReloadAssembly (241ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (29ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (49ms)
+	RebuildCommonClasses (35ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (39ms)
+	LoadAllAssembliesAndSetupDomain (237ms)
+		LoadAssemblies (335ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (16ms)
+			TypeCache.Refresh (10ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (1332ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (650ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (10ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (116ms)
+			ProcessInitializeOnLoadAttributes (456ms)
+			ProcessInitializeOnLoadMethodAttributes (54ms)
+			AfterProcessingInitializeOnLoad (9ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (22ms)
+Refreshing native plugins compatible for Editor in 4.89 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3994 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 41 unused Assets / (216.8 KB). Loaded Objects now: 4550.
+Memory consumption went from 139.4 MB to 139.2 MB.
+Total: 5.434800 ms (FindLiveObjects: 0.540600 ms CreateObjectMapping: 0.196900 ms MarkObjects: 4.385200 ms  DeleteObjects: 0.309600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
