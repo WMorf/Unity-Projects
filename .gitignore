@@ -3,6 +3,9 @@
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
 Library
+Logs
+Temp
+Debug
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
@@ -71,3 +74,6 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+*.log
+*.log
+*.log
