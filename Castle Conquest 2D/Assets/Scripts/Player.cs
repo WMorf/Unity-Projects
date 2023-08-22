@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     [SerializeField] float runSpeed = 10f;
     [SerializeField] float jumpSpeed = 15f;
     [SerializeField] float climbingSpeed = 8f;
+    [SerializeField] Vector2 hitKick = new Vector2 (50f, 50f);
 
     Rigidbody2D myRigidbody2D;
     Animator myAnimator;
@@ -18,6 +19,7 @@ public class Player : MonoBehaviour
     PolygonCollider2D myPlayersFeet;
 
     float startingGravityScale;
+    bool isHurting = false;
 
     void Start()
     {
@@ -32,9 +34,35 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        Run();
-        Jump();
-        Climb();
+        if (!isHurting)
+        {
+            Run();
+            Jump();
+            Climb();
+
+            if(myBoxCollider2D.IsTouchingLayers(LayerMask.GetMask("Enemy")))
+            {
+                PlayerHit();
+            }
+
+        }
+    }
+
+    private void PlayerHit()
+    {
+        myRigidbody2D.velocity = hitKick * new Vector2(-transform.lossyScale.x, 1f);
+
+        myAnimator.SetTrigger("Hitting");
+        isHurting = true;
+
+        StartCoroutine(StopHurting());
+    }
+
+    IEnumerator StopHurting()
+    {
+        yield return new WaitForSeconds(2f);
+
+        isHurting = false;
     }
 
     private void Climb()
