@@ -9,16 +9,40 @@ public class Enemy : MonoBehaviour
     [SerializeField] float enemyRunSpeed = 5f;
 
     Rigidbody2D enemyRigidBody;
+    Animator enemyAnimator;
 
 
     void Start()
     {
-        enemyRigidBody = GetComponent<Rigidbody2D>();    
+        enemyRigidBody = GetComponent<Rigidbody2D>();
+        enemyAnimator = GetComponent<Animator>();
     }
 
     void Update()
     {
-        if(IsFacingLeft())
+        EnemyMovement();
+    }
+
+    public void Dying()
+    {
+        enemyAnimator.SetTrigger("Die");
+        GetComponent<CapsuleCollider2D>().enabled = false;
+        GetComponent<BoxCollider2D>().enabled = false;
+        enemyRigidBody.bodyType = RigidbodyType2D.Static;
+
+        StartCoroutine(DestroyEnemy());
+    }
+
+    IEnumerator DestroyEnemy()
+    {
+        yield return new WaitForSeconds(2);
+
+        Destroy(gameObject);
+    }
+
+    private void EnemyMovement()
+    {
+        if (IsFacingLeft())
         {
             enemyRigidBody.velocity = new Vector2(-enemyRunSpeed, 0f);
         }
@@ -26,7 +50,6 @@ public class Enemy : MonoBehaviour
         {
             enemyRigidBody.velocity = new Vector2(enemyRunSpeed, 0f);
         }
-        
     }
 
     private void OnTriggerExit2D(Collider2D collision)

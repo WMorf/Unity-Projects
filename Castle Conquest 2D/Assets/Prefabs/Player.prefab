@@ -9,12 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 117328234756780279}
+  - component: {fileID: -1029437232983211208}
   - component: {fileID: 4899587212377711436}
   - component: {fileID: 5538711533297909551}
   - component: {fileID: -2817692824299877453}
   - component: {fileID: 2584052253657139905}
   - component: {fileID: 2444583948602779016}
-  - component: {fileID: -1029437232983211208}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -34,9 +34,28 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 3457030149682142938}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-1029437232983211208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3044568870378975271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4bb9bbeb03724d4fb82ee665b7a7338, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runSpeed: 10
+  jumpSpeed: 40
+  climbingSpeed: 8
+  attackRadius: 1.05
+  hitKick: {x: 50, y: 50}
+  hurtBox: {fileID: 3457030149682142938}
 --- !u!212 &4899587212377711436
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -76,7 +95,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1676536737
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 1927532083, guid: bbf8e6754f94ec84fa9b7373f14a5dec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -231,18 +250,34 @@ PolygonCollider2D:
       - {x: -0.20178938, y: -0.53267443}
       - {x: 0.3446631, y: -0.5320127}
   m_UseDelaunayMesh: 0
---- !u!114 &-1029437232983211208
-MonoBehaviour:
+--- !u!1 &6608132154911857825
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3044568870378975271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4bb9bbeb03724d4fb82ee665b7a7338, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  runSpeed: 10
-  jumpSpeed: 50
-  climbingSpeed: 8
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3457030149682142938}
+  m_Layer: 0
+  m_Name: Hurt Box
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3457030149682142938
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6608132154911857825}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.523, y: 0.063, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 117328234756780279}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
