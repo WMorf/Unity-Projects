@@ -87,6 +87,8 @@ public class Player : MonoBehaviour
         myAnimator.SetTrigger("Hitting");
         isHurting = true;
 
+        FindAnyObjectByType<GameSession>().ProccessPlayerDeath();
+
         StartCoroutine(StopHurting());
     }
 
