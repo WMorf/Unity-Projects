@@ -53,7 +53,7 @@ MonoBehaviour:
   runSpeed: 10
   jumpSpeed: 40
   climbingSpeed: 8
-  attackRadius: 1.05
+  attackRadius: 1.15
   hitKick: {x: 50, y: 50}
   hurtBox: {fileID: 3457030149682142938}
 --- !u!212 &4899587212377711436
@@ -275,7 +275,7 @@ Transform:
   m_GameObject: {fileID: 6608132154911857825}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.523, y: 0.063, z: 0}
+  m_LocalPosition: {x: 0.601, y: 0.063, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

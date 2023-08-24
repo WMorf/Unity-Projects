@@ -17,7 +17,7 @@ TagManager:
   - World Confiner
   - Enemy
   - Bomb
-  - 
+  - Interact
   - 
   - 
   - 
@@ -52,6 +52,9 @@ TagManager:
     locked: 0
   - name: Enemy
     uniqueID: 934831379
+    locked: 0
+  - name: Interact
+    uniqueID: 883356287
     locked: 0
   - name: Player
     uniqueID: 2618430559
