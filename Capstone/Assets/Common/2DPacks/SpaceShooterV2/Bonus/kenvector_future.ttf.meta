@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: a543763051f3e0640ade1477d9581acf
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - KenVector Future
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 8c92da74a2eb0e641a3c13e653fb4f52, type: 3}
+  - {fileID: 12800000, guid: f20d7e709207fe04a814ddfcf2896bc1, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
