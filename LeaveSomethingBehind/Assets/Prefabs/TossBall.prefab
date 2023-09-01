@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2014042401280008172}
   - component: {fileID: 5536860105919318332}
   - component: {fileID: 6329358269191260389}
+  - component: {fileID: 7549428615686671786}
   m_Layer: 0
   m_Name: TossBall
   m_TagString: Untagged
@@ -71,6 +72,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.15
+--- !u!114 &7549428615686671786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3324840835558318520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b29f7dbfa74056640b9428ba9cb990c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emission: {fileID: 6321098085206527546, guid: b337bbf9f9506de40a9c47fff969f536, type: 3}
 --- !u!1 &8519758283900716603
 GameObject:
   m_ObjectHideFlags: 0
