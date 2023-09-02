@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
 
     [Header("Objects")]
     public GameObject tossBall;
+    public GameObject firePoint;
 
     [Header("Components")]
     Rigidbody2D myRigidbody2D;
@@ -37,7 +38,17 @@ public class Player : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Q)) 
         {
-            GameObject activeBall = Instantiate<GameObject>(tossBall, transform.position, Quaternion.identity);
+            GameObject activeBall = Instantiate<GameObject>(tossBall, firePoint.transform.position, Quaternion.identity);
+            
+            if(transform.localScale.x > 0)
+            {
+                activeBall.GetComponent<Rigidbody2D>().AddForce(transform.right * 1000f);
+            }
+            else
+            {
+                activeBall.GetComponent<Rigidbody2D>().AddForce(-transform.right * 1000f);
+            }
+            
         }
     }
 
@@ -47,7 +58,19 @@ public class Player : MonoBehaviour
 
         Vector2 playerVelocity = new Vector2(controlThrow * runSpeed, myRigidbody2D.velocity.y);
         myRigidbody2D.velocity = playerVelocity;
+
+        FlipSprite();
     }
 
-    
+    private void FlipSprite()
+    {
+        bool runningHorizontaly = Mathf.Abs(myRigidbody2D.velocity.x) > Mathf.Epsilon;
+
+        if (runningHorizontaly)
+        {
+            transform.localScale = new Vector2(Mathf.Sign(myRigidbody2D.velocity.x), 1f);
+        }
+    }
+
+
 }
