@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,9 @@ public class Player : MonoBehaviour
     [Header("Movement")]
     public float runSpeed = 1f;
     public float jumpSpeed = 1f;
+
+    [Header("Objects")]
+    public GameObject tossBall;
 
     [Header("Components")]
     Rigidbody2D myRigidbody2D;
@@ -26,6 +30,15 @@ public class Player : MonoBehaviour
     {
         Run();
         //Jump();
+        Toss();
+    }
+
+    private void Toss()
+    {
+        if(Input.GetKeyDown(KeyCode.Q)) 
+        {
+            GameObject activeBall = Instantiate<GameObject>(tossBall, transform.position, Quaternion.identity);
+        }
     }
 
     private void Run()
@@ -35,4 +48,6 @@ public class Player : MonoBehaviour
         Vector2 playerVelocity = new Vector2(controlThrow * runSpeed, myRigidbody2D.velocity.y);
         myRigidbody2D.velocity = playerVelocity;
     }
+
+    
 }
