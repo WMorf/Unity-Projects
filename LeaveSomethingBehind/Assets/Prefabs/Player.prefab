@@ -591,8 +591,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runSpeed: 5
   jumpSpeed: 5
-  tossBall: {fileID: 3324840835558318520, guid: add9eda58c478684397ea57fd9cd57b0, type: 3}
+  rubberBall: {fileID: 3324840835558318520, guid: add9eda58c478684397ea57fd9cd57b0, type: 3}
+  metalBall: {fileID: 3324840835558318520, guid: cf5b4ffef1d362f46b6e9885ee7a23e0, type: 3}
+  currentBall: {fileID: 0}
   firePoint: {fileID: 1756616462351510902}
+  sparks: {fileID: 6321098085206527546, guid: c3a21cb089376644397be6c0fcc987da, type: 3}
 --- !u!50 &9088307701233817589
 Rigidbody2D:
   serializedVersion: 4

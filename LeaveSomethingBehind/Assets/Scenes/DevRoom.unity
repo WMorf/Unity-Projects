@@ -1170,6 +1170,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7277972017029415851, guid: c6c27377af5700141a5df4562be0e564, type: 3}
+      propertyPath: m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7277972017029415851, guid: c6c27377af5700141a5df4562be0e564, type: 3}
+      propertyPath: m_Range
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7277972017029415851, guid: c6c27377af5700141a5df4562be0e564, type: 3}
+      propertyPath: m_Intensity
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7277972017029415851, guid: c6c27377af5700141a5df4562be0e564, type: 3}
+      propertyPath: m_CookieSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7277972017029415851, guid: c6c27377af5700141a5df4562be0e564, type: 3}
+      propertyPath: m_BounceIntensity
+      value: 0.15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6c27377af5700141a5df4562be0e564, type: 3}
 --- !u!1 &1769787363

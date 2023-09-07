@@ -10,8 +10,13 @@ public class Player : MonoBehaviour
     public float jumpSpeed = 1f;
 
     [Header("Objects")]
-    public GameObject tossBall;
+    public GameObject rubberBall;
+    public GameObject metalBall;
+    public GameObject currentBall;
     public GameObject firePoint;
+
+    [Header("FX")]
+    public GameObject sparks;
 
     [Header("Components")]
     Rigidbody2D myRigidbody2D;
@@ -25,22 +30,40 @@ public class Player : MonoBehaviour
         myAnimator = GetComponent<Animator>();
         myBoxCollider2D = GetComponent<BoxCollider2D>();
         startingGravity = myRigidbody2D.gravityScale;
+
     }
 
     void Update()
     {
         Run();
         //Jump();
-        Toss();
+
+        BallType();
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Toss();
+        }
+    }
+
+    private void BallType()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            currentBall = rubberBall;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            currentBall = metalBall;
+        }
     }
 
     private void Toss()
     {
-        if(Input.GetKeyDown(KeyCode.Q)) 
+        if(currentBall.gameObject != null) 
         {
-            GameObject activeBall = Instantiate<GameObject>(tossBall, firePoint.transform.position, Quaternion.identity);
-            
-            if(transform.localScale.x > 0)
+            GameObject activeBall = Instantiate<GameObject>(currentBall, firePoint.transform.position, Quaternion.identity);
+
+            if (transform.localScale.x > 0)
             {
                 activeBall.GetComponent<Rigidbody2D>().AddForce(transform.right * 1000f);
             }
@@ -48,9 +71,14 @@ public class Player : MonoBehaviour
             {
                 activeBall.GetComponent<Rigidbody2D>().AddForce(-transform.right * 1000f);
             }
-            
         }
+        else
+        {
+            Instantiate<GameObject>(sparks, firePoint.transform.position, Quaternion.identity);
+        }
+
     }
+
 
     private void Run()
     {
