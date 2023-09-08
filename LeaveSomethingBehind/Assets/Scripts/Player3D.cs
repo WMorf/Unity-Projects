@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player3D : MonoBehaviour
 {
     [Header("Movement")]
     public float runSpeed = 1f;
@@ -87,18 +87,10 @@ public class Player : MonoBehaviour
         Vector2 playerVelocity = new Vector2(controlThrow * runSpeed, myRigidbody2D.velocity.y);
         myRigidbody2D.velocity = playerVelocity;
 
-        FlipSprite();
     }
 
-    private void FlipSprite()
-    {
-        bool runningHorizontaly = Mathf.Abs(myRigidbody2D.velocity.x) > Mathf.Epsilon;
 
-        if (runningHorizontaly)
-        {
-            transform.localScale = new Vector2(Mathf.Sign(myRigidbody2D.velocity.x), 1f);
-        }
-    }
+
 
 
 }
