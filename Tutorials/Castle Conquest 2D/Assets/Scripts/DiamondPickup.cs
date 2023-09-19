@@ -1,0 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.Xml.Serialization;
+using UnityEngine;
+
+public class DiamondPickup : MonoBehaviour
+{
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Destroy(gameObject);
+    }
+}
