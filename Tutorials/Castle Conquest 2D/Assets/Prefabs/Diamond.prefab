@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b47b3b00ac304af488c19a14ad0e41ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  diamondValue: 100
   diamondPickupSFX: {fileID: 8300000, guid: ed65953fe2c78824191525440fe7d454, type: 3}
 --- !u!212 &-8975426535372056261
 SpriteRenderer:
