@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e42edf359f403c4e9c96f241958bad7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  heartPickupSFX: {fileID: 8300000, guid: 37f327bd04e3c394088ddf0e92bd3c36, type: 3}
 --- !u!212 &-8975426535372056261
 SpriteRenderer:
   m_ObjectHideFlags: 0
