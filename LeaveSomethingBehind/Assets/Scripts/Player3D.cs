@@ -19,17 +19,17 @@ public class Player3D : MonoBehaviour
     public GameObject sparks;
 
     [Header("Components")]
-    Rigidbody2D myRigidbody2D;
-    float startingGravity;
+    Rigidbody myRigidbody;
+    //float startingGravity;
     Animator myAnimator;
-    BoxCollider2D myBoxCollider2D;
+    BoxCollider myBoxCollider;
 
     void Start()
     {
-        myRigidbody2D = GetComponent<Rigidbody2D>();
+        myRigidbody = GetComponent<Rigidbody>();
         myAnimator = GetComponent<Animator>();
-        myBoxCollider2D = GetComponent<BoxCollider2D>();
-        startingGravity = myRigidbody2D.gravityScale;
+        myBoxCollider = GetComponent<BoxCollider>();
+        //startingGravity = myRigidbody.;
 
     }
 
@@ -65,11 +65,11 @@ public class Player3D : MonoBehaviour
 
             if (transform.localScale.x > 0)
             {
-                activeBall.GetComponent<Rigidbody2D>().AddForce(transform.right * 1000f);
+                activeBall.GetComponent<Rigidbody>().AddForce(transform.right * 1000f);
             }
             else
             {
-                activeBall.GetComponent<Rigidbody2D>().AddForce(-transform.right * 1000f);
+                activeBall.GetComponent<Rigidbody>().AddForce(-transform.right * 1000f);
             }
         }
         else
@@ -84,8 +84,8 @@ public class Player3D : MonoBehaviour
     {
         float controlThrow = Input.GetAxis("Horizontal");
 
-        Vector2 playerVelocity = new Vector2(controlThrow * runSpeed, myRigidbody2D.velocity.y);
-        myRigidbody2D.velocity = playerVelocity;
+        Vector2 playerVelocity = new Vector2(controlThrow * runSpeed, myRigidbody.velocity.y);
+        myRigidbody.velocity = playerVelocity;
 
     }
 
