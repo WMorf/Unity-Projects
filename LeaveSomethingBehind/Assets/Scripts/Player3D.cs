@@ -8,6 +8,7 @@ public class Player3D : MonoBehaviour
     [Header("Movement")]
     public float runSpeed = 1f;
     public float jumpSpeed = 1f;
+    //private float lastThrow;
 
     [Header("Objects")]
     public GameObject rubberBall;
@@ -31,12 +32,23 @@ public class Player3D : MonoBehaviour
         myBoxCollider = GetComponent<BoxCollider>();
         //startingGravity = myRigidbody.;
 
+
     }
 
     void Update()
     {
         Run();
         //Jump();
+
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            //transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+
+        //if (Input.GetKeyDown(KeyCode.A))
+        //{
+        //    transform.rotation = Quaternion.Euler(0, -180, 0);
+        //}
 
         BallType();
         if (Input.GetKeyDown(KeyCode.Q))
@@ -87,10 +99,7 @@ public class Player3D : MonoBehaviour
         Vector2 playerVelocity = new Vector2(controlThrow * runSpeed, myRigidbody.velocity.y);
         myRigidbody.velocity = playerVelocity;
 
+
     }
-
-
-
-
 
 }
