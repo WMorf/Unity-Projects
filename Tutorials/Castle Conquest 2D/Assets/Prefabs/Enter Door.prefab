@@ -119,3 +119,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64f8d63614fea3540b6621fd90572217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  openingDoorSFX: {fileID: 8300000, guid: 55df908dc04a3754da0e05f840a284e6, type: 3}
+  closingDoorSFX: {fileID: 8300000, guid: 3bada0253bf87ff48832012f2cddcb9d, type: 3}

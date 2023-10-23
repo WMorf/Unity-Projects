@@ -7,9 +7,13 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] float enemyRunSpeed = 5f;
+    [SerializeField] bool dead = false; //Added to remove "velocity" warning in console
+
+    [SerializeField] AudioClip dyingSFX;
 
     Rigidbody2D enemyRigidBody;
     Animator enemyAnimator;
+
 
 
     void Start()
@@ -20,11 +24,15 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        EnemyMovement();
+        if (!dead) //Added to remove "velocity" warning in console
+        {
+            EnemyMovement();
+        }
     }
 
     public void Dying()
     {
+        dead = true; //Added to remove "velocity" warning in console
         enemyAnimator.SetTrigger("Die");
         GetComponent<CapsuleCollider2D>().enabled = false;
         GetComponent<BoxCollider2D>().enabled = false;
@@ -65,5 +73,10 @@ public class Enemy : MonoBehaviour
     private bool IsFacingLeft()
     {
         return transform.localScale.x > 0;
+    }
+
+    void EnemyDyingSFX()
+    {
+        AudioSource.PlayClipAtPoint(dyingSFX, Camera.main.transform.position);
     }
 }

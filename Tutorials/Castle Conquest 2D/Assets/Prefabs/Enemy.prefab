@@ -185,6 +185,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyRunSpeed: 5
+  dead: 0
+  dyingSFX: {fileID: 8300000, guid: b1021a3a643b48b4c8e87cf192ded0f6, type: 3}
 --- !u!61 &3758665203873847929
 BoxCollider2D:
   m_ObjectHideFlags: 0
