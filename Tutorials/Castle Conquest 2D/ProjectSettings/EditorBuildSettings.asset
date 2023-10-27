@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Success Level.unity
     guid: f57042469108f144898dba5f944db061
+  - enabled: 1
+    path: Assets/Scenes/DevLevel.unity
+    guid: a040ef8e5a816e6429e7d15fc2c694bf
   m_configObjects: {}
