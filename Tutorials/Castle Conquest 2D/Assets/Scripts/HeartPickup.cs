@@ -8,8 +8,12 @@ public class HeartPickup : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        AudioSource.PlayClipAtPoint(heartPickupSFX, Camera.main.transform.position);
-        FindObjectOfType<GameSession>().AddToLives();
-        Destroy(gameObject);
+        if(collision.GetType() == typeof(BoxCollider2D)) // Added to prevent double pickups
+        {
+            AudioSource.PlayClipAtPoint(heartPickupSFX, Camera.main.transform.position);
+            FindObjectOfType<GameSession>().AddToLives();
+            Destroy(gameObject);
+        }
+
     }
 }

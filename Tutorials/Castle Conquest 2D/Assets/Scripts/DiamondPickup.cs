@@ -10,8 +10,11 @@ public class DiamondPickup : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        AudioSource.PlayClipAtPoint(diamondPickupSFX, Camera.main.transform.position);
-        FindObjectOfType<GameSession>().AddToScore(diamondValue);
-        Destroy(gameObject);
+        if (collision.GetType() == typeof(BoxCollider2D)) // Added to prevent double pickups
+        {
+            AudioSource.PlayClipAtPoint(diamondPickupSFX, Camera.main.transform.position);
+            FindObjectOfType<GameSession>().AddToScore(diamondValue);
+            Destroy(gameObject);
+        }
     }
 }
