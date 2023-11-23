@@ -1,11 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class bSpawnCollide : MonoBehaviour
 {
     [SerializeField] bool N, S, E, W;
     [SerializeField] bSpawnCheck SpawnCheck;
+
+    private void Awake()
+    {
+        SpawnCheck = FindAnyObjectByType(typeof(Canvas)).GetComponent<bSpawnCheck>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

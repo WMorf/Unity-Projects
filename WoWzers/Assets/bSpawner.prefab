@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2386627317355390860}
   - component: {fileID: -4921473068619850400}
+  - component: {fileID: 4070169491728662897}
   m_Layer: 3
-  m_Name: Spawner
+  m_Name: bSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88,6 +89,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4070169491728662897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391316392228179240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa0f0bd9bbb36bc46aad3b41e8eba18c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnCheck: {fileID: 0}
+  N: {fileID: 7261012793487427130}
+  S: {fileID: 5841502734040134370}
+  E: {fileID: 8722943638305340994}
+  W: {fileID: 4071631115101115775}
+  mob: {fileID: 7598050823209021970, guid: a99c5ad7b351f074aa6eba97c14f6053, type: 3}
+  spawnedMobs: []
+  popMax: 5
+  popCurrent: 0
 --- !u!1 &4071631115101115775
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,6 +121,7 @@ GameObject:
   - component: {fileID: 8588395515173713090}
   - component: {fileID: 8284551963541531475}
   - component: {fileID: 3501884987332124893}
+  - component: {fileID: 3024347621479398756}
   m_Layer: 3
   m_Name: Spawn Point W
   m_TagString: Untagged
@@ -218,6 +241,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &3024347621479398756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4071631115101115775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d201801d5c2d57e499037f4e39636d54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  N: 0
+  S: 0
+  E: 0
+  W: 1
+  SpawnCheck: {fileID: 0}
 --- !u!1 &5841502734040134370
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,6 +269,7 @@ GameObject:
   - component: {fileID: 1956257082407713335}
   - component: {fileID: 4426386591703940417}
   - component: {fileID: 8474885211127276034}
+  - component: {fileID: 8667138991116615470}
   m_Layer: 3
   m_Name: Spawn Point S
   m_TagString: Untagged
@@ -348,6 +389,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8667138991116615470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5841502734040134370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d201801d5c2d57e499037f4e39636d54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  N: 0
+  S: 1
+  E: 0
+  W: 0
+  SpawnCheck: {fileID: 0}
 --- !u!1 &7261012793487427130
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,6 +417,7 @@ GameObject:
   - component: {fileID: 1433248650183892861}
   - component: {fileID: 8927107991600983931}
   - component: {fileID: 8505362961383209496}
+  - component: {fileID: 482956768629046192}
   m_Layer: 3
   m_Name: Spawn Point N
   m_TagString: Untagged
@@ -478,6 +537,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &482956768629046192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7261012793487427130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d201801d5c2d57e499037f4e39636d54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  N: 1
+  S: 0
+  E: 0
+  W: 0
+  SpawnCheck: {fileID: 0}
 --- !u!1 &8722943638305340994
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,6 +565,7 @@ GameObject:
   - component: {fileID: 7754892439481050437}
   - component: {fileID: 3449370990722340980}
   - component: {fileID: 649101012600590654}
+  - component: {fileID: 1257950563635996240}
   m_Layer: 3
   m_Name: Spawn Point E
   m_TagString: Untagged
@@ -608,3 +685,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1257950563635996240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8722943638305340994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d201801d5c2d57e499037f4e39636d54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  N: 0
+  S: 0
+  E: 1
+  W: 0
+  SpawnCheck: {fileID: 0}

@@ -93,12 +93,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7255084065853425042}
+  - component: {fileID: 4051154654931322280}
   - component: {fileID: 9152542969221601300}
   - component: {fileID: 5451663539895659657}
-  - component: {fileID: 4051154654931322280}
   m_Layer: 0
-  m_Name: Mob
-  m_TagString: Untagged
+  m_Name: bMob
+  m_TagString: Mob
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,6 +119,22 @@ Transform:
   - {fileID: 6988359235497073898}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4051154654931322280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7598050823209021970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3bb84e25be105a44a89a7a157fa3966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  spawner: {fileID: 0}
+  lifeTime: 0
+  nest: {fileID: 1391316392228179240, guid: cc8ca07c03738c14bb107af880521d67, type: 3}
 --- !u!61 &9152542969221601300
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -191,16 +207,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4051154654931322280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7598050823209021970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3bb84e25be105a44a89a7a157fa3966, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
