@@ -13,7 +13,9 @@ public class bMob : MonoBehaviour
     public bSpawner spawner;
     public int rewardScore;
 
-    public float lifeTime;
+    public bool shouldNest;
+
+    public float lifeTime, maxLifeTime, maxTimeVariation;
     public float moveDelay;
     public Vector2 newDirection;
 
@@ -26,6 +28,7 @@ public class bMob : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         SpawnCheck = FindAnyObjectByType(typeof(Canvas)).GetComponent<bSpawnCheck>();
         StartCoroutine(Shift());
+        maxLifeTime = Random.Range(maxLifeTime, maxLifeTime + maxTimeVariation);
     }
 
     void Update()
@@ -36,9 +39,14 @@ public class bMob : MonoBehaviour
         rb.velocity = newDirection * speed;
 
 
-        if (rewardScore > 10)
+        if (rewardScore >= 10 && shouldNest )
         {
             Instantiate(nest, transform.position, transform.rotation);
+            GameObject.Destroy(gameObject);
+        }
+
+        if (lifeTime > maxLifeTime)
+        {
             GameObject.Destroy(gameObject);
         }
     }

@@ -134,7 +134,10 @@ MonoBehaviour:
   speed: 5
   spawner: {fileID: 0}
   rewardScore: 0
+  shouldNest: 1
   lifeTime: 0
+  maxLifeTime: 20
+  maxTimeVariation: 5
   moveDelay: 1
   newDirection: {x: 0, y: 0}
   nest: {fileID: 1391316392228179240, guid: cc8ca07c03738c14bb107af880521d67, type: 3}
