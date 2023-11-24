@@ -10,64 +10,74 @@ public class bSpawner : MonoBehaviour
     public GameObject mob;
     public List<GameObject> spawnedMobs;
     public int popMax, popCurrent;
+    public float spawnDelay = 1f;
 
     private void Awake()
     {
         SpawnCheck = FindAnyObjectByType(typeof(Canvas)).GetComponent<bSpawnCheck>();
+        StartCoroutine(Spawn());
     }
 
     // Update is called once per frame
     void Update()
     {
-        SpawnMob();
+        //if (popCurrent < popMax)
+        //{
+        //    StartCoroutine(Spawn());
+        //}
     }
 
-    private void SpawnMob()
+    IEnumerator Spawn()
     {
-        if (popCurrent < popMax)
+        while (true)
         {
-            int rand = Random.Range(1, 4);
+            if (popCurrent < popMax)
+            {
+                int rand = Random.Range(1, 4);
 
-            if (rand == 1)
-            {
-                if (SpawnCheck.pointN == 0)
+                if (rand == 1)
                 {
-                    GameObject spawnedMob = Instantiate(mob, N.transform.position, transform.rotation);
-                    spawnedMob.GetComponent<bMob>().spawner = this;
-                    popCurrent++;
-                    SpawnCheck.spawnCount++;
+                    if (SpawnCheck.pointN == 0)
+                    {
+                        GameObject spawnedMob = Instantiate(mob, N.transform.position, transform.rotation);
+                        spawnedMob.GetComponent<bMob>().spawner = this;
+                        popCurrent++;
+                        SpawnCheck.spawnCount++;
+                    }
                 }
-            }
-            if (rand == 2)
-            {
-                if (SpawnCheck.pointS == 0)
+                if (rand == 2)
                 {
-                    GameObject spawnedMob = Instantiate(mob, S.transform.position, transform.rotation);
-                    spawnedMob.GetComponent<bMob>().spawner = this;
-                    popCurrent++;
-                    SpawnCheck.spawnCount++;
+                    if (SpawnCheck.pointS == 0)
+                    {
+                        GameObject spawnedMob = Instantiate(mob, S.transform.position, transform.rotation);
+                        spawnedMob.GetComponent<bMob>().spawner = this;
+                        popCurrent++;
+                        SpawnCheck.spawnCount++;
+                    }
                 }
-            }
-            if (rand == 3)
-            {
-                if (SpawnCheck.pointE == 0)
+                if (rand == 3)
                 {
-                    GameObject spawnedMob = Instantiate(mob, E.transform.position, transform.rotation);
-                    spawnedMob.GetComponent<bMob>().spawner = this;
-                    popCurrent++;
-                    SpawnCheck.spawnCount++;
+                    if (SpawnCheck.pointE == 0)
+                    {
+                        GameObject spawnedMob = Instantiate(mob, E.transform.position, transform.rotation);
+                        spawnedMob.GetComponent<bMob>().spawner = this;
+                        popCurrent++;
+                        SpawnCheck.spawnCount++;
+                    }
                 }
-            }
-            if (rand == 4)
-            {
-                if (SpawnCheck.pointW == 0)
+                if (rand == 4)
                 {
-                    GameObject spawnedMob = Instantiate(mob, W.transform.position, transform.rotation);
-                    spawnedMob.GetComponent<bMob>().spawner = this;
-                    popCurrent++;
-                    SpawnCheck.spawnCount++;
+                    if (SpawnCheck.pointW == 0)
+                    {
+                        GameObject spawnedMob = Instantiate(mob, W.transform.position, transform.rotation);
+                        spawnedMob.GetComponent<bMob>().spawner = this;
+                        popCurrent++;
+                        SpawnCheck.spawnCount++;
+                    }
                 }
+                yield return new WaitForSeconds(spawnDelay);
             }
+            yield return new WaitForSeconds(spawnDelay);
         }
     }
 }

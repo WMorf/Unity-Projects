@@ -110,6 +110,7 @@ MonoBehaviour:
   spawnedMobs: []
   popMax: 5
   popCurrent: 0
+  spawnDelay: 1
 --- !u!1 &4071631115101115775
 GameObject:
   m_ObjectHideFlags: 0
