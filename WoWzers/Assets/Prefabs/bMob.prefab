@@ -131,14 +131,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3bb84e25be105a44a89a7a157fa3966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 3
   spawner: {fileID: 0}
   rewardScore: 0
+  baseReward: 2
   shouldNest: 1
   lifeTime: 0
   maxLifeTime: 20
   maxTimeVariation: 5
-  moveDelay: 1
+  moveDelay: 2
   newDirection: {x: 0, y: 0}
   nest: {fileID: 1391316392228179240, guid: cc8ca07c03738c14bb107af880521d67, type: 3}
   SpawnCheck: {fileID: 0}

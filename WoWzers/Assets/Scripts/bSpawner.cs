@@ -11,6 +11,7 @@ public class bSpawner : MonoBehaviour
     public List<GameObject> spawnedMobs;
     public int popMax, popCurrent;
     public float spawnDelay = 1f;
+    public bool shouldSpawn;
 
     private void Awake()
     {
@@ -31,7 +32,7 @@ public class bSpawner : MonoBehaviour
     {
         while (true)
         {
-            if (popCurrent < popMax)
+            if (popCurrent < popMax && shouldSpawn)
             {
                 int rand = Random.Range(1, 4);
 

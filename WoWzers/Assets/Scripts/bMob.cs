@@ -12,6 +12,7 @@ public class bMob : MonoBehaviour
     public float speed = 5f;
     public bSpawner spawner;
     public int rewardScore;
+    public int baseReward;
 
     public bool shouldNest;
 

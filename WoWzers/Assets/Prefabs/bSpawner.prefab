@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2386627317355390860}
-  - component: {fileID: -4921473068619850400}
   - component: {fileID: 4070169491728662897}
+  - component: {fileID: -4921473068619850400}
   m_Layer: 3
   m_Name: bSpawner
   m_TagString: Untagged
@@ -37,6 +37,29 @@ Transform:
   - {fileID: 1433248650183892861}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4070169491728662897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391316392228179240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa0f0bd9bbb36bc46aad3b41e8eba18c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnCheck: {fileID: 0}
+  N: {fileID: 7261012793487427130}
+  S: {fileID: 5841502734040134370}
+  E: {fileID: 8722943638305340994}
+  W: {fileID: 4071631115101115775}
+  mob: {fileID: 7598050823209021970, guid: a99c5ad7b351f074aa6eba97c14f6053, type: 3}
+  spawnedMobs: []
+  popMax: 10
+  popCurrent: 0
+  spawnDelay: 5
+  shouldSpawn: 1
 --- !u!212 &-4921473068619850400
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -89,28 +112,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4070169491728662897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1391316392228179240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa0f0bd9bbb36bc46aad3b41e8eba18c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpawnCheck: {fileID: 0}
-  N: {fileID: 7261012793487427130}
-  S: {fileID: 5841502734040134370}
-  E: {fileID: 8722943638305340994}
-  W: {fileID: 4071631115101115775}
-  mob: {fileID: 7598050823209021970, guid: a99c5ad7b351f074aa6eba97c14f6053, type: 3}
-  spawnedMobs: []
-  popMax: 5
-  popCurrent: 0
-  spawnDelay: 1
 --- !u!1 &4071631115101115775
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,16 +7,15 @@ public class bPlayer : MonoBehaviour
     public float speed = 5.0f;
     private Rigidbody2D rb;
 
-    void
+    public int rewardScore { get; set; }
 
-    Start()
+    void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void
 
-    Update()
+    void Update()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
@@ -27,8 +26,11 @@ public class bPlayer : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Mob")
+        GameObject mob = collision.gameObject;
+        if (mob.tag == "Mob")
         {
+            this.rewardScore += mob.GetComponent<bMob>().rewardScore + mob.GetComponent<bMob>().baseReward;
+            print(this.rewardScore);
             Destroy(collision.gameObject);
         }
     }
