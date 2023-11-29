@@ -6,6 +6,7 @@ using UnityEngine;
 public class bSpawner : MonoBehaviour
 {
     public bSpawnCheck SpawnCheck;
+    public bPopManager PopManager;
     public GameObject N, S, E, W;
     public GameObject mob;
     public List<GameObject> spawnedMobs;
@@ -16,6 +17,8 @@ public class bSpawner : MonoBehaviour
     private void Awake()
     {
         SpawnCheck = FindAnyObjectByType(typeof(Canvas)).GetComponent<bSpawnCheck>();
+        PopManager = FindAnyObjectByType<bPopManager>();
+        PopManager.mobSpawners.Add(gameObject);
         StartCoroutine(Spawn());
     }
 

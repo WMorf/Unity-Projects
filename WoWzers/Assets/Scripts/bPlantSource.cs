@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class bPlantSource : MonoBehaviour
 {
+    public bPopManager PopManager;
     public float spawnInterval;
     public float spawnRange;
     public int popMax, popCurrent;
@@ -15,6 +16,8 @@ public class bPlantSource : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PopManager = FindAnyObjectByType<bPopManager>();
+        PopManager.plantSpawners.Add(gameObject);
         StartCoroutine(SpawnPlant());
     }
 
