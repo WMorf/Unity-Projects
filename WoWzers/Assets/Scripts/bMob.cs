@@ -9,7 +9,7 @@ public class bMob : MonoBehaviour
     private Rigidbody2D rb;
 
     // Movement speed
-    public float speed = 5f;
+    public float speed =2f, currentSpeed;
     public bSpawner spawner;
     public int rewardScore;
     public int baseReward;
@@ -28,8 +28,9 @@ public class bMob : MonoBehaviour
         // Get the Rigidbody2D component
         rb = GetComponent<Rigidbody2D>();
         SpawnCheck = FindAnyObjectByType(typeof(Canvas)).GetComponent<bSpawnCheck>();
-        StartCoroutine(Shift());
         maxLifeTime = Random.Range(maxLifeTime, maxLifeTime + maxTimeVariation);
+        currentSpeed = speed;
+        StartCoroutine(Shift());
     }
 
     void Update()
@@ -37,10 +38,10 @@ public class bMob : MonoBehaviour
         lifeTime += Time.deltaTime;
         // Apply a random direction every frame
 
-        rb.velocity = newDirection * speed;
+        rb.velocity = newDirection * currentSpeed;
 
 
-        if (rewardScore >= 10 && shouldNest )
+        if (rewardScore >= 20 && shouldNest )
         {
             Instantiate(nest, transform.position, transform.rotation);
             GameObject.Destroy(gameObject);
@@ -54,12 +55,31 @@ public class bMob : MonoBehaviour
 
     IEnumerator Shift()
     {
-        while (true)
-        {
-            this.newDirection = Random.insideUnitCircle;
-            yield return new WaitForSeconds(moveDelay);
-        }
+        Debug.Log("Shift Start");
+        currentSpeed = speed;
+        this.newDirection = Random.insideUnitCircle;
+        //StartCoroutine(Idle());
+        yield return new WaitForSeconds(moveDelay);
+        Debug.Log("Shift End");
+        StartCoroutine(Idle());
+    }
+    //IEnumerator Shift()
+    //{
+    //    while (true)
+    //    {
+    //        this.newDirection = Random.insideUnitCircle;
+    //        yield return new WaitForSeconds(moveDelay);
+    //    }
 
+    //}
+    IEnumerator Idle()
+    {
+        
+        Debug.Log("Idle Start");
+        currentSpeed = 0f;
+        yield return new WaitForSeconds(moveDelay);
+        Debug.Log("Idle End");
+        StartCoroutine(Shift());
     }
 
     private void OnDestroy()

@@ -50,11 +50,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpawnCheck: {fileID: 0}
+  PopManager: {fileID: 0}
   N: {fileID: 7261012793487427130}
   S: {fileID: 5841502734040134370}
   E: {fileID: 8722943638305340994}
   W: {fileID: 4071631115101115775}
-  mob: {fileID: 7598050823209021970, guid: a99c5ad7b351f074aa6eba97c14f6053, type: 3}
+  mob: {fileID: 7598050823209021970, guid: 49ab80c52c017fa408f444c4efeee64b, type: 3}
   spawnedMobs: []
   popMax: 10
   popCurrent: 0

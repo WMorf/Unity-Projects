@@ -77,3 +77,4 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 *.log
 LeaveSomethingBehind/UserSettings/Layouts/default-2021.dwlt
+*.dwlt
