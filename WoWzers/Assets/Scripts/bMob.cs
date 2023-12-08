@@ -20,6 +20,8 @@ public class bMob : MonoBehaviour
     public float moveDelay;
     public Vector2 newDirection;
 
+    public Animator anim;
+
     public GameObject nest;
     [SerializeField] bSpawnCheck SpawnCheck;
 
@@ -55,6 +57,7 @@ public class bMob : MonoBehaviour
 
     IEnumerator Shift()
     {
+        anim.SetBool("Moving", true);
         Debug.Log("Shift Start");
         currentSpeed = speed;
         this.newDirection = Random.insideUnitCircle;
@@ -74,7 +77,7 @@ public class bMob : MonoBehaviour
     //}
     IEnumerator Idle()
     {
-        
+        anim.SetBool("Moving", false);
         Debug.Log("Idle Start");
         currentSpeed = 0f;
         yield return new WaitForSeconds(moveDelay);
