@@ -133,6 +133,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95a97e4e9b86c454b8666ae7efae0b7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  render: {fileID: 1422522634089705511}
+  shouldMutate: 1
+  color: {r: 1, g: 0.995283, b: 0.995283, a: 0}
+  colorMutation: {r: 0, g: 0, b: 0, a: 0}
+  colorRangeMin: 0.1
+  colorRangeMax: 0.5
 --- !u!114 &4051154654931322280
 MonoBehaviour:
   m_ObjectHideFlags: 0

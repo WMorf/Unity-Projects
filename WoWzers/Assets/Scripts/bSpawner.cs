@@ -13,6 +13,7 @@ public class bSpawner : MonoBehaviour
     public int popMax, popCurrent;
     public float spawnDelay = 1f;
     public bool shouldSpawn;
+    public Color spawnColor;
 
     private void Awake()
     {
@@ -45,6 +46,7 @@ public class bSpawner : MonoBehaviour
                     {
                         GameObject spawnedMob = Instantiate(mob, N.transform.position, transform.rotation);
                         spawnedMob.GetComponent<bMob>().spawner = this;
+                        spawnedMob.GetComponentInChildren<SpriteRenderer>().color = spawnColor;
                         popCurrent++;
                         SpawnCheck.spawnCount++;
                     }
@@ -55,6 +57,7 @@ public class bSpawner : MonoBehaviour
                     {
                         GameObject spawnedMob = Instantiate(mob, S.transform.position, transform.rotation);
                         spawnedMob.GetComponent<bMob>().spawner = this;
+                        spawnedMob.GetComponentInChildren<SpriteRenderer>().color = spawnColor;
                         popCurrent++;
                         SpawnCheck.spawnCount++;
                     }
@@ -65,6 +68,7 @@ public class bSpawner : MonoBehaviour
                     {
                         GameObject spawnedMob = Instantiate(mob, E.transform.position, transform.rotation);
                         spawnedMob.GetComponent<bMob>().spawner = this;
+                        spawnedMob.GetComponentInChildren<SpriteRenderer>().color = spawnColor;
                         popCurrent++;
                         SpawnCheck.spawnCount++;
                     }
@@ -75,6 +79,7 @@ public class bSpawner : MonoBehaviour
                     {
                         GameObject spawnedMob = Instantiate(mob, W.transform.position, transform.rotation);
                         spawnedMob.GetComponent<bMob>().spawner = this;
+                        spawnedMob.GetComponentInChildren<SpriteRenderer>().color = spawnColor;
                         popCurrent++;
                         SpawnCheck.spawnCount++;
                     }

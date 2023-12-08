@@ -45,7 +45,8 @@ public class bMob : MonoBehaviour
 
         if (rewardScore >= 20 && shouldNest )
         {
-            Instantiate(nest, transform.position, transform.rotation);
+            GameObject newNest = Instantiate(nest, transform.position, transform.rotation);
+            newNest.GetComponent<bSpawner>().spawnColor = this.GetComponent<SpriteRenderer>().material.color;
             GameObject.Destroy(gameObject);
         }
 
