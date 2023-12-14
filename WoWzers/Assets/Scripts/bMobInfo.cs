@@ -24,7 +24,7 @@ public class bMobInfo : MonoBehaviour
             Color lerpColor = Random.ColorHSV();
             lerpColor.a = 1.0f;
             colorMutation = Color.Lerp(color, lerpColor, Random.Range(colorRangeMin, colorRangeMax));
-            Debug.Log(colorMutation);
+            //Debug.Log(colorMutation);
             render.color = colorMutation;
         }
     }

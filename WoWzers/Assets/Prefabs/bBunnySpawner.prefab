@@ -62,6 +62,8 @@ MonoBehaviour:
   spawnDelay: 5
   shouldSpawn: 1
   spawnColor: {r: 1, g: 1, b: 1, a: 1}
+  deadTime: 0
+  deadTimeThreshold: 10
 --- !u!212 &-4921473068619850400
 SpriteRenderer:
   m_ObjectHideFlags: 0

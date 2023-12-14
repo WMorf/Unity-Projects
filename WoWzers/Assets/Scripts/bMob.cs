@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class bMob : MonoBehaviour
 {
+    public bMobInfo info;
     // Rigidbody2D component reference
     private Rigidbody2D rb;
 
@@ -27,6 +28,7 @@ public class bMob : MonoBehaviour
 
     void Start()
     {
+        moveDelay += Random.Range(.5f, -.5f);
         // Get the Rigidbody2D component
         rb = GetComponent<Rigidbody2D>();
         SpawnCheck = FindAnyObjectByType(typeof(Canvas)).GetComponent<bSpawnCheck>();
@@ -43,11 +45,12 @@ public class bMob : MonoBehaviour
         rb.velocity = newDirection * currentSpeed;
 
 
-        if (rewardScore >= 20 && shouldNest )
+        if (rewardScore >= 12 && shouldNest )
         {
+            shouldNest = false;
             GameObject newNest = Instantiate(nest, transform.position, transform.rotation);
-            newNest.GetComponent<bSpawner>().spawnColor = this.GetComponent<SpriteRenderer>().material.color;
-            GameObject.Destroy(gameObject);
+            newNest.GetComponent<bSpawner>().spawnColor = info.render.color;
+            //GameObject.Destroy(gameObject);
         }
 
         if (lifeTime > maxLifeTime)

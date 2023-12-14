@@ -132,6 +132,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95a97e4e9b86c454b8666ae7efae0b7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  render: {fileID: 0}
+  shouldMutate: 0
+  color: {r: 0, g: 0, b: 0, a: 0}
+  colorMutation: {r: 0, g: 0, b: 0, a: 0}
+  colorRangeMin: 0
+  colorRangeMax: 0
 --- !u!114 &4051154654931322280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,6 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  currentSpeed: 0
   spawner: {fileID: 0}
   rewardScore: 0
   baseReward: 2
@@ -154,6 +161,7 @@ MonoBehaviour:
   maxTimeVariation: 5
   moveDelay: 2
   newDirection: {x: 0, y: 0}
+  anim: {fileID: 0}
   nest: {fileID: 1391316392228179240, guid: cc8ca07c03738c14bb107af880521d67, type: 3}
   SpawnCheck: {fileID: 0}
 --- !u!61 &9152542969221601300

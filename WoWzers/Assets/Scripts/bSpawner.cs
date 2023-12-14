@@ -15,6 +15,8 @@ public class bSpawner : MonoBehaviour
     public bool shouldSpawn;
     public Color spawnColor;
 
+    public float deadTime, deadTimeThreshold;
+
     private void Awake()
     {
         SpawnCheck = FindAnyObjectByType(typeof(Canvas)).GetComponent<bSpawnCheck>();
@@ -30,6 +32,16 @@ public class bSpawner : MonoBehaviour
         //{
         //    StartCoroutine(Spawn());
         //}
+
+        if(popCurrent <= 0)
+        {
+            deadTime += Time.deltaTime;
+        }
+        if(deadTime >= deadTimeThreshold)
+        {
+            Debug.Log(gameObject.name + " has withered away");
+            Destroy(gameObject);
+        }
     }
 
     IEnumerator Spawn()

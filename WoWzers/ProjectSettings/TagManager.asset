@@ -42,11 +42,11 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Ground
-    uniqueID: 490610927
-    locked: 0
   - name: Wall
     uniqueID: 2122718537
+    locked: 0
+  - name: Ground
+    uniqueID: 490610927
     locked: 0
   - name: Mob
     uniqueID: 687772761
