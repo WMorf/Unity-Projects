@@ -62,31 +62,45 @@ public class bMob : MonoBehaviour
     IEnumerator Shift()
     {
         anim.SetBool("Moving", true);
-        Debug.Log("Shift Start");
+        //Debug.Log("Shift Start");
         currentSpeed = speed;
         this.newDirection = Random.insideUnitCircle;
         //StartCoroutine(Idle());
         yield return new WaitForSeconds(moveDelay);
-        Debug.Log("Shift End");
+        //Debug.Log("Shift End");
         StartCoroutine(Idle());
     }
-    //IEnumerator Shift()
-    //{
-    //    while (true)
-    //    {
-    //        this.newDirection = Random.insideUnitCircle;
-    //        yield return new WaitForSeconds(moveDelay);
-    //    }
-
-    //}
+    
+    IEnumerator Home()
+    {
+        Debug.Log(new Vector2(spawner.transform.position.x, spawner.transform.position.y));
+        anim.SetBool("Moving", true);
+        //Debug.Log("Shift Start");
+        currentSpeed = speed;
+        this.newDirection = new Vector2(spawner.transform.position.x, spawner.transform.position.y);
+        //StartCoroutine(Idle());
+        yield return new WaitForSeconds(moveDelay);
+        //Debug.Log("Shift End");
+        StartCoroutine(Idle());
+    }
+    
     IEnumerator Idle()
     {
         anim.SetBool("Moving", false);
-        Debug.Log("Idle Start");
+        //Debug.Log("Idle Start");
         currentSpeed = 0f;
         yield return new WaitForSeconds(moveDelay);
-        Debug.Log("Idle End");
-        StartCoroutine(Shift());
+        //Debug.Log("Idle End");
+        //Unused until I fix movement code
+        int rando = Random.Range(0, 3);
+        if(rando == 4)
+        {
+            StartCoroutine(Home());
+        }
+        else
+        {
+            StartCoroutine(Shift());
+        }
     }
 
     private void OnDestroy()

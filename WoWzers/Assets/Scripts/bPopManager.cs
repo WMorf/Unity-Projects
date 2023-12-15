@@ -77,7 +77,7 @@ public class bPopManager : MonoBehaviour
             }
 
             string message = string.Format("Checking For Spawners\n {0} PlantSpawners found - {1} Plants, {2} MobSpawners - {3} - Mobs", plantSpawners.Count, plantCurrent, mobSpawners.Count, mobCurrent);
-            Debug.Log(message);
+            //Debug.Log(message);
 
             mobCurrent = mobTemp;
             plantCurrent = plantTemp;
