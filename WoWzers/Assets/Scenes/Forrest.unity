@@ -29807,6 +29807,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1441267828}
   - component: {fileID: 1441267827}
+  - component: {fileID: 1441267829}
   - component: {fileID: 1441267826}
   m_Layer: 0
   m_Name: Circle
@@ -29879,21 +29880,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9df599fd41f6b2645ab238cb070d9f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  info: {fileID: 0}
-  speed: 2
-  currentSpeed: 0
-  spawner: {fileID: 0}
-  rewardScore: 0
-  baseReward: 0
-  shouldNest: 0
-  lifeTime: 0
-  maxLifeTime: 0
-  maxTimeVariation: 0
-  moveDelay: 0
-  newDirection: {x: 0, y: 0}
+  rb: {fileID: 0}
   anim: {fileID: 0}
-  nest: {fileID: 0}
-  SpawnCheck: {fileID: 0}
+  spawner: {fileID: 0}
+  render: {fileID: 1441267826}
+  manager: {fileID: 0}
+  baseReward: 0
+  speed: 0
+  maxLifeTime: 0
 --- !u!4 &1441267828
 Transform:
   m_ObjectHideFlags: 0
@@ -29909,6 +29903,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1441267829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441267825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab64bd7d821803146bda3f64c63719f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mobInfo: {fileID: 1441267827}
+  shouldMutate_Color: 1
+  colorRangeMin: 0
+  colorRangeMax: 0.2
+  shouldMutate_Time: 0
+  maxTimeVariation: 0
 --- !u!1 &1489112870
 GameObject:
   m_ObjectHideFlags: 0
@@ -30160,10 +30172,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2118440471}
+  - component: {fileID: 2118440475}
   - component: {fileID: 2118440474}
   - component: {fileID: 2118440473}
   - component: {fileID: 2118440472}
-  - component: {fileID: 2118440475}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged

@@ -14,11 +14,9 @@ public class c3dWall : MonoBehaviour
 
             if (!tilemap.HasTile(localPlace)) continue;
 
-            //TileBase tile = tilemap.GetTile(localPlace);
-
-
             Vector3 place = tilemap.CellToWorld(localPlace);
-            Instantiate(cubePrefab, place, Quaternion.identity);
+            GameObject wall = Instantiate(cubePrefab, place, Quaternion.identity);
+            wall.transform.parent = transform; //This will organize cubes in the hiearchy
         }
     }
 

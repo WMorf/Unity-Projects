@@ -9,30 +9,31 @@ public class cMobInfo : MonoBehaviour
     //[Tooltip("")]
 
     [Header("Components")]
-    public Rigidbody2D rb;
-    public Animator anim;
-    public GameObject spawner;
+        public Rigidbody2D rb;
+        public Animator anim;
+        public GameObject spawner;
+        public SpriteRenderer render;
+        public cStateManager manager;
 
 
     [Header("Stats")]
 
-    public int baseReward; [Tooltip("How much value a mob is worth when calculating rewardScore for an opposing mob")]
-    public float speed;
-    public float maxLifeTime, maxTimeVariation;
-
+        [Tooltip("How much value a mob is worth when calculating rewardScore for an opposing mob")]
+        public int baseReward;
+        public float speed;
+        public float maxLifeTime;
 
     //Runtime
-    private int rewardScore;
-    private int currentSpeed;
-    private float lifeTime;
+        private int rewardScore;
+        private int currentSpeed;
+        private float lifeTime;
 
-    [Header("Logic")]
-    public bool shouldVaryLifeTime;
-    public bool shouldNest;
+    //[Header("Logic")]
+        //public bool shouldNest;
 
 
     void Start()
     {
-        if (shouldVaryLifeTime) { maxLifeTime = Random.Range(maxLifeTime, maxLifeTime + maxTimeVariation); }; //Keeps certain mobs consistant
+        
     }
 }
