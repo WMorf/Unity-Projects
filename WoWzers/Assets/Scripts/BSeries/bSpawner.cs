@@ -14,15 +14,19 @@ public class bSpawner : MonoBehaviour
     public float spawnDelay = 1f;
     public bool shouldSpawn;
     public Color spawnColor;
+    public SpriteRenderer nestSprite;
+    public bool ifSpawnCheck;
 
     public float deadTime, deadTimeThreshold;
+    //if (ifSpawnCheck){ }
 
     private void Awake()
     {
-        SpawnCheck = FindAnyObjectByType(typeof(Canvas)).GetComponent<bSpawnCheck>();
+        if (ifSpawnCheck){ SpawnCheck = FindAnyObjectByType(typeof(Canvas)).GetComponent<bSpawnCheck>(); } 
         PopManager = FindAnyObjectByType<bPopManager>();
         PopManager.mobSpawners.Add(gameObject);
         StartCoroutine(Spawn());
+        GetComponent<SpriteRenderer>().color = spawnColor;
     }
 
     // Update is called once per frame
@@ -59,8 +63,10 @@ public class bSpawner : MonoBehaviour
                         GameObject spawnedMob = Instantiate(mob, N.transform.position, transform.rotation);
                         spawnedMob.GetComponent<bMob>().spawner = this;
                         spawnedMob.GetComponentInChildren<SpriteRenderer>().color = spawnColor;
+                        nestSprite.color = spawnColor;
                         popCurrent++;
-                        SpawnCheck.spawnCount++;
+                        if (ifSpawnCheck) { SpawnCheck.spawnCount++; }
+
                     }
                 }
                 if (rand == 2)
@@ -71,7 +77,7 @@ public class bSpawner : MonoBehaviour
                         spawnedMob.GetComponent<bMob>().spawner = this;
                         spawnedMob.GetComponentInChildren<SpriteRenderer>().color = spawnColor;
                         popCurrent++;
-                        SpawnCheck.spawnCount++;
+                        if (ifSpawnCheck) { SpawnCheck.spawnCount++; }
                     }
                 }
                 if (rand == 3)
@@ -82,7 +88,7 @@ public class bSpawner : MonoBehaviour
                         spawnedMob.GetComponent<bMob>().spawner = this;
                         spawnedMob.GetComponentInChildren<SpriteRenderer>().color = spawnColor;
                         popCurrent++;
-                        SpawnCheck.spawnCount++;
+                        if (ifSpawnCheck) { SpawnCheck.spawnCount++; }
                     }
                 }
                 if (rand == 4)
@@ -93,7 +99,7 @@ public class bSpawner : MonoBehaviour
                         spawnedMob.GetComponent<bMob>().spawner = this;
                         spawnedMob.GetComponentInChildren<SpriteRenderer>().color = spawnColor;
                         popCurrent++;
-                        SpawnCheck.spawnCount++;
+                        if (ifSpawnCheck) { SpawnCheck.spawnCount++; }
                     }
                 }
                 yield return new WaitForSeconds(spawnDelay);
