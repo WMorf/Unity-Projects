@@ -23,17 +23,21 @@ public class cMobInfo : MonoBehaviour
         public float speed;
         public float maxLifeTime;
 
-    //Runtime
-        private int rewardScore;
-        private int currentSpeed;
-        private float lifeTime;
+    [Header("Runtime")]
+        public int rewardScore;
+        public float lifeTime;
 
     //[Header("Logic")]
-        //public bool shouldNest;
+    //public bool shouldNest;
 
 
     void Start()
     {
         
+    }
+
+    private void Update()
+    {
+        lifeTime += Time.deltaTime;
     }
 }

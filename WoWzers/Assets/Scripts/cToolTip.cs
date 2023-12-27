@@ -7,14 +7,14 @@ using UnityEngine.UI;
 public class cToolTip : MonoBehaviour
 {
     public GameObject infoPanel;
-    public bMob script;
+    public cMobInfo script;
     private void Start()
     {
         try
         {
            infoPanel = GameObject.Find("InfoPanel");
         }
-        catch { Debug.Log("Not found"); };
+        catch { Debug.Log("Info Panel not found"); };
     }
 
     private void OnMouseDown()

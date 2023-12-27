@@ -5,14 +5,15 @@ using UnityEngine;
 public class cState_Idle : MonoBehaviour, Istate
 {
     public cMobInfo mobInfo;
+    public float threshold;
 
-    // Start is called before the first frame update
     public void Enter()
     {
-        
+        mobInfo.anim.SetBool("Moving", false);
+        mobInfo.manager.timer = 0;
+        mobInfo.manager.threshold = threshold;
     }
 
-    // Update is called once per frame
     public void Update()
     {
         

@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class cInfoPanel : MonoBehaviour
 {
-    public Text reward, life;
-    public bMob mobScript;
+    public Text reward, life, message;
+    public cMobInfo mobScript;
 
-    public void GetMob(bMob script)
+    public void GetMob(cMobInfo script)
     {
         mobScript = script;
     }
@@ -21,6 +21,7 @@ public class cInfoPanel : MonoBehaviour
             {
                 reward.text = mobScript.rewardScore.ToString();
                 life.text = mobScript.lifeTime.ToString();
+                message.text = mobScript.manager.stateMessage.ToString();
             }
             catch { }
         }
@@ -28,6 +29,7 @@ public class cInfoPanel : MonoBehaviour
         {
             reward.text = "0";
             life.text = "0";
+            message.text = "Oof";
         }
     }
 }
