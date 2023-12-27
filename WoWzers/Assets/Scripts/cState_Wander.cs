@@ -13,7 +13,10 @@ public class cState_Wander : MonoBehaviour, Istate
     private float speed;
     private Vector2 newDirection;
 
-
+    public void Start()
+    {
+        rb = mobInfo.rb;
+    }
 
     public void Enter()
     {
@@ -21,7 +24,6 @@ public class cState_Wander : MonoBehaviour, Istate
         mobInfo.manager.timer = 0;
         mobInfo.manager.threshold = threshold;
         speed = mobInfo.speed;
-        rb = mobInfo.rb;
         newDirection = Random.insideUnitCircle;
     }
 
@@ -32,6 +34,14 @@ public class cState_Wander : MonoBehaviour, Istate
 
     public void Exit()
     {
+        
+    }
 
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Wall")
+        {
+            newDirection = Random.insideUnitCircle;
+        }
     }
 }
