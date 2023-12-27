@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cState_Wander : MonoBehaviour
+public class cState_Wander : MonoBehaviour, Istate
 {
     [Header("Components")]
     public cMobInfo mobInfo;
@@ -27,7 +27,7 @@ public class cState_Wander : MonoBehaviour
 
     public void Update()
     {
-        //rb.velocity = newDirection * speed;
+        rb.velocity = newDirection * speed;
     }
 
     public void Exit()

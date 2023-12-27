@@ -6,8 +6,8 @@ public class cStateManager : MonoBehaviour
 {
     private Istate currentState;
     public cMobInfo mobInfo;
-    public cState_Idle state_Idle;
-    public cState_Wander state_Wander;
+    public Istate state_Idle;
+    public Istate state_Wander;
     public string stateMessage;
 
     public bool debug;
@@ -25,6 +25,8 @@ public class cStateManager : MonoBehaviour
 
     void Start()
     {
+        state_Idle = GetComponent<cState_Idle>();
+        state_Wander = GetComponent<cState_Wander>();
         currentState = state_Idle;
     }
 
@@ -44,13 +46,18 @@ public class cStateManager : MonoBehaviour
                 timer += Time.deltaTime;
                 if(timer >= threshold)
                 {
-                    //currentState = (Istate)state_Wander;
+                    ChangeState( state_Wander );
                 }
                 break;
 
             case cState_Wander:
                 stateMessage = "I am Wandering";
                 if (debug) { Debug.Log(stateMessage); }
+                timer += Time.deltaTime;
+                if (timer >= threshold)
+                {
+                    ChangeState(state_Idle);
+                }
                 break;
 
             default:

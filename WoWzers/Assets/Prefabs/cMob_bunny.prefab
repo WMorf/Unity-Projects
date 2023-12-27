@@ -173,8 +173,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mobInfo: {fileID: 7883412537908607052}
-  state_Idle: {fileID: 7718010514046635520}
-  state_Wander: {fileID: 3168005757872097000}
   stateMessage: 
   debug: 0
   timer: 0
