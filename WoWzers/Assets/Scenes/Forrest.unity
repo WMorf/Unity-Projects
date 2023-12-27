@@ -520,6 +520,10 @@ PrefabInstance:
       propertyPath: script
       value: 
       objectReference: {fileID: 1540820355}
+    - target: {fileID: 5451663539895659657, guid: 1a7215531c9acf244bde63956e88dc15, type: 3}
+      propertyPath: m_LinearDrag
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7255084065853425042, guid: 1a7215531c9acf244bde63956e88dc15, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.08838
@@ -30153,7 +30157,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 687772761
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -30575,7 +30579,7 @@ GameObject:
   - component: {fileID: 2118440472}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
