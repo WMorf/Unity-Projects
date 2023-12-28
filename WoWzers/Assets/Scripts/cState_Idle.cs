@@ -9,6 +9,9 @@ public class cState_Idle : MonoBehaviour, Istate
     public float threshold;
     private Rigidbody2D rb;
 
+    public bool variedTime;
+    public float variation;
+
     public void Start()
     {
         rb = mobInfo.rb;
@@ -18,8 +21,8 @@ public class cState_Idle : MonoBehaviour, Istate
     {
         mobInfo.anim.SetBool("Moving", false);
         mobInfo.manager.timer = 0;
-        mobInfo.manager.threshold = threshold;
-
+        if (!variedTime){ mobInfo.manager.threshold = threshold;}
+        else { mobInfo.manager.threshold = threshold += Random.Range(-variation, variation); }
     }
 
     public void Update()

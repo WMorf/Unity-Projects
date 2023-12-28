@@ -13,6 +13,9 @@ public class cState_Wander : MonoBehaviour, Istate
     private float speed;
     private Vector2 newDirection;
 
+    public bool variedTime;
+    public float variation;
+
     public void Start()
     {
         rb = mobInfo.rb;
@@ -22,7 +25,9 @@ public class cState_Wander : MonoBehaviour, Istate
     {
         mobInfo.anim.SetBool("Moving", true);
         mobInfo.manager.timer = 0;
-        mobInfo.manager.threshold = threshold;
+        if (!variedTime) { mobInfo.manager.threshold = threshold; }
+        else { mobInfo.manager.threshold = threshold += Random.Range(-variation, variation); }
+
         speed = mobInfo.speed;
         newDirection = Random.insideUnitCircle;
     }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,7 @@ public class cStateManager : MonoBehaviour
     public cMobInfo mobInfo;
     public Istate state_Idle;
     public Istate state_Wander;
+    public Istate state_Nest;
     public string stateMessage;
 
     public bool debug;
@@ -27,6 +29,7 @@ public class cStateManager : MonoBehaviour
     {
         state_Idle = GetComponent<cState_Idle>();
         state_Wander = GetComponent<cState_Wander>();
+        state_Wander = GetComponent<cState_Nest>();
         currentState = state_Idle;
     }
 
@@ -34,6 +37,12 @@ public class cStateManager : MonoBehaviour
     {
         currentState.Update();
         CheckState();
+        if (mobInfo.shouldNest) { CheckNest(); }
+    }
+
+    private void CheckNest()
+    {
+        if (mobInfo.rewardScore < mobInfo.nestScore) { ChangeState(state_Nest); }
     }
 
     public void CheckState()
@@ -56,6 +65,19 @@ public class cStateManager : MonoBehaviour
                 timer += Time.deltaTime;
                 if (timer >= threshold)
                 {
+                    ChangeState(state_Idle);
+                }
+                break;
+
+            case cState_Nest:
+                stateMessage = "I am Nesting";
+                if (debug) { Debug.Log(stateMessage); }
+                timer += Time.deltaTime;
+                if (timer >= threshold)
+                {
+                    GameObject newNest = Instantiate(mobInfo.nest, transform.position, transform.rotation);
+                    newNest.GetComponent<bSpawner>().spawnColor = mobInfo.render.color;
+                    mobInfo.shouldNest = false;
                     ChangeState(state_Idle);
                 }
                 break;

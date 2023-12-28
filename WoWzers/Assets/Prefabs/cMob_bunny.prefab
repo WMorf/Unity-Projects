@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 3803487206810450847}
   serializedVersion: 2
   m_LocalRotation: {x: -0.60876137, y: 0, z: 0, w: 0.7933534}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.046, z: -0.172}
   m_LocalScale: {x: 1.25, y: 1.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 687772761
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -1046713345, guid: 75cff3d2ded0d784385adfc16b742827, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: -6999049820370188404}
   - component: {fileID: 7718010514046635520}
   - component: {fileID: 3168005757872097000}
+  - component: {fileID: 2663137675579685101}
   - component: {fileID: 9152542969221601300}
   - component: {fileID: 5451663539895659657}
   - component: {fileID: 811658085834073188}
@@ -138,7 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 5451663539895659657}
   anim: {fileID: 811658085834073188}
-  spawner: {fileID: 0}
+  nest: {fileID: 7598050823209021970}
   render: {fileID: 1422522634089705511}
   manager: {fileID: -6999049820370188404}
   baseReward: 5
@@ -146,6 +147,8 @@ MonoBehaviour:
   maxLifeTime: 30
   rewardScore: 0
   lifeTime: 0
+  shouldNest: 0
+  nestScore: 0
 --- !u!114 &1169036621456212808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,6 +194,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mobInfo: {fileID: 7883412537908607052}
   threshold: 5
+  variedTime: 1
+  variation: 0.2
 --- !u!114 &3168005757872097000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,6 +210,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mobInfo: {fileID: 7883412537908607052}
   threshold: 5
+  variedTime: 1
+  variation: 0.2
+--- !u!114 &2663137675579685101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7598050823209021970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1810cdde3519dbb4bb43f2fae38dca6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mobInfo: {fileID: 7883412537908607052}
+  threshold: 10
+  variedTime: 1
+  variation: 2
 --- !u!61 &9152542969221601300
 BoxCollider2D:
   m_ObjectHideFlags: 0

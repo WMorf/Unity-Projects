@@ -11,7 +11,7 @@ public class cMobInfo : MonoBehaviour
     [Header("Components")]
         public Rigidbody2D rb;
         public Animator anim;
-        public GameObject spawner;
+        public GameObject nest;
         public SpriteRenderer render;
         public cStateManager manager;
 
@@ -27,8 +27,9 @@ public class cMobInfo : MonoBehaviour
         public int rewardScore;
         public float lifeTime;
 
-    //[Header("Logic")]
-    //public bool shouldNest;
+    [Header("Logic")]
+        public bool shouldNest;
+        public int nestScore;
 
 
     void Start()
