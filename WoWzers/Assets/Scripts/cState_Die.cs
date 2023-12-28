@@ -19,7 +19,6 @@ public class cState_Die : MonoBehaviour, Istate
     {
         mobInfo.anim.SetBool("Moving", false);
         mobInfo.manager.timer = 0;
-        mobInfo.nest.GetComponent<cSpawner>().popCurrent--;
         if (!variedTime) { mobInfo.manager.threshold = threshold; }
         else { mobInfo.manager.threshold = threshold += Random.Range(-variation, variation); }
     }
@@ -31,6 +30,6 @@ public class cState_Die : MonoBehaviour, Istate
 
     public void Exit()
     {
-
+        
     }
 }

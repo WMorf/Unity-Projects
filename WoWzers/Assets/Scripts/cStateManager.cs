@@ -45,7 +45,7 @@ public class cStateManager : MonoBehaviour
 
     private void CheckNest()
     {
-        if (mobInfo.rewardScore < mobInfo.nestScore) { ChangeState(state_Nest); }
+        if (mobInfo.rewardScore > mobInfo.nestScore) { ChangeState(state_Nest); }
     }
 
     public void CheckState()
@@ -76,12 +76,12 @@ public class cStateManager : MonoBehaviour
                 stateMessage = "I am Nesting";
                 if (debug) { Debug.Log(stateMessage); }
                 timer += Time.deltaTime;
-                if (timer >= threshold && mobInfo.shouldNest)
+                mobInfo.shouldNest = false;
+                if (timer >= threshold)
                 {
-                    GameObject newNest = Instantiate(mobInfo.nest, transform.position, transform.rotation);
-                    newNest.GetComponent<bSpawner>().spawnColor = mobInfo.render.color;
-                    mobInfo.shouldNest = false;
                     ChangeState(state_Idle);
+                    GameObject newNest = Instantiate(mobInfo.nest, transform.position, transform.rotation);
+                    newNest.GetComponent<cSpawner>().spawnColor = mobInfo.render.color;
                 }
                 break;
 
@@ -91,6 +91,7 @@ public class cStateManager : MonoBehaviour
                 timer += Time.deltaTime;
                 if (timer >= threshold)
                 {
+                    try { mobInfo.nest.GetComponent<cSpawner>().popCurrent--; } catch { };
                     Destroy(gameObject);
                 }
                 break;
