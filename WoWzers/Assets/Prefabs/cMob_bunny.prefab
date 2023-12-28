@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 7718010514046635520}
   - component: {fileID: 3168005757872097000}
   - component: {fileID: 2663137675579685101}
+  - component: {fileID: 8954162067864208643}
   - component: {fileID: 9152542969221601300}
   - component: {fileID: 5451663539895659657}
   - component: {fileID: 811658085834073188}
@@ -139,7 +140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 5451663539895659657}
   anim: {fileID: 811658085834073188}
-  nest: {fileID: 7598050823209021970}
+  nest: {fileID: 1391316392228179240, guid: 9abc102da4abafd4abb73d2e6e784e2c, type: 3}
   render: {fileID: 1422522634089705511}
   manager: {fileID: -6999049820370188404}
   baseReward: 5
@@ -148,7 +149,7 @@ MonoBehaviour:
   rewardScore: 0
   lifeTime: 0
   shouldNest: 0
-  nestScore: 0
+  nestScore: 10
 --- !u!114 &1169036621456212808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,7 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 0}
-  script: {fileID: 0}
+  script: {fileID: 7883412537908607052}
 --- !u!114 &-6999049820370188404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,6 +229,22 @@ MonoBehaviour:
   threshold: 10
   variedTime: 1
   variation: 2
+--- !u!114 &8954162067864208643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7598050823209021970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9473aac32228bb44b8b1f802f86818f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mobInfo: {fileID: 7883412537908607052}
+  threshold: 10
+  variedTime: 1
+  variation: 3
 --- !u!61 &9152542969221601300
 BoxCollider2D:
   m_ObjectHideFlags: 0

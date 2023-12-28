@@ -10,6 +10,7 @@ public class cStateManager : MonoBehaviour
     public Istate state_Idle;
     public Istate state_Wander;
     public Istate state_Nest;
+    public Istate state_Die;
     public string stateMessage;
 
     public bool debug;
@@ -29,7 +30,8 @@ public class cStateManager : MonoBehaviour
     {
         state_Idle = GetComponent<cState_Idle>();
         state_Wander = GetComponent<cState_Wander>();
-        state_Wander = GetComponent<cState_Nest>();
+        state_Nest = GetComponent<cState_Nest>();
+        state_Die = GetComponent<cState_Die>();
         currentState = state_Idle;
     }
 
@@ -38,6 +40,7 @@ public class cStateManager : MonoBehaviour
         currentState.Update();
         CheckState();
         if (mobInfo.shouldNest) { CheckNest(); }
+        if (mobInfo.lifeTime >= mobInfo.maxLifeTime) { ChangeState(state_Die); }
     }
 
     private void CheckNest()
@@ -73,12 +76,22 @@ public class cStateManager : MonoBehaviour
                 stateMessage = "I am Nesting";
                 if (debug) { Debug.Log(stateMessage); }
                 timer += Time.deltaTime;
-                if (timer >= threshold)
+                if (timer >= threshold && mobInfo.shouldNest)
                 {
                     GameObject newNest = Instantiate(mobInfo.nest, transform.position, transform.rotation);
                     newNest.GetComponent<bSpawner>().spawnColor = mobInfo.render.color;
                     mobInfo.shouldNest = false;
                     ChangeState(state_Idle);
+                }
+                break;
+
+            case cState_Die:
+                stateMessage = "I am Dead";
+                if (debug) { Debug.Log(stateMessage); }
+                timer += Time.deltaTime;
+                if (timer >= threshold)
+                {
+                    Destroy(gameObject);
                 }
                 break;
 
