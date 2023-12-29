@@ -145,7 +145,7 @@ MonoBehaviour:
   manager: {fileID: -6999049820370188404}
   baseReward: 5
   speed: 2
-  maxLifeTime: 30
+  maxLifeTime: 60
   rewardScore: 0
   lifeTime: 0
   shouldNest: 0
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mobInfo: {fileID: 7883412537908607052}
-  stateMessage: 
+  stateMessage: 'I '
   debug: 0
   timer: 0
   threshold: 0
@@ -226,9 +226,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mobInfo: {fileID: 7883412537908607052}
-  threshold: 10
+  threshold: 5
   variedTime: 1
-  variation: 2
+  variation: 1
 --- !u!114 &8954162067864208643
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,12 +11,13 @@ public class cSpawner : MonoBehaviour
     [Header("Components")]
         public SpriteRenderer nestSprite;
         public GameObject mob;
-        public List<GameObject> spawnedMobs;
+        //public List<GameObject> spawnedMobs;
 
     [Header("Stats")]
         public bool shouldSpawn;
         public Color spawnColor;
         public float spawnDelay;
+        public float spawnRange;
         public float deadTime, deadTimeThreshold;
         public int popMax, popCurrent;
 
@@ -50,7 +51,10 @@ public class cSpawner : MonoBehaviour
         {
             if (popCurrent < popMax && shouldSpawn)
             {
-                GameObject spawnedMob = Instantiate(mob, transform.position, transform.rotation);
+                Vector3 spawnPoint = new Vector3(Random.Range(spawnRange, -spawnRange), Random.Range(spawnRange, -spawnRange), 0f);
+
+                GameObject spawnedMob = Instantiate(mob, transform.position + spawnPoint, transform.rotation);
+
                 spawnedMob.GetComponent<cMobInfo>().nest = gameObject;
                 spawnedMob.GetComponentInChildren<SpriteRenderer>().color = spawnColor;
                 popCurrent++;

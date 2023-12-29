@@ -45,9 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69a03928a7de6454d93770f46b59d794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PopManager: {fileID: 0}
   spawnInterval: 4
   spawnRange: 10
-  popMax: 10
+  popMax: 11
   popCurrent: 0
   spawnObject: {fileID: 4766326292935194401, guid: 582a6de119e0086478c62cd889db03f4, type: 3}
   shouldSpawn: 1

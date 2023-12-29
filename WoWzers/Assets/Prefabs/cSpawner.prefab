@@ -184,10 +184,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nestSprite: {fileID: 3784681046996561318}
   mob: {fileID: 7598050823209021970, guid: 1a7215531c9acf244bde63956e88dc15, type: 3}
-  spawnedMobs: []
   shouldSpawn: 1
   spawnColor: {r: 1, g: 1, b: 1, a: 1}
   spawnDelay: 5
+  spawnRange: 0
   deadTime: 0
   deadTimeThreshold: 10
   popMax: 10

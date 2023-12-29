@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 0}
-  script: {fileID: 4051154654931322280}
+  script: {fileID: 0}
 --- !u!114 &2792014824662639207
 MonoBehaviour:
   m_ObjectHideFlags: 0
