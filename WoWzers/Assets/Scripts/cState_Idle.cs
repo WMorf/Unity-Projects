@@ -7,18 +7,20 @@ public class cState_Idle : MonoBehaviour, Istate
     [Header("Components")]
     public cMobInfo mobInfo;
     public float threshold;
+    public string message = "I am Idle";
     private Rigidbody2D rb;
 
     public bool variedTime;
     public float variation;
 
-    public void Start()
+    public string Info()
     {
-        rb = mobInfo.rb;
+        return message;
     }
 
     public void Enter()
     {
+        rb = mobInfo.rb;
         mobInfo.anim.SetBool("Moving", false);
         mobInfo.manager.timer = 0;
         if (!variedTime){ mobInfo.manager.threshold = threshold;}

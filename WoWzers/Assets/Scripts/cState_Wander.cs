@@ -7,6 +7,7 @@ public class cState_Wander : MonoBehaviour, Istate
     [Header("Components")]
     public cMobInfo mobInfo;
     public float threshold;
+    public string message = "I am Wandering";
     private Rigidbody2D rb;
 
     [Header("RunTime")]
@@ -16,13 +17,15 @@ public class cState_Wander : MonoBehaviour, Istate
     public bool variedTime;
     public float variation;
 
-    public void Start()
+
+    public string Info()
     {
-        rb = mobInfo.rb;
+        return message;
     }
 
     public void Enter()
     {
+        rb = mobInfo.rb;
         mobInfo.anim.SetBool("Moving", true);
         mobInfo.manager.timer = 0;
         if (!variedTime) { mobInfo.manager.threshold = threshold; }
@@ -34,7 +37,7 @@ public class cState_Wander : MonoBehaviour, Istate
 
     public void Update()
     {
-        rb.velocity = newDirection * speed;
+        try { rb.velocity = newDirection * speed; } catch { }
     }
 
     public void Exit()

@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mobInfo: {fileID: 7883412537908607052}
-  stateMessage: 'I '
+  stateMessage: I am Error
   debug: 0
   timer: 0
   threshold: 0
@@ -195,6 +195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mobInfo: {fileID: 7883412537908607052}
   threshold: 5
+  message: I am Idle
   variedTime: 1
   variation: 0.2
 --- !u!114 &3168005757872097000
@@ -211,6 +212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mobInfo: {fileID: 7883412537908607052}
   threshold: 5
+  message: I am Wandering
   variedTime: 1
   variation: 0.2
 --- !u!114 &2663137675579685101
@@ -227,6 +229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mobInfo: {fileID: 7883412537908607052}
   threshold: 5
+  message: I am Nesting
   variedTime: 1
   variation: 1
 --- !u!114 &8954162067864208643
@@ -243,6 +246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mobInfo: {fileID: 7883412537908607052}
   threshold: 10
+  message: I am Dead
   variedTime: 1
   variation: 3
 --- !u!61 &9152542969221601300

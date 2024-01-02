@@ -7,12 +7,15 @@ public class cState_Die : MonoBehaviour, Istate
     [Header("Components")]
     public cMobInfo mobInfo;
     public float threshold;
+    public string message = "I am Dead";
 
     public bool variedTime;
     public float variation;
 
-    public void Start()
+
+    public string Info()
     {
+        return message;
     }
 
     public void Enter()

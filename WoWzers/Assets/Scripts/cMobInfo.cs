@@ -32,9 +32,10 @@ public class cMobInfo : MonoBehaviour
         public int nestScore;
 
 
-    void Start()
+    void Awake()
     {
-        
+        //manager.enabled = false;
+        //enabled = true;
     }
 
     private void Update()

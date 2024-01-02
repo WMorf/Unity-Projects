@@ -11,7 +11,7 @@ public class cStateManager : MonoBehaviour
     public Istate state_Wander;
     public Istate state_Nest;
     public Istate state_Die;
-    public string stateMessage;
+    public string stateMessage = "I am Error";
 
     public bool debug;
     public float timer, threshold;
@@ -26,13 +26,14 @@ public class cStateManager : MonoBehaviour
         currentState.Enter();
     }
 
-    void Start()
+    void Awake()
     {
         state_Idle = GetComponent<cState_Idle>();
         state_Wander = GetComponent<cState_Wander>();
         state_Nest = GetComponent<cState_Nest>();
         state_Die = GetComponent<cState_Die>();
         currentState = state_Idle;
+        if(debug) { Debug.Log("I am Awake!"); }
     }
 
     void Update()
@@ -53,7 +54,7 @@ public class cStateManager : MonoBehaviour
         switch (currentState)
         {
             case cState_Idle:
-                stateMessage = "I am Idle";
+                stateMessage = currentState.Info();
                 if (debug) { Debug.Log(stateMessage); }
                 timer += Time.deltaTime;
                 if(timer >= threshold)
@@ -63,7 +64,7 @@ public class cStateManager : MonoBehaviour
                 break;
 
             case cState_Wander:
-                stateMessage = "I am Wandering";
+                stateMessage = currentState.Info();
                 if (debug) { Debug.Log(stateMessage); }
                 timer += Time.deltaTime;
                 if (timer >= threshold)
@@ -73,7 +74,7 @@ public class cStateManager : MonoBehaviour
                 break;
 
             case cState_Nest:
-                stateMessage = "I am Nesting";
+                stateMessage = currentState.Info();
                 if (debug) { Debug.Log(stateMessage); }
                 timer += Time.deltaTime;
                 mobInfo.shouldNest = false;
@@ -86,7 +87,7 @@ public class cStateManager : MonoBehaviour
                 break;
 
             case cState_Die:
-                stateMessage = "I am Dead";
+                stateMessage = currentState.Info();
                 if (debug) { Debug.Log(stateMessage); }
                 timer += Time.deltaTime;
                 if (timer >= threshold)
@@ -97,7 +98,7 @@ public class cStateManager : MonoBehaviour
                 break;
 
             default:
-                stateMessage = "I am Error";
+                stateMessage = currentState.Info();
                 if (debug) { Debug.Log(stateMessage); }
                 break;
         }
