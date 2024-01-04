@@ -12,6 +12,7 @@ public class cState_Die : MonoBehaviour, Istate
     public bool variedTime;
     public float variation;
 
+    public bool active;
 
     public string Info()
     {
@@ -20,6 +21,7 @@ public class cState_Die : MonoBehaviour, Istate
 
     public void Enter()
     {
+        active = true;
         mobInfo.anim.SetBool("Moving", false);
         mobInfo.manager.timer = 0;
         if (!variedTime) { mobInfo.manager.threshold = threshold; }
@@ -33,6 +35,6 @@ public class cState_Die : MonoBehaviour, Istate
 
     public void Exit()
     {
-        
+        active = false;
     }
 }

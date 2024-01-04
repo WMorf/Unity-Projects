@@ -17,6 +17,7 @@ public class cState_Wander : MonoBehaviour, Istate
     public bool variedTime;
     public float variation;
 
+    public bool active;
 
     public string Info()
     {
@@ -25,6 +26,7 @@ public class cState_Wander : MonoBehaviour, Istate
 
     public void Enter()
     {
+        active = true; 
         rb = mobInfo.rb;
         mobInfo.anim.SetBool("Moving", true);
         mobInfo.manager.timer = 0;
@@ -37,17 +39,21 @@ public class cState_Wander : MonoBehaviour, Istate
 
     public void Update()
     {
-        try { rb.velocity = newDirection * speed; } catch { }
+        if (active)
+        {
+            try { rb.velocity = newDirection * speed; } catch { }
+        }
     }
 
     public void Exit()
     {
-        
+        try { rb.velocity = Vector2.zero; } catch { }
+        active = false;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Wall")
+        if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Mob")
         {
             newDirection = Random.insideUnitCircle;
         }

@@ -41,5 +41,6 @@ public class cMobInfo : MonoBehaviour
     private void Update()
     {
         lifeTime += Time.deltaTime;
+        //Debug.Log(rb.velocity);
     }
 }

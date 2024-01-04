@@ -190,5 +190,5 @@ MonoBehaviour:
   spawnRange: 0
   deadTime: 0
   deadTimeThreshold: 10
-  popMax: 10
+  popMax: 25
   popCurrent: 0

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public class cState_Idle : MonoBehaviour, Istate
@@ -13,6 +14,8 @@ public class cState_Idle : MonoBehaviour, Istate
     public bool variedTime;
     public float variation;
 
+    public bool active;
+
     public string Info()
     {
         return message;
@@ -20,6 +23,7 @@ public class cState_Idle : MonoBehaviour, Istate
 
     public void Enter()
     {
+        active = true;
         rb = mobInfo.rb;
         mobInfo.anim.SetBool("Moving", false);
         mobInfo.manager.timer = 0;
@@ -29,11 +33,14 @@ public class cState_Idle : MonoBehaviour, Istate
 
     public void Update()
     {
-        try { rb.velocity = Vector2.zero; } catch { };
+        if (active)
+        {
+            //try { rb.velocity = Vector2.zero; } catch { };
+        }
     }
 
     public void Exit()
     {
-
+        active = false;
     }
 }

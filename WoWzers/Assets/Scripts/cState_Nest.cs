@@ -13,6 +13,7 @@ public class cState_Nest : MonoBehaviour, Istate
     public bool variedTime;
     public float variation;
 
+    public bool active;
 
     public string Info()
     {
@@ -21,6 +22,7 @@ public class cState_Nest : MonoBehaviour, Istate
 
     public void Enter()
     {
+        active = true;
         rb = mobInfo.rb;
         mobInfo.anim.SetBool("Moving", false);
         mobInfo.manager.timer = 0;
@@ -35,6 +37,6 @@ public class cState_Nest : MonoBehaviour, Istate
 
     public void Exit()
     {
-
+        active = false;
     }
 }

@@ -26,7 +26,7 @@ public class cStateManager : MonoBehaviour
         currentState.Enter();
     }
 
-    void Awake()
+    public void Start()
     {
         state_Idle = GetComponent<cState_Idle>();
         state_Wander = GetComponent<cState_Wander>();
