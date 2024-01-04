@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 3803487206810450847}
   serializedVersion: 2
   m_LocalRotation: {x: -0.60876137, y: 0, z: 0, w: 0.7933534}
-  m_LocalPosition: {x: 0, y: 0.046, z: -0.172}
+  m_LocalPosition: {x: 0, y: 0.073, z: -0.272}
   m_LocalScale: {x: 1.25, y: 1.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -94,6 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7255084065853425042}
   - component: {fileID: 7883412537908607052}
+  - component: {fileID: 1747982356514359882}
   - component: {fileID: 1169036621456212808}
   - component: {fileID: -6999049820370188404}
   - component: {fileID: 7718010514046635520}
@@ -150,6 +151,24 @@ MonoBehaviour:
   lifeTime: 0
   shouldNest: 0
   nestScore: 10
+--- !u!114 &1747982356514359882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7598050823209021970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab64bd7d821803146bda3f64c63719f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mobInfo: {fileID: 7883412537908607052}
+  shouldMutate_Color: 1
+  colorRangeMin: 0
+  colorRangeMax: 0.2
+  shouldMutate_Time: 1
+  maxTimeVariation: 5
 --- !u!114 &1169036621456212808
 MonoBehaviour:
   m_ObjectHideFlags: 0
