@@ -149,8 +149,8 @@ MonoBehaviour:
   maxLifeTime: 60
   rewardScore: 0
   lifeTime: 0
-  shouldNest: 0
-  nestScore: 10
+  shouldNest: 1
+  nestScore: 30
 --- !u!114 &1747982356514359882
 MonoBehaviour:
   m_ObjectHideFlags: 0

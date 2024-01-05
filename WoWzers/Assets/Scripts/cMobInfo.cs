@@ -30,17 +30,16 @@ public class cMobInfo : MonoBehaviour
     [Header("Logic")]
         public bool shouldNest;
         public int nestScore;
+        public bool eatRotten;
 
 
-    void Awake()
+    private void Start()
     {
-        //manager.enabled = false;
-        //enabled = true;
+
     }
 
     private void Update()
     {
         lifeTime += Time.deltaTime;
-        //Debug.Log(rb.velocity);
     }
 }
