@@ -151,6 +151,7 @@ MonoBehaviour:
   lifeTime: 0
   shouldNest: 1
   nestScore: 30
+  eatRotten: 0
 --- !u!114 &1747982356514359882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,6 +165,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mobInfo: {fileID: 7883412537908607052}
+  foodInfo: {fileID: 0}
+  isMob: 1
   shouldMutate_Color: 1
   colorRangeMin: 0
   colorRangeMax: 0.2

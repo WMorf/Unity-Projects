@@ -134,6 +134,7 @@ MonoBehaviour:
   spawnRange: 5
   spawnObject: {fileID: 2496873123849567600, guid: c23cac28f6ab40045aa58a4efb981ec2, type: 3}
   shouldSpawn: 1
+  render: {fileID: 9000804102530901946}
 --- !u!212 &6933111930076897094
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ public class cPlantSource : MonoBehaviour
     public GameObject spawnObject;
     public bool shouldSpawn;
 
+    public SpriteRenderer render;
 
 
     // Start is called before the first frame update
@@ -32,6 +33,8 @@ public class cPlantSource : MonoBehaviour
                 Vector3 spawnPoint = new Vector3(Random.Range(spawnRange, -spawnRange), Random.Range(spawnRange, -spawnRange), 0f);
 
                 GameObject spawnedPlant = Instantiate(spawnObject, transform.position + spawnPoint, transform.rotation);
+                spawnedPlant.GetComponent<cFood>().bodySprite.color = render.color;
+                spawnedPlant.transform.parent = transform;
             }
             yield return new WaitForSeconds(spawnInterval);
         }

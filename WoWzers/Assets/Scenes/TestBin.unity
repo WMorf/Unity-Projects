@@ -5427,6 +5427,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6046848081068113213, guid: 9abc102da4abafd4abb73d2e6e784e2c, type: 3}
+      propertyPath: popCurrent
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6046848081068113213, guid: 9abc102da4abafd4abb73d2e6e784e2c, type: 3}
+      propertyPath: spawnDelay
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6046848081068113213, guid: 9abc102da4abafd4abb73d2e6e784e2c, type: 3}
+      propertyPath: shouldSpawn
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

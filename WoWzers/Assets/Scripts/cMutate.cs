@@ -6,6 +6,9 @@ public class cMutate : MonoBehaviour
 {
     [Header("Components")]
     public cMobInfo mobInfo;
+    public cFood foodInfo;
+
+    public bool isMob;
 
     [Header("Color")]
     public bool shouldMutate_Color;
@@ -20,33 +23,68 @@ public class cMutate : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Color Mutation
-        if (shouldMutate_Color)
+        if (isMob)
         {
-            try
+            //Color Mutation
+            if (shouldMutate_Color)
             {
-                color = mobInfo.render.color;
-                Color lerpColor = Random.ColorHSV();
-                lerpColor.a = 1.0f;
-                colorMutation = Color.Lerp(color, lerpColor, Random.Range(colorRangeMin, colorRangeMax));
-                mobInfo.render.color = colorMutation;
+                try
+                {
+                    color = mobInfo.render.color;
+                    Color lerpColor = Random.ColorHSV();
+                    lerpColor.a = 1.0f;
+                    colorMutation = Color.Lerp(color, lerpColor, Random.Range(colorRangeMin, colorRangeMax));
+                    mobInfo.render.color = colorMutation;
+                }
+                catch
+                {
+                    Debug.Log("Error Mutating Color");
+                }
             }
-            catch 
+
+            //LifeTime Mutation
+            if (shouldMutate_Time)
             {
-                Debug.Log("Error Mutating Color");
+                try
+                {
+                    mobInfo.maxLifeTime = Random.Range(mobInfo.maxLifeTime, mobInfo.maxLifeTime + maxTimeVariation);
+                }
+                catch
+                {
+                    Debug.Log("Error Mutating LifeTime");
+                }
             }
         }
-
-        //LifeTime Mutation
-        if (shouldMutate_Time) 
+        else
         {
-            try
+            //Color Mutation
+            if (shouldMutate_Color)
             {
-                mobInfo.maxLifeTime = Random.Range(mobInfo.maxLifeTime, mobInfo.maxLifeTime + maxTimeVariation);
+                try
+                {
+                    color = foodInfo.bodySprite.color;
+                    Color lerpColor = Random.ColorHSV();
+                    lerpColor.a = 1.0f;
+                    colorMutation = Color.Lerp(color, lerpColor, Random.Range(colorRangeMin, colorRangeMax));
+                    foodInfo.bodySprite.color = colorMutation;
+                }
+                catch
+                {
+                    Debug.Log("Error Mutating Color");
+                }
             }
-            catch 
+
+            //LifeTime Mutation
+            if (shouldMutate_Time)
             {
-                Debug.Log("Error Mutating LifeTime");
+                try
+                {
+                    foodInfo.maxLifeTime = Random.Range(foodInfo.maxLifeTime, foodInfo.maxLifeTime + maxTimeVariation);
+                }
+                catch
+                {
+                    Debug.Log("Error Mutating LifeTime");
+                }
             }
         }
     }

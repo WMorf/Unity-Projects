@@ -9,6 +9,8 @@ public class cFood : MonoBehaviour
     public int reward;
     public float lifeReward;
     public float rotTime;
+    public float maxLifeTime;
+    public SpriteRenderer bodySprite;
     public SpriteRenderer rotRender;
 
     [Header("Runtime")]
@@ -24,7 +26,7 @@ public class cFood : MonoBehaviour
         {
             transform.localScale = new Vector3(transform.localScale.x + growRate, transform.localScale.y + growRate, transform.localScale.z + growRate);
         }
-        if (transform.localScale.x <= .2f)
+        if (transform.localScale.x <= .2f || lifeTime >= maxLifeTime)
         {
             GameObject.Destroy(gameObject);
         }
@@ -33,6 +35,7 @@ public class cFood : MonoBehaviour
         {
             rotten = true;
             rotRender.enabled = true;
+            //bodySprite.enabled = false;
             shouldGrow = false;
         }
     }
