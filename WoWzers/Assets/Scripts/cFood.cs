@@ -43,7 +43,7 @@ public class cFood : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Mob")
+        if (collision.gameObject.tag == "Mob" && !collision.gameObject.GetComponent<cMobInfo>().eatRotten)
         {
             if (!rotten)
             {
