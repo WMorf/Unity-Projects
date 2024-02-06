@@ -8,6 +8,13 @@ public class cToolTip : MonoBehaviour
 {
     public GameObject infoPanel;
     public cMobInfo script;
+
+
+    //Mouse Cursor
+    public Texture2D cursorTexture;
+    public CursorMode cursorMode = CursorMode.Auto;
+    public Vector2 hotSpot = new Vector2(-1f,-1f);
+
     private void Start()
     {
         try
@@ -24,9 +31,18 @@ public class cToolTip : MonoBehaviour
         {
             infoPanel.GetComponent<cInfoPanel>().GetMob(script);
         }
-        catch
-        {
+        catch{ Debug.Log("Mob not found"); }
+    }
 
-        }
+    //Cursor
+    void OnMouseEnter()
+    {
+        Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
+    }
+
+    void OnMouseExit()
+    {
+        // Pass 'null' to the texture parameter to use the default system cursor.
+        Cursor.SetCursor(null, Vector2.zero, cursorMode);
     }
 }
