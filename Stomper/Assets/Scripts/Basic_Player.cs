@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,12 +6,16 @@ using UnityEngine;
 public class Basic_Player : MonoBehaviour
 {
     public float speed = 5.0f;
-    private Rigidbody2D rb;
+    private Rigidbody rb;
     //public int rewardScore { get; set; }
+
+    public GameObject firePoint;
+    public GameObject shotPrefab;
+    public float shotSpeed;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody>();
     }
 
 
@@ -22,8 +27,18 @@ public class Basic_Player : MonoBehaviour
         Vector2 movement = new Vector2(horizontalInput, verticalInput);
 
         rb.velocity = movement * speed;
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            GameObject shot = Instantiate(shotPrefab, firePoint.transform.position, firePoint.transform.rotation);
+            Rigidbody rb = shot.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                rb.velocity = transform.forward * shotSpeed;
+            }
+        }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter(Collision collision)
     {
         GameObject mob = collision.gameObject;
         if (mob.tag == "Mob")
@@ -33,4 +48,6 @@ public class Basic_Player : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
+
+
 }

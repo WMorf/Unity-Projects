@@ -26,13 +26,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 708034141369256947}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.087193295, y: -0, z: -0, w: 0.99619144}
-  m_LocalPosition: {x: 0, y: 1.65, z: -3.62}
+  m_LocalRotation: {x: 0.26826864, y: -0, z: -0, w: 0.96334416}
+  m_LocalPosition: {x: 0, y: 3.9, z: -3.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8084081120332101875}
-  m_LocalEulerAnglesHint: {x: 10.004, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 31.123, y: 0, z: 0}
 --- !u!20 &5698007914866169920
 Camera:
   m_ObjectHideFlags: 0
@@ -92,6 +92,37 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 708034141369256947}
   m_Enabled: 1
+--- !u!1 &5689678353199051121
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1798734893488096551}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1798734893488096551
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5689678353199051121}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.023, y: -0.004, z: 0.606}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8084081120332101875}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9086330364914842680
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,6 +158,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4422250568946821092}
+  - {fileID: 1798734893488096551}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6681256459481556843
@@ -142,6 +174,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  firePoint: {fileID: 5689678353199051121}
+  shotPrefab: {fileID: 5157367590343481771, guid: ab2e1c77033e4914daf9a952345cbc7a, type: 3}
+  shotSpeed: 1
 --- !u!65 &6865713555173948306
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -188,7 +223,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!33 &3418936920210276649
 MeshFilter:
