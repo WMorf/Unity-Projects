@@ -11,7 +11,11 @@ public class cStateManager : MonoBehaviour
     public Istate state_Wander;
     public Istate state_Nest;
     public Istate state_Die;
+    public Istate state_Panic;
     public string stateMessage = "I am Error";
+    public GameObject target;
+
+    public bool panic;
 
     public bool debug;
     public float timer, threshold;
@@ -32,6 +36,7 @@ public class cStateManager : MonoBehaviour
         state_Wander = GetComponent<cState_Wander>();
         state_Nest = GetComponent<cState_Nest>();
         state_Die = GetComponent<cState_Die>();
+        state_Panic = GetComponent<cState_Panic>();
         currentState = state_Idle;
         if(debug) { Debug.Log("I am Awake!"); }
     }
@@ -51,6 +56,13 @@ public class cStateManager : MonoBehaviour
 
     public void CheckState()
     {
+        if(panic)
+        {
+            ChangeState(state_Panic);
+            panic = false;
+            print("panic");
+
+        }
         switch (currentState)
         {
             case cState_Idle:
@@ -83,6 +95,17 @@ public class cStateManager : MonoBehaviour
                     ChangeState(state_Idle);
                     GameObject newNest = Instantiate(mobInfo.nest, transform.position, transform.rotation);
                     newNest.GetComponent<cSpawner>().spawnColor = mobInfo.render.color;
+                }
+                break;
+
+            case cState_Panic:
+                stateMessage = currentState.Info();
+                if (debug) { Debug.Log(stateMessage); }
+                timer += Time.deltaTime;
+                if (timer >= threshold)
+                {
+                    ChangeState(state_Idle);
+                    //panic = false;
                 }
                 break;
 

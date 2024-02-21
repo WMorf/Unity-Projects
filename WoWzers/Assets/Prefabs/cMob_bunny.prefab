@@ -1,5 +1,78 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3040424295915648254
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3472825228157119726}
+  - component: {fileID: 2414154674576852147}
+  - component: {fileID: 4920001842780851797}
+  m_Layer: 0
+  m_Name: Eyes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3472825228157119726
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3040424295915648254}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7255084065853425042}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2414154674576852147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3040424295915648254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05cb688059d455d4f8db8e7782d76f8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info: {fileID: 7883412537908607052}
+  target: {fileID: 0}
+--- !u!61 &4920001842780851797
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3040424295915648254}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5, y: 5}
+  m_EdgeRadius: 0
 --- !u!1 &3803487206810450847
 GameObject:
   m_ObjectHideFlags: 0
@@ -100,6 +173,7 @@ GameObject:
   - component: {fileID: 7718010514046635520}
   - component: {fileID: 3168005757872097000}
   - component: {fileID: 2663137675579685101}
+  - component: {fileID: 8452972810285757782}
   - component: {fileID: 8954162067864208643}
   - component: {fileID: 9152542969221601300}
   - component: {fileID: 5451663539895659657}
@@ -124,6 +198,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6988359235497073898}
+  - {fileID: 3472825228157119726}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -144,6 +219,7 @@ MonoBehaviour:
   nest: {fileID: 1391316392228179240, guid: 9abc102da4abafd4abb73d2e6e784e2c, type: 3}
   render: {fileID: 1422522634089705511}
   manager: {fileID: -6999049820370188404}
+  eyes: {fileID: 3040424295915648254}
   baseReward: 5
   speed: 2
   maxLifeTime: 60
@@ -152,6 +228,8 @@ MonoBehaviour:
   shouldNest: 1
   nestScore: 30
   eatRotten: 0
+  friend: 
+  foe: Wolf
 --- !u!114 &1747982356514359882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,6 +281,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mobInfo: {fileID: 7883412537908607052}
   stateMessage: I am Error
+  target: {fileID: 0}
+  panic: 0
   debug: 0
   timer: 0
   threshold: 0
@@ -259,6 +339,27 @@ MonoBehaviour:
   message: I am Nesting
   variedTime: 1
   variation: 1
+  active: 0
+--- !u!114 &8452972810285757782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7598050823209021970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45811d22fad769e43a6ea6f72c9ecba7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mobInfo: {fileID: 7883412537908607052}
+  threshold: 5
+  message: I am Panic!
+  target: {fileID: 0}
+  variedTime: 0
+  variation: 0
+  panicTimer: 0
+  panicThreshold: 2
   active: 0
 --- !u!114 &8954162067864208643
 MonoBehaviour:

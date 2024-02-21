@@ -14,6 +14,7 @@ public class cMobInfo : MonoBehaviour
         public GameObject nest;
         public SpriteRenderer render;
         public cStateManager manager;
+        public GameObject eyes;
 
 
     [Header("Stats")]
@@ -31,6 +32,7 @@ public class cMobInfo : MonoBehaviour
         public bool shouldNest;
         public int nestScore;
         public bool eatRotten;
+        public string friend, foe;
 
 
     private void Start()
