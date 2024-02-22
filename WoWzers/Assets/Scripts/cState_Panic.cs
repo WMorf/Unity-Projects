@@ -39,8 +39,8 @@ public class cState_Panic : MonoBehaviour, Istate
         if (!variedTime) { mobInfo.manager.threshold = threshold; }
         else { mobInfo.manager.threshold = threshold += Random.Range(-variation, variation); }
 
-        speed = mobInfo.speed * 1.25f;
-        newDirection = Random.insideUnitCircle;
+        speed = mobInfo.speed * 1.1f;
+        newDirection = transform.position - target.transform.position;
     }
 
     public void Update()
@@ -49,12 +49,20 @@ public class cState_Panic : MonoBehaviour, Istate
         {
             if(panicTimer >= panicThreshold)
             {
-                newDirection = Random.insideUnitCircle;
+                //newDirection = transform.position - target.transform.position;
+                //newDirection = Random.insideUnitCircle;
                 panicTimer = 0f;
-                if (target = null) // Pulls mob out of Panic State
-                {
-                    mobInfo.manager.timer = threshold;
-                }
+                //try
+                //{
+                //    if (target = null) // Pulls mob out of Panic State
+                //    {
+                //        mobInfo.manager.timer = threshold;
+                //    }
+                //}
+                //catch
+                //{
+
+                //}
             }
             else
             {

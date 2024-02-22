@@ -102,6 +102,10 @@ public class cStateManager : MonoBehaviour
                 stateMessage = currentState.Info();
                 if (debug) { Debug.Log(stateMessage); }
                 timer += Time.deltaTime;
+                if (target == null)
+                {
+                    ChangeState(state_Idle);
+                }
                 if (timer >= threshold)
                 {
                     ChangeState(state_Idle);

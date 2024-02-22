@@ -33,4 +33,16 @@ public class cMobEyes : MonoBehaviour
         
     }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Wolf"))
+        {
+            target = null;
+            info.manager.target = null;
+
+            print("Leave");
+
+        }
+    }
+
 }
