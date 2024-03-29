@@ -18,16 +18,15 @@ public class dStateManager : MonoBehaviour
 
     private void Awake()
     {
-        
+        state_Idle = new dState_Idle(mobInfo.rb, mobInfo);
+        state_Wander = new dState_Wander(mobInfo.rb, mobInfo);
+        if (mobInfo.debug) { Debug.Log(gameObject.name + " : I am Awake!"); }
     }
 
     void Start()
     {
-        state_Idle = new dState_Idle(mobInfo.rb, mobInfo);
-        state_Wander = new dState_Wander(mobInfo.rb, mobInfo);
-        if (mobInfo.debug) { Debug.Log(gameObject.name + " : I am Awake!"); }
-        currentState = state_Idle;
-        ChangeState(state_Wander);
+        currentState = state_Idle; //Placeholder, state_Spawn eventually
+        ChangeState(state_Idle);
     }
 
     void Update()
