@@ -8,7 +8,6 @@ public class dState_Idle : dState
 
     public override void Enter()
     {
-        if (mobInfo.debug) { Debug.Log(mobInfo.gameObject.name + " : I am Idle"); }
         message = "I am Idle";
         rb = mobInfo.rb;
         //mobInfo.anim.SetBool("Moving", false);

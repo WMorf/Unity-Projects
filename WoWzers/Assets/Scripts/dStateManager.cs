@@ -25,7 +25,6 @@ public class dStateManager : MonoBehaviour
 
     void Start()
     {
-        currentState = state_Idle; //Placeholder, state_Spawn eventually
         ChangeState(state_Idle);
     }
 
