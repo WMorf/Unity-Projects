@@ -18,6 +18,12 @@ public abstract class dState
     public string message = "I am Error";
     public bool active;
 
+    public dState(Rigidbody rb, dMobInfo mobInfo) 
+    {
+        this.rb = rb;
+        this.mobInfo = mobInfo;
+    }
+
     public string Info()
     {
         return message;
