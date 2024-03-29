@@ -9,7 +9,14 @@ public abstract class dState
     //[Header("")]
     //[Tooltip("")]
 
+    [Header("Components")]
+    public Rigidbody rb;
+
+    [Header("Scripts")]
+    public dMobInfo mobInfo;
+
     public string message = "I am Error";
+    public bool active;
 
     public string Info()
     {

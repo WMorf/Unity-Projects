@@ -19,9 +19,9 @@ public class dInfoPanel : MonoBehaviour
             {
                 reward.text = mobInfo.rewardScore.ToString();
                 life.text = mobInfo.lifeTime.ToString();
-                message.text = mobInfo.manager.stateMessage.ToString();
-                timer.text = mobInfo.manager.timer.ToString();
-                threshold.text = mobInfo.manager.threshold.ToString();
+                message.text = mobInfo.manager.stateCheck.stateMessage.ToString();
+                timer.text = mobInfo.manager.stateCheck.timer.ToString();
+                threshold.text = mobInfo.manager.stateCheck.threshold.ToString();
             }
             catch { }
         }

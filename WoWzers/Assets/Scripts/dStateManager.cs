@@ -11,28 +11,23 @@ public class dStateManager : MonoBehaviour
 
     [Header("Scripts")]
     public dMobInfo mobInfo;
+    public dStateCheck stateCheck;
 
-    [Header("Objects")]
-    public GameObject target;
-
-    [Header("Logic")]
-    public float timer, threshold;
-    public float idleTime, wanderTime;
-    public string stateMessage;
-    public bool variedTime;
-    public float variation;
+    //[Header("Objects")]
+    //public GameObject target;
 
     void Start()
     {
-        state_Idle = new dState_Idle();
-        state_Wander = new dState_Wander();
+        state_Idle = new dState_Idle(); state_Idle.mobInfo = mobInfo; state_Idle.rb = mobInfo.rb;
+        state_Wander = new dState_Wander(); state_Wander.mobInfo = mobInfo; state_Wander.rb = mobInfo.rb;
+        if (mobInfo.debug) { Debug.Log(gameObject.name + " : I am Awake!"); }
         currentState = state_Idle;
-        if (mobInfo.debug) { Debug.Log("I am Awake!"); }
+        ChangeState(state_Wander);
     }
 
     void Update()
     {
-        
+        currentState.Update();
     }
 
     public void ChangeState(dState newState)
@@ -43,5 +38,7 @@ public class dStateManager : MonoBehaviour
         }
         currentState = newState;
         currentState.Enter();
+        stateCheck.stateMessage = currentState.Info();
+        if (mobInfo.debug) { Debug.Log(currentState.Info()); }
     }
 }
