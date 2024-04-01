@@ -16,7 +16,7 @@ public class dState_Wander : dState
         rb = mobInfo.rb;
         //mobInfo.anim.SetBool("Moving", true);
         speed = mobInfo.speed;
-        newDirection = Random.insideUnitCircle;
+        ChangeDirection();
         active = true;
     }
 
@@ -34,11 +34,17 @@ public class dState_Wander : dState
         active = false;
     }
 
+    public void ChangeDirection()
+    {
+        newDirection = Random.insideUnitSphere * speed;
+        //newDirection.y = 0;
+    }
+
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Mob")
         {
-            newDirection = Random.insideUnitCircle;
+            ChangeDirection();
         }
     }
 }
