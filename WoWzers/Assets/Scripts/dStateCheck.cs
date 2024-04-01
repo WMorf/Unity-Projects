@@ -15,10 +15,12 @@ public class dStateCheck : MonoBehaviour
     public string stateMessage;
     public bool variedTime;
     public float variation;
+    public string mood = "normal";
 
 
     void Awake()
     {
+        mood = mobInfo.mood;
         manager = mobInfo.manager;
         currentState = manager.currentState;
         if (variedTime)
@@ -30,31 +32,40 @@ public class dStateCheck : MonoBehaviour
 
     void Update()
     {
-        switch (currentState)
+        mood = mobInfo.mood;
+
+        switch (mood)
         {
-            /*-------------------------------------------------------*/
-            case dState_Idle:
-                timer += Time.deltaTime;
-                if (timer >= threshold)
-                {
-                    timer = 0;
-                    threshold = wanderTime;
-                    manager.ChangeState(manager.state_Wander);
-                }
-                break;
+            case "normal":
+                    switch (currentState)
+                    {
+                        /*-------------------------------------------------------*/
+                        case dState_Idle:
+                            timer += Time.deltaTime;
+                            if (timer >= threshold)
+                            {
+                                timer = 0;
+                                threshold = wanderTime;
+                                manager.ChangeState(manager.state_Wander);
+                            }
+                            break;
 
-            /*-------------------------------------------------------*/
-            case dState_Wander:
-                timer += Time.deltaTime;
-                if (timer >= threshold)
-                {
-                    timer = 0;
-                    threshold = idleTime;
-                    manager.ChangeState(manager.state_Idle);
-                }
-                break;
+                        /*-------------------------------------------------------*/
+                        case dState_Wander:
+                            timer += Time.deltaTime;
+                            if (timer >= threshold)
+                            {
+                                timer = 0;
+                                threshold = idleTime;
+                                manager.ChangeState(manager.state_Idle);
+                            }
+                            break;
 
-            /*-------------------------------------------------------*/
+                        /*-------------------------------------------------------*/
+                    }
+            break;
+
         }
+
     }
 }

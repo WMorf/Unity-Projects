@@ -35,6 +35,7 @@ public class dMobInfo : MonoBehaviour
     public bool debug;
     public int rewardScore;
     public float lifeTime;
+    public string mood = "normal";
 
 
 
