@@ -41,6 +41,7 @@ public class dStateManager : MonoBehaviour
         }
         currentState = newState;
         currentState.Enter();
+        stateCheck.currentState = newState;
         stateCheck.stateMessage = currentState.Info();
         if (mobInfo.debug) { Debug.Log(currentState.Info()); }
     }

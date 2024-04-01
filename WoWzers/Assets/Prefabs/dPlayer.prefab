@@ -83,7 +83,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mobInfo: {fileID: 2240182974091198553}
   stateCheck: {fileID: 7382391177401812028}
-  target: {fileID: 0}
 --- !u!114 &7382391177401812028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,13 +95,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30798ec0ce19ea84883324633f32f978, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mobInfo: {fileID: 2240182974091198553}
+  manager: {fileID: 2240182974091198554}
   timer: 0
   threshold: 0
-  idleTime: 0
-  wanderTime: 0
+  idleTime: 3
+  wanderTime: 3
   stateMessage: 
-  variedTime: 0
-  variation: 0
+  variedTime: 1
+  variation: 0.5
 --- !u!114 &2240182974091198555
 MonoBehaviour:
   m_ObjectHideFlags: 0

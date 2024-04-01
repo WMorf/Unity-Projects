@@ -6,7 +6,7 @@ public class dState_Wander : dState
 {
     [Header("RunTime")]
     public float speed;
-    public Vector3 newDirection;
+    public Vector2 newDirection;
 
     public dState_Wander(Rigidbody rb, dMobInfo mobInfo) : base(rb, mobInfo) { }
 
