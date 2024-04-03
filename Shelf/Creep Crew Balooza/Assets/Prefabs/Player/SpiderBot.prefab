@@ -184,7 +184,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 759334109
-  m_SortingLayer: 7
+  m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 5821847316215258738, guid: fbdbb7cab63f3a94f9dc53bf640fc676,
     type: 3}
@@ -207,6 +207,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1796838721863639914}
+  - component: {fileID: 3602345859100195897}
   - component: {fileID: 2155156377114107687}
   - component: {fileID: 6283784885011630011}
   - component: {fileID: 8248594227861590008}
@@ -239,6 +240,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3602345859100195897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922102658103450462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 371feeac64d2b574ca43a3cd07128b0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0
+  theRB: {fileID: 2155156377114107687}
+  gunArm: {fileID: 5227932289889326179}
+  zoomCam: {fileID: 1997059589}
+  anim: {fileID: 6283784885011630011}
+  bulletToFire: {fileID: 1269591438222805179, guid: 566720f29e53ae14ea40ce54d04b386d,
+    type: 3}
+  missleToFIre: {fileID: 5212429647145424725, guid: 2edae7954b15ddf42bd828df15d0eb18,
+    type: 3}
+  shotPoint: {fileID: 3101172920295959724}
+  firePoint: {fileID: 265575960386956657}
+  timeBetweenShots: 0
+  timeBetweenMissles: 0
+  missleAlert: {fileID: 5332590702116128807, guid: 7e33f8abf8d748c4994b12635587d33d,
+    type: 3}
+  spread: 0
+  bodySR: {fileID: 9028068198040654762}
+  whoTarget:
+    serializedVersion: 2
+    m_Bits: 0
+  dashSpeed: 8
+  dashLength: 0.5
+  dashCooldown: 1
+  dashInvincibillity: 0.4
+  dashCounter: 0
+  shell: {fileID: 2934476766697639728, guid: 8fff60af23943914eaf6654e7c2e596b, type: 3}
+  canMove: 1
 --- !u!50 &2155156377114107687
 Rigidbody2D:
   serializedVersion: 4
@@ -363,7 +403,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 759334109
-  m_SortingLayer: 7
+  m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -3223810312228597290, guid: fbdbb7cab63f3a94f9dc53bf640fc676,
     type: 3}
@@ -445,7 +485,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 759334109
-  m_SortingLayer: 7
+  m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: -4187917602552200450, guid: fbdbb7cab63f3a94f9dc53bf640fc676,
     type: 3}
@@ -557,7 +597,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 759334109
-  m_SortingLayer: 7
+  m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -2589783090754167811, guid: fbdbb7cab63f3a94f9dc53bf640fc676,
     type: 3}
@@ -639,7 +679,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 759334109
-  m_SortingLayer: 7
+  m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -7038808925434530866, guid: fbdbb7cab63f3a94f9dc53bf640fc676,
     type: 3}
@@ -721,7 +761,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 759334109
-  m_SortingLayer: 7
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -5246074676601618523, guid: fbdbb7cab63f3a94f9dc53bf640fc676,
     type: 3}
@@ -803,7 +843,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 759334109
-  m_SortingLayer: 7
+  m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: 6838920496310108439, guid: fbdbb7cab63f3a94f9dc53bf640fc676,
     type: 3}

@@ -145,7 +145,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -767226433
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: -4232058982347268741, guid: 5c4d1613a337a5e408088d0f1cf25847,
     type: 3}
@@ -179,7 +179,15 @@ MonoBehaviour:
     type: 3}
   trailDust: {fileID: 6005054324596127172, guid: 97c51bf140e32f7469efc1208dd48a86,
     type: 3}
-  damageToGive: 1
+  distanceCounter: 0
+  DistanceMax: 0
+  health: 0
+  shouldExplode: 0
+  explosionBits: []
+  numberOfBitsMax: 0
+  numberBitsMin: 0
+  damageToGive: 10
+  explosionDust: {fileID: 0}
 --- !u!61 &9212524601277962202
 BoxCollider2D:
   m_ObjectHideFlags: 0

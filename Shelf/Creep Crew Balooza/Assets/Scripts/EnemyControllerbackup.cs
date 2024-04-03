@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class EnemyController : MonoBehaviour
+public class EnemyControllerBackup : MonoBehaviour
 {
     public static EnemyController instance;
     
@@ -72,10 +72,10 @@ public class EnemyController : MonoBehaviour
 
     
 
-    private void Awake()
-    {
-        instance = this;
-    }
+    //private void Awake()
+    //{
+    //    instance = this;
+    //}
 
 
 

@@ -97,7 +97,7 @@ public class EnemyController : MonoBehaviour
         scaleY = transform.localScale.y;
         flipCount = flipMax;
         backPoint = transform.position;
-        anim.SetFloat("Idle",startIdle);
+        try { anim.SetFloat("Idle", startIdle); } catch { };
     }
 
     // Update is called once per frame
@@ -326,7 +326,7 @@ public class EnemyController : MonoBehaviour
 
     public void IdlePick()
     {
-        anim.SetInteger( "Idle", Random.Range(1, idleMax ));
+        try { anim.SetInteger("Idle", Random.Range(1, idleMax)); } catch { };
     }
 
     public void damageEnemy(int damage)

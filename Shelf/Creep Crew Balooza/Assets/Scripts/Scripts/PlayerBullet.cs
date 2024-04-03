@@ -69,10 +69,10 @@ public class PlayerBullet : MonoBehaviour
             Instantiate(impactEffectSkelly, transform.position, transform.rotation);
             other.GetComponent<EnemyController>().damageEnemy(damageToGive);
         }
-        
-        if(other.tag == "Player")
+
+        if (other.tag == "Player")
         {
-            HealthManager.instance.DamagePlayer(); 
+            HealthManager.instance.DamagePlayer();
         }
     }
 

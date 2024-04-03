@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class AudioManager : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
+        levelMusic.volume = .01f;
         levelMusic.Play();
     }
 
