@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/TestBin.unity
-    guid: 17bc638c1a02491498cdd1feab12b55b
+    path: Assets/Scenes/Alamo Test.unity
+    guid: 90201d85b1b50e745b856f07a7be2382
   m_configObjects: {}

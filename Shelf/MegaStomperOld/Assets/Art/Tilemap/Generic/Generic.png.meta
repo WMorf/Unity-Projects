@@ -123,7 +123,7 @@ TextureImporter:
       213: 6201897406375021389
     second: Concrete
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -140,9 +140,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -152,8 +155,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -174,10 +177,15 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -189,6 +197,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -201,6 +210,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -213,6 +223,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -225,6 +236,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -237,6 +249,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1092,9 +1105,49 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      Concrete: 6201897406375021389
+      ConcreteDark: -6335609286413554248
+      ConcreteDarkb: -1435657850015897182
+      Concreteb: -3607263578231728920
+      Dirt: -4607517194309683353
+      Dirtb: -3467255870234447437
+      FRoad1: 339393523074379097
+      FRoad2: -9143270371774218164
+      FRoad3: 33377346663477012
+      Fence1: 5784037110645889251
+      Fence2: 2306281883216541043
+      Fence3: 7841032492756124450
+      Fence4: -5436288166754646110
+      Grass1: 378912892361772757
+      Grass1b: -317036793397117672
+      Grass2: -1228857272436911732
+      Grass2b: -946095948643917779
+      Mud: -1023096886784325880
+      Mudb: 2800523105692380828
+      RoadAStraight: -1018593299453630229
+      RoadATurn: 3860516513650030955
+      RoadBStraight: -5814707831439810184
+      RoadBTurn: -8877971955166297669
+      RoadCStraight: 754694462419025149
+      RoadCTurn: -8962802800790084515
+      Sand: 612128135974884488
+      Sandb: -3312452826285331162
+      Sea: 6776800264832018738
+      Seab: 8274314695660969828
+      Shallow: 3397284717413066629
+      ShallowB: 5121926330577882567
+      Shore: -6441678543560877818
+      Shoreb: -7775819094548201046
+      Trail: -3767625692065671256
+      TrailTurn: -8813661897893010469
+      Trailb: -6884337769520911368
+      Yard1: 6909046797704820123
+      Yard2: -4806471919217708043
+      Yard3: -7493037666557902347
+      Yard4: 5485087988864332185
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -123,7 +123,7 @@ TextureImporter:
       213: -4777029961003333497
     second: Scientist_39
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -140,10 +140,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -153,11 +155,11 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: -1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -182,6 +184,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -193,6 +197,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -205,6 +210,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -217,6 +223,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -229,6 +236,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -241,6 +249,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -253,6 +262,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1108,9 +1118,49 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      Scientist_0: 3191487229801253599
+      Scientist_1: 4496153721236874793
+      Scientist_10: -3684936366197557146
+      Scientist_11: 3709541245099167810
+      Scientist_12: -117690381463808343
+      Scientist_13: 2880666457191497725
+      Scientist_14: 8252484363259810946
+      Scientist_15: 6597719470303704809
+      Scientist_16: 6630860666273043275
+      Scientist_17: -3066133683817136882
+      Scientist_18: -7498964566749403557
+      Scientist_19: 4611611833784122347
+      Scientist_2: 5014882533444588982
+      Scientist_20: 5270338807155898833
+      Scientist_21: -1864095209474938880
+      Scientist_22: 1302737717060698081
+      Scientist_23: 4907035147078911450
+      Scientist_24: 7016186307731097473
+      Scientist_25: -2428646172916619009
+      Scientist_26: -3235509309875034098
+      Scientist_27: 3145486484475025288
+      Scientist_28: 2135803122869067416
+      Scientist_29: 5043367185012215943
+      Scientist_3: 7042246541931600999
+      Scientist_30: 3796460942621710600
+      Scientist_31: 1787274873827212448
+      Scientist_32: -2184233828918117128
+      Scientist_33: 8089492950489062418
+      Scientist_34: -1640289584589217329
+      Scientist_35: 9082968958111520526
+      Scientist_36: 5785812726713206306
+      Scientist_37: 474876528598782027
+      Scientist_38: 6108522664453758685
+      Scientist_39: -4777029961003333497
+      Scientist_4: -4648952255572900420
+      Scientist_5: 7453911253746885
+      Scientist_6: -3878837330690485307
+      Scientist_7: 352252269205891217
+      Scientist_8: -2624890351732360632
+      Scientist_9: 6788833516027929513
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -123,7 +123,7 @@ TextureImporter:
       213: 8743643340956579797
     second: nemling_19b
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -140,10 +140,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -153,11 +155,11 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: -1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -182,6 +184,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -193,6 +197,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -205,6 +210,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -217,6 +223,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -229,6 +236,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -241,6 +249,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -253,6 +262,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1108,9 +1118,49 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      nemling_0: 3119086599388486545
+      nemling_0b: -8295050513087136169
+      nemling_1: 4621042961579603162
+      nemling_10: 2206694970103414162
+      nemling_10b: -8166889863212862079
+      nemling_11: -8029307583791569922
+      nemling_11b: 580750247237559935
+      nemling_12: 2361123516619106594
+      nemling_12b: 3051031494437730857
+      nemling_13: 820465287022606508
+      nemling_13b: -6519461037444077130
+      nemling_14: -8720329703946075256
+      nemling_14b: 5704966140586374350
+      nemling_15: -7285267760378905061
+      nemling_15b: -8895180276591871519
+      nemling_16: 86014889096054782
+      nemling_16b: 8936996315321508553
+      nemling_17: 1803370770403738558
+      nemling_17b: 8665988272525353855
+      nemling_18: 7725357507194643605
+      nemling_18b: 8847250861324924965
+      nemling_19: 5147168174830846421
+      nemling_19b: 8743643340956579797
+      nemling_1b: -6224524818687135985
+      nemling_2: -2329048300271796147
+      nemling_2b: 3078791129533350340
+      nemling_3: 6413889399809773225
+      nemling_3b: 8475638921873363505
+      nemling_4: -2555616425960205610
+      nemling_4b: -6773393429991473600
+      nemling_5: 4395658840377341554
+      nemling_5b: 8299760631482131207
+      nemling_6: -3419827904302629510
+      nemling_6b: -6350066644584543323
+      nemling_7: 2318836738519992630
+      nemling_7b: 6670937349257253580
+      nemling_8: 5524438694505011344
+      nemling_8b: -3306881898324970333
+      nemling_9: 6656748283355059730
+      nemling_9b: 2487435663876558504
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

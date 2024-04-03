@@ -183,7 +183,7 @@ TextureImporter:
       213: -6075034641550481010
     second: sulfurtrack4
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -200,10 +200,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -213,11 +215,11 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: -1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -242,6 +244,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -253,6 +257,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -265,6 +270,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -277,6 +283,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -289,6 +296,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -301,6 +309,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -313,6 +322,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1588,9 +1598,69 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      SulfurFrogIdle: 7410135794088175386
+      SulfurFrogcower1: 8922468350074681656
+      SulfurFrogcower2: 8495505396702319152
+      SulfurFrogwalk1: 1979923568806895748
+      SulfurFrogwalk2: -1664743817771218282
+      SulfurTreeBase1: -2758380027674523955
+      SulfurTreeBase2: -4680645740961645170
+      smoke1: -3357843803765955555
+      smoke2: 2498048714625263275
+      smoke3: -8627965309570022915
+      sulfurCloud1: 821871045376568252
+      sulfurCloud2: -3389321416571430679
+      sulfurCloud3: 1763126517079669328
+      sulfurRock1: 1719025943453334075
+      sulfurRock2: -504189140883363460
+      sulfurRock3: 8193181204107379128
+      sulfurRock4: 7871759180575600748
+      sulfurSmoke1: -3504896492481979377
+      sulfurSmoke2: 3758917299053530777
+      sulfurSmoke3: 3753592016721010958
+      sulfurSteam1: -4102476352390925768
+      sulfurSteam2: 4415776634663829918
+      sulfurSteam3: 681230329312937567
+      sulfurSteam4: 8510012792242862465
+      sulfurSteam5: 9062951996235177395
+      sulfurTreeCluster1: -6669334631399626995
+      sulfurTreeCluster2: 6426040831996284560
+      sulfurTreeCluster3: -9150181307212739845
+      sulfurTreeCluster4: 8698950401530761782
+      sulfurTreeRubble1: 6211550631286822778
+      sulfurTreeRubble2: 8275891764028964965
+      sulfurTreeRubble3: 2802218637025909613
+      sulfurTreeRubble4: -1156603241203144238
+      sulfurTreeSeedling1: -9010164509949706818
+      sulfurTreeSeedling2: 7518018576261049520
+      sulfurTreeSeedling3: -6227741840861454606
+      sulfurTreeSeedling4: 2756189208548812348
+      sulfurTreeSeedling5: -3609949767701207102
+      sulfurTreeSeedling6: 5151043983309442951
+      sulfurTree_Aback: -7025847079937495502
+      sulfurTree_Afront: -8714155305466935789
+      sulfurTree_Bback: 2889615687901360752
+      sulfurTree_Bfront: -3895795456986618016
+      sulfurTree_Cback: -4446260872616960235
+      sulfurTree_Cfront: -6795411629850135625
+      sulfurTree_sapling1: 3542868498904791922
+      sulfurTree_sapling2: -1085162492937532666
+      sulfurTree_sapling3: 2704599976731862014
+      sulfurTree_sapling4: 3478047925325302461
+      sulfurdrip: -1696652693230322849
+      sulfursplash1: 6744039262066359744
+      sulfursplash2: -1091337796088343894
+      sulfursplash3: 5354390960887125001
+      sulfursplash4: -8687782610879831578
+      sulfursplash5: 7885630752205138294
+      sulfursplash6: -5794068642493056613
+      sulfurtrack1: -5115982699194251876
+      sulfurtrack2: 7843511002931717910
+      sulfurtrack3: -1212016814394355317
+      sulfurtrack4: -6075034641550481010
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

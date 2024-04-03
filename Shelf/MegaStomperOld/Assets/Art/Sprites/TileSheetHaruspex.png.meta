@@ -75,7 +75,7 @@ TextureImporter:
       213: -6020360276557789820
     second: TileSheetHaruspex_23
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -92,10 +92,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -105,8 +107,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -134,6 +136,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -145,6 +149,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -157,6 +162,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -169,6 +175,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -181,6 +188,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -193,6 +201,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -205,6 +214,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -724,9 +734,33 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      TileSheetHaruspex_0: 8106770894036376416
+      TileSheetHaruspex_1: -7107892708868968929
+      TileSheetHaruspex_10: 8742596332378837603
+      TileSheetHaruspex_11: -5422178953262123987
+      TileSheetHaruspex_12: -6845770271364100365
+      TileSheetHaruspex_13: 544660314534225851
+      TileSheetHaruspex_14: 8484097371399990809
+      TileSheetHaruspex_15: 5918680989440920590
+      TileSheetHaruspex_16: -443517098372081485
+      TileSheetHaruspex_17: -7726310913515362165
+      TileSheetHaruspex_18: -4113689915194824683
+      TileSheetHaruspex_19: 3752809179270180635
+      TileSheetHaruspex_2: -881937228125990397
+      TileSheetHaruspex_20: 2830405155032955246
+      TileSheetHaruspex_21: -8943048658262169507
+      TileSheetHaruspex_22: -7118990943594115774
+      TileSheetHaruspex_23: -6020360276557789820
+      TileSheetHaruspex_3: -2884735040294754346
+      TileSheetHaruspex_4: 7685265821404910814
+      TileSheetHaruspex_5: 3789741802183392744
+      TileSheetHaruspex_6: -7991897096675674235
+      TileSheetHaruspex_7: -4267173897009079426
+      TileSheetHaruspex_8: 950288737753992674
+      TileSheetHaruspex_9: 8470049010188339703
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
