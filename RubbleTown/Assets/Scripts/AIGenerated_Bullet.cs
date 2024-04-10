@@ -9,11 +9,15 @@ public class AIGenerated_Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        // Spawn impact decal at the collision point
-        SpawnImpactDecal(collision.contacts[0].point, collision.contacts[0].normal);
+        if(collision.gameObject.CompareTag("Wall") )
+        {
+            // Spawn impact decal at the collision point
+            SpawnImpactDecal(collision.contacts[0].point, collision.contacts[0].normal);
 
-        // Spawn particle emitter for smoke and debris
-        SpawnParticleEmitter(collision.contacts[0].point, collision.contacts[0].normal);
+            // Spawn particle emitter for smoke and debris
+            SpawnParticleEmitter(collision.contacts[0].point, collision.contacts[0].normal);
+        }
+
 
         // Destroy the bullet
         Destroy(gameObject);

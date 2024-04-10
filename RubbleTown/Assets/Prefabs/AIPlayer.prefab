@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2246296867479868487}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FIrePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 185790024799653316}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.45, y: -0.04, z: 0.57}
+  m_LocalPosition: {x: -0.45, y: -0.04, z: 0.661}
   m_LocalScale: {x: 11.660508, y: 5.7045064, z: 0.945708}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 3609906101762524660}
   - component: {fileID: 5056362029482972341}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115,6 +115,37 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 352145189676335415}
   m_Enabled: 1
+--- !u!1 &2013378931653945341
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8148641664189350896}
+  m_Layer: 3
+  m_Name: EjectPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8148641664189350896
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013378931653945341}
+  m_LocalRotation: {x: -0, y: -0, z: 0.27304015, w: 0.96200264}
+  m_LocalPosition: {x: 0.53, y: 0.44, z: 0.164}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5074084618476183045}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 31.691}
 --- !u!1 &4677688919784197533
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,11 +199,14 @@ MonoBehaviour:
   movementSpeed: 5
   rotationSpeed: 3
   projectilePrefab: {fileID: 6279237114007075993, guid: 26f4c70784ba8c547a9ea8766f42da09, type: 3}
-  muzzleFLash: {fileID: 5744454742530171426, guid: 677da45e1ff21444ab570f65a8f6d399, type: 3}
   firePoint: {fileID: 2246296867479868487}
+  shellEjectionPoint: {fileID: 8148641664189350896}
+  shellPrefab: {fileID: 3478286342781473120, guid: 727dea39d9455304395f2b5c4a76350d, type: 3}
+  muzzleFLash: {fileID: 5744454742530171426, guid: 677da45e1ff21444ab570f65a8f6d399, type: 3}
   projectileSpeed: 20
   fireRate: 0.1
-  accuracy: 3.5
+  accuracy: 0
+  gunObject: {fileID: 7703516736405933395}
 --- !u!54 &5289736709446069859
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -231,7 +265,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0dbf85833e7911c4cbf59a9895205f58, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -264,9 +298,8 @@ GameObject:
   - component: {fileID: 5074084618476183045}
   - component: {fileID: 384808314893742835}
   - component: {fileID: 3713703628888875588}
-  - component: {fileID: 8971857231627688407}
-  m_Layer: 0
-  m_Name: Cube
+  m_Layer: 3
+  m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -280,11 +313,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7703516736405933395}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.22, y: 0.4123, z: 0.486}
+  m_LocalPosition: {x: 0.042, y: 0.288, z: 0.656}
   m_LocalScale: {x: 0.08575955, y: 0.1753, z: 0.6290525}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2246296867479868487}
+  - {fileID: 8148641664189350896}
   m_Father: {fileID: 4114689326815693889}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -316,7 +350,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 683b329cffe36424c9fd46b61b7e8cc9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -338,16 +372,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8971857231627688407
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7703516736405933395}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
