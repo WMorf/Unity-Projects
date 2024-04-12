@@ -107,9 +107,19 @@ MonoBehaviour:
   - {fileID: 2130140520526518046, guid: 3e301b9994f36e24ea4bdcf215ad5149, type: 3}
   maxPieces: 2
   shouldDropItems: 0
+  shouldSmoke: 0
   itemsToDrop: []
   itemDropPercent: 0
+  leaveBase: 0
+  shouldShatterBits: 1
+  baseRemains: {fileID: 0}
+  residue: {fileID: 0}
   breakSound: 0
+  shouldExplode: 0
+  explosionBits: []
+  numberOfBitsMax: 0
+  numberBitsMin: 0
+  explosionDust: {fileID: 0}
 --- !u!50 &2230077114961590641
 Rigidbody2D:
   serializedVersion: 4

@@ -122,9 +122,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2469228999303690591}
   - component: {fileID: 2469228999303690588}
+  - component: {fileID: 8016403255926829939}
   - component: {fileID: 2469228999303690589}
   - component: {fileID: 2469228999303690530}
-  - component: {fileID: 2469228999303690531}
   m_Layer: 10
   m_Name: Skelly
   m_TagString: Mob
@@ -167,6 +167,56 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8016403255926829939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2469228999303690528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a37558e2ae2384d82dc2d159d66e96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 15
+  moveSpeed: 4
+  flipMax: 0.25
+  idleMax: 0
+  shouldIdlePick: 0
+  startIdle: 0
+  shouldChase: 0
+  shouldfollowProphet: 0
+  rangeToChasePlayer: 9
+  shouldRunaAway: 0
+  runAwayRange: 5
+  shouldWander: 1
+  wanderLength: 3
+  pauseLength: 5
+  shouldPatrol: 0
+  patrolPoints: []
+  deathSplatters:
+  - {fileID: 4274290117184446383, guid: 9e0d6600a4bbe0845933ef07de8195cb, type: 3}
+  - {fileID: 5895313757212777519, guid: 69e2563c48bbdd0438b9d66e6f3dacc6, type: 3}
+  - {fileID: 2561676632335470294, guid: c05d5f1a6e6715549b5114ad3cd348cd, type: 3}
+  - {fileID: 2999218001246650806, guid: ae387eda1f9e672458f0a8323ab07e19, type: 3}
+  hitEffect: {fileID: 3641192855080691887, guid: 333b3dbd413e89d40b73f8a457844722,
+    type: 3}
+  blockWhenIdle: 0
+  shouldShoot: 1
+  bullet: {fileID: 5958462426956016207, guid: a84fdc5dd90bd1f4098516c67dcb8448, type: 3}
+  firePoint: {fileID: 2016925842}
+  fireRate: 3
+  shotRange: 8
+  shouldDropItems: 0
+  itemsToDrop:
+  - {fileID: 8383231325947368041, guid: 4cff39b8f59e1e64f8b2e8da9fcd8e5d, type: 3}
+  - {fileID: 8383231325947368041, guid: 4cff39b8f59e1e64f8b2e8da9fcd8e5d, type: 3}
+  - {fileID: 8383231325947368041, guid: 4cff39b8f59e1e64f8b2e8da9fcd8e5d, type: 3}
+  itemDropPercent: 0
+  theRB: {fileID: 2469228999303690589}
+  anim: {fileID: 2469228999303690588}
+  theBody: {fileID: 2469228998408257126}
 --- !u!50 &2469228999303690589
 Rigidbody2D:
   serializedVersion: 4
@@ -214,46 +264,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4111719, y: 0.83642244}
   m_EdgeRadius: 0
---- !u!114 &2469228999303690531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2469228999303690528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f3f512c86cb96349a97d3e68bec2c20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  theRB: {fileID: 2469228999303690589}
-  anim: {fileID: 2469228999303690588}
-  theBody: {fileID: 2469228998408257126}
-  moveSpeed: 4
-  shouldChase: 0
-  rangeToChasePlayer: 9
-  shouldRunaAway: 1
-  runAwayRange: 5
-  shouldWander: 0
-  wanderLength: 0
-  pauseLength: 0
-  health: 15
-  deathSplatters:
-  - {fileID: 4274290117184446383, guid: 9e0d6600a4bbe0845933ef07de8195cb, type: 3}
-  - {fileID: 5895313757212777519, guid: 69e2563c48bbdd0438b9d66e6f3dacc6, type: 3}
-  - {fileID: 2561676632335470294, guid: c05d5f1a6e6715549b5114ad3cd348cd, type: 3}
-  - {fileID: 2999218001246650806, guid: ae387eda1f9e672458f0a8323ab07e19, type: 3}
-  hitEffect: {fileID: 3641192855080691887, guid: 333b3dbd413e89d40b73f8a457844722,
-    type: 3}
-  blockWhenIdle: 0
-  shouldShoot: 1
-  bullet: {fileID: 5958462426956016207, guid: a84fdc5dd90bd1f4098516c67dcb8448, type: 3}
-  firePoint: {fileID: 2016925842}
-  fireRate: 1
-  shotRange: 12
-  shouldDropItems: 1
-  itemsToDrop:
-  - {fileID: 8383231325947368041, guid: 4cff39b8f59e1e64f8b2e8da9fcd8e5d, type: 3}
-  - {fileID: 8383231325947368041, guid: 4cff39b8f59e1e64f8b2e8da9fcd8e5d, type: 3}
-  - {fileID: 8383231325947368041, guid: 4cff39b8f59e1e64f8b2e8da9fcd8e5d, type: 3}
-  itemDropPercent: 20

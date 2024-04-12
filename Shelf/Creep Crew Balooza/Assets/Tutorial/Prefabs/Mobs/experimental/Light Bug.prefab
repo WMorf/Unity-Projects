@@ -255,7 +255,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7582782223909887263}
-  - component: {fileID: 1273058193364271905}
+  - component: {fileID: 5346493023549808501}
   - component: {fileID: 498342244699295641}
   - component: {fileID: 7623378441277677886}
   - component: {fileID: 2016802812723656570}
@@ -284,7 +284,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1273058193364271905
+--- !u!114 &5346493023549808501
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -293,21 +293,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 2995619095848936196}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f3f512c86cb96349a97d3e68bec2c20, type: 3}
+  m_Script: {fileID: 11500000, guid: 61a37558e2ae2384d82dc2d159d66e96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theRB: {fileID: 2016802812723656570}
-  anim: {fileID: 498342244699295641}
-  theBody: {fileID: 119018999334932152}
+  health: 1
   moveSpeed: 1
+  flipMax: 0.25
+  idleMax: 0
+  shouldIdlePick: 0
+  startIdle: 0
   shouldChase: 0
+  shouldfollowProphet: 0
   rangeToChasePlayer: 0
   shouldRunaAway: 1
   runAwayRange: 1
   shouldWander: 1
-  wanderLength: 1
-  pauseLength: 1
-  health: 1
+  wanderLength: 0.5
+  pauseLength: 0.5
+  shouldPatrol: 0
+  patrolPoints: []
   deathSplatters:
   - {fileID: 6404626174822062769, guid: 54e58cb92d02ede48a9f2549e691ebcb, type: 3}
   hitEffect: {fileID: 3641192855080691887, guid: 333b3dbd413e89d40b73f8a457844722,
@@ -321,6 +325,9 @@ MonoBehaviour:
   shouldDropItems: 0
   itemsToDrop: []
   itemDropPercent: 0
+  theRB: {fileID: 2016802812723656570}
+  anim: {fileID: 498342244699295641}
+  theBody: {fileID: 119018999334932152}
 --- !u!95 &498342244699295641
 Animator:
   serializedVersion: 3

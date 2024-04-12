@@ -114,9 +114,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6338237645531499822}
+  - component: {fileID: 2576848945034501274}
   - component: {fileID: 3652422191591574388}
   - component: {fileID: 4291977763998204392}
-  - component: {fileID: 7235776741949376782}
   - component: {fileID: 8543280757652514636}
   - component: {fileID: -7845311534554512464}
   m_Layer: 0
@@ -141,6 +141,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2576848945034501274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978296385892314892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a37558e2ae2384d82dc2d159d66e96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  moveSpeed: 1
+  flipMax: 0.25
+  idleMax: 0
+  shouldIdlePick: 0
+  startIdle: 0
+  shouldChase: 0
+  shouldfollowProphet: 0
+  rangeToChasePlayer: 0
+  shouldRunaAway: 1
+  runAwayRange: 2
+  shouldWander: 1
+  wanderLength: 2
+  pauseLength: 4
+  shouldPatrol: 0
+  patrolPoints: []
+  deathSplatters:
+  - {fileID: 1866623020247651576, guid: a83c4f2d955f32a4f9094ed00222bdef, type: 3}
+  hitEffect: {fileID: 1866623020247651576, guid: a83c4f2d955f32a4f9094ed00222bdef,
+    type: 3}
+  blockWhenIdle: 0
+  shouldShoot: 0
+  bullet: {fileID: 0}
+  firePoint: {fileID: 0}
+  fireRate: 0
+  shotRange: 0
+  shouldDropItems: 0
+  itemsToDrop: []
+  itemDropPercent: 0
+  theRB: {fileID: 3652422191591574388}
+  anim: {fileID: 8543280757652514636}
+  theBody: {fileID: 3675948417249573089}
 --- !u!50 &3652422191591574388
 Rigidbody2D:
   serializedVersion: 4
@@ -188,45 +232,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4221804, y: 0.65369046}
   m_EdgeRadius: 0
---- !u!114 &7235776741949376782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 978296385892314892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f3f512c86cb96349a97d3e68bec2c20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 5
-  moveSpeed: 1
-  shouldChase: 0
-  rangeToChasePlayer: 0
-  shouldRunaAway: 1
-  runAwayRange: 2
-  shouldWander: 1
-  wanderLength: 2
-  pauseLength: 4
-  shouldPatrol: 0
-  patrolPoints: []
-  deathSplatters:
-  - {fileID: 1866623020247651576, guid: a83c4f2d955f32a4f9094ed00222bdef, type: 3}
-  hitEffect: {fileID: 1866623020247651576, guid: a83c4f2d955f32a4f9094ed00222bdef,
-    type: 3}
-  blockWhenIdle: 0
-  shouldShoot: 0
-  bullet: {fileID: 0}
-  firePoint: {fileID: 0}
-  fireRate: 0
-  shotRange: 0
-  shouldDropItems: 0
-  itemsToDrop: []
-  itemDropPercent: 0
-  theRB: {fileID: 3652422191591574388}
-  anim: {fileID: 8543280757652514636}
-  theBody: {fileID: 3675948417249573089}
 --- !u!95 &8543280757652514636
 Animator:
   serializedVersion: 3
@@ -264,10 +269,19 @@ MonoBehaviour:
   - {fileID: 1415832488324988180, guid: 420cba596974d5046b7c684c720339b2, type: 3}
   maxPieces: 3
   shouldDropItems: 0
+  shouldSmoke: 0
   itemsToDrop: []
   itemDropPercent: 0
-  smashPower: 1
+  leaveBase: 0
+  shouldShatterBits: 0
+  baseRemains: {fileID: 0}
+  residue: {fileID: 0}
   breakSound: 0
+  shouldExplode: 0
+  explosionBits: []
+  numberOfBitsMax: 0
+  numberBitsMin: 0
+  explosionDust: {fileID: 0}
 --- !u!1 &1378004014600492691
 GameObject:
   m_ObjectHideFlags: 0
@@ -962,8 +976,8 @@ MonoBehaviour:
   - {fileID: 8874325745593384713}
   - {fileID: 7796378310304115836}
   m_Bounds:
-    m_Center: {x: 0.011415705, y: -0.0020174682, z: 0}
-    m_Extent: {x: 0.20986797, y: 0.23510157, z: 0}
+    m_Center: {x: 0.01141572, y: -0.0020174682, z: 0}
+    m_Extent: {x: 0.20986798, y: 0.23510157, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &6820375349835391222

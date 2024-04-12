@@ -107,9 +107,20 @@ MonoBehaviour:
   - {fileID: 2130140520526518046, guid: 3e301b9994f36e24ea4bdcf215ad5149, type: 3}
   maxPieces: 4
   shouldDropItems: 0
+  shouldSmoke: 0
   itemsToDrop: []
   itemDropPercent: 0
+  leaveBase: 0
+  shouldShatterBits: 1
+  baseRemains: {fileID: 4945382601149115771, guid: 64230f4844fdd1a4db61480048493bee,
+    type: 3}
+  residue: {fileID: 0}
   breakSound: 0
+  shouldExplode: 0
+  explosionBits: []
+  numberOfBitsMax: 0
+  numberBitsMin: 0
+  explosionDust: {fileID: 0}
 --- !u!61 &7394817430771377233
 BoxCollider2D:
   m_ObjectHideFlags: 0
