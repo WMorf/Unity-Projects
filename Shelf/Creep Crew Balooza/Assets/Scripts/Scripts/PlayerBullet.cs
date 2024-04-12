@@ -67,7 +67,15 @@ public class PlayerBullet : MonoBehaviour
         if(other.tag == "Mob" || other.tag == "Mob2")
         {
             Instantiate(impactEffectSkelly, transform.position, transform.rotation);
-            other.GetComponent<EnemyController>().damageEnemy(damageToGive);
+            try
+            {
+                other.GetComponent<EnemyController>().damageEnemy(damageToGive);
+            }
+            catch
+            {
+                other.GetComponent<tutEnemy>().damageEnemy(damageToGive);
+            }
+            
         }
 
         if (other.tag == "Player")

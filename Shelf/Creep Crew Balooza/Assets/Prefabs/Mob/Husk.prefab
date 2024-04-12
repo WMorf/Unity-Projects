@@ -1446,7 +1446,7 @@ GameObject:
   - component: {fileID: 1445054261723818115}
   - component: {fileID: 1445054261723818116}
   - component: {fileID: 1445054261723818117}
-  - component: {fileID: 1445054261723818118}
+  - component: {fileID: 4061772406741766735}
   - component: {fileID: 1445054261723818119}
   m_Layer: 10
   m_Name: Husk
@@ -1507,7 +1507,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1445054261723818118
+--- !u!114 &4061772406741766735
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1516,37 +1516,47 @@ MonoBehaviour:
   m_GameObject: {fileID: 1445054261723818120}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f3f512c86cb96349a97d3e68bec2c20, type: 3}
+  m_Script: {fileID: 11500000, guid: 61a37558e2ae2384d82dc2d159d66e96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theRB: {fileID: 1445054261723818117}
-  anim: {fileID: 1445054261803516239}
-  theBody: {fileID: 1445054261291853316}
+  health: 45
   moveSpeed: 1
+  flipMax: 0.25
+  idleMax: 0
+  shouldIdlePick: 0
+  startIdle: 0
   shouldChase: 1
+  shouldfollowProphet: 0
   rangeToChasePlayer: 6
   shouldRunaAway: 0
   runAwayRange: 0
   shouldWander: 0
   wanderLength: 0
   pauseLength: 0
-  health: 45
+  shouldPatrol: 0
+  patrolPoints: []
   deathSplatters:
   - {fileID: 3799041217737658795, guid: eb9f0f1186234e546a9f4d183b9140d8, type: 3}
-  hitEffect: {fileID: 3641192855080691887, guid: 333b3dbd413e89d40b73f8a457844722,
+  hitEffect: {fileID: 1704697082995556924, guid: e9fcab220fc354d4ebb7070267ca0a1e,
     type: 3}
   blockWhenIdle: 1
-  shouldShoot: 1
+  shouldShoot: 0
   bullet: {fileID: 4445302980514565572, guid: ffba9536ce2e9db4ba3422fc152bad90, type: 3}
-  firePoint: {fileID: 1445054260450548435}
-  fireRate: 3
-  shotRange: 4
+  firePoint: {fileID: 1445054260553752299}
+  fireRate: 0
+  shotRange: 0
   shouldDropItems: 1
   itemsToDrop:
+  - {fileID: 7883119418932473005, guid: d31febaccfba4e745b63639938c3a6cd, type: 3}
+  - {fileID: 1755809749575711, guid: 13db0f3441ba6894287b1850c93be6aa, type: 3}
   - {fileID: 2995619095848936196, guid: 622d5391ac7fd4d429bdad5244021ebc, type: 3}
   - {fileID: 2995619095848936196, guid: 622d5391ac7fd4d429bdad5244021ebc, type: 3}
-  - {fileID: 8383231325947368041, guid: 4cff39b8f59e1e64f8b2e8da9fcd8e5d, type: 3}
+  - {fileID: 2995619095848936196, guid: 622d5391ac7fd4d429bdad5244021ebc, type: 3}
+  - {fileID: 2995619095848936196, guid: 622d5391ac7fd4d429bdad5244021ebc, type: 3}
   itemDropPercent: 25
+  theRB: {fileID: 1445054261723818117}
+  anim: {fileID: 1445054261803516239}
+  theBody: {fileID: 1445054261291853316}
 --- !u!114 &1445054261723818119
 MonoBehaviour:
   m_ObjectHideFlags: 0

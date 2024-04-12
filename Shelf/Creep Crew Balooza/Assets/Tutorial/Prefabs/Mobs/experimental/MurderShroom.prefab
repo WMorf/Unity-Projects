@@ -121,7 +121,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4603872363521436601}
-  - component: {fileID: 6235033317767960476}
+  - component: {fileID: 4612067954626083488}
   - component: {fileID: 5637985113705873892}
   - component: {fileID: 589813929109654410}
   - component: {fileID: 4511461708791262915}
@@ -150,7 +150,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6235033317767960476
+--- !u!114 &4612067954626083488
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,12 +159,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 8034828113399579009}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f3f512c86cb96349a97d3e68bec2c20, type: 3}
+  m_Script: {fileID: 11500000, guid: 61a37558e2ae2384d82dc2d159d66e96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
   moveSpeed: 1
   flipMax: 0.25
+  idleMax: 0
+  shouldIdlePick: 0
+  startIdle: 0
   shouldChase: 1
   shouldfollowProphet: 0
   rangeToChasePlayer: 8
@@ -175,8 +178,7 @@ MonoBehaviour:
   pauseLength: 5
   shouldPatrol: 0
   patrolPoints: []
-  deathSplatters:
-  - {fileID: 4274290117184446383, guid: 9e0d6600a4bbe0845933ef07de8195cb, type: 3}
+  deathSplatters: []
   hitEffect: {fileID: 1704697082995556924, guid: e9fcab220fc354d4ebb7070267ca0a1e,
     type: 3}
   blockWhenIdle: 0
@@ -185,11 +187,9 @@ MonoBehaviour:
   firePoint: {fileID: 8998418290166796201}
   fireRate: 0
   shotRange: 0
-  shouldDropItems: 1
-  itemsToDrop:
-  - {fileID: 8383231325947368041, guid: 4cff39b8f59e1e64f8b2e8da9fcd8e5d, type: 3}
-  - {fileID: 7883119418932473005, guid: d31febaccfba4e745b63639938c3a6cd, type: 3}
-  itemDropPercent: 25
+  shouldDropItems: 0
+  itemsToDrop: []
+  itemDropPercent: 0
   theRB: {fileID: 4511461708791262915}
   anim: {fileID: 5637985113705873892}
   theBody: {fileID: 4147927626519637026}

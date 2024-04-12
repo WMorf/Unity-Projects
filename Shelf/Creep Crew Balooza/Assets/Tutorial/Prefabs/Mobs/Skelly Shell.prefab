@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 8949826455138902239}
   - component: {fileID: 8949826455138902238}
   - component: {fileID: 8949826455138902177}
-  - component: {fileID: 8949826455138902176}
+  - component: {fileID: 841697859003825159}
   m_Layer: 10
   m_Name: Skelly Shell
   m_TagString: Mob
@@ -288,7 +288,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4111719, y: 0.83642244}
   m_EdgeRadius: 0
---- !u!114 &8949826455138902176
+--- !u!114 &841697859003825159
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -297,21 +297,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 8949826455138902179}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f3f512c86cb96349a97d3e68bec2c20, type: 3}
+  m_Script: {fileID: 11500000, guid: 61a37558e2ae2384d82dc2d159d66e96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theRB: {fileID: 8949826455138902238}
-  anim: {fileID: 8949826455138902239}
-  theBody: {fileID: 8949826454943950821}
+  health: 15
   moveSpeed: 2
-  shouldChase: 0
+  flipMax: 0.25
+  idleMax: 0
+  shouldIdlePick: 0
+  startIdle: 0
+  shouldChase: 1
+  shouldfollowProphet: 0
   rangeToChasePlayer: 9
-  shouldRunaAway: 0
+  shouldRunaAway: 1
   runAwayRange: 5
   shouldWander: 1
   wanderLength: 4
   pauseLength: 3
-  health: 15
+  shouldPatrol: 0
+  patrolPoints: []
   deathSplatters:
   - {fileID: 4274290117184446383, guid: 9e0d6600a4bbe0845933ef07de8195cb, type: 3}
   - {fileID: 5895313757212777519, guid: 69e2563c48bbdd0438b9d66e6f3dacc6, type: 3}
@@ -320,11 +324,15 @@ MonoBehaviour:
   hitEffect: {fileID: 3641192855080691887, guid: 333b3dbd413e89d40b73f8a457844722,
     type: 3}
   blockWhenIdle: 0
-  shouldShoot: 0
+  shouldShoot: 1
   bullet: {fileID: 5958462426956016207, guid: a84fdc5dd90bd1f4098516c67dcb8448, type: 3}
   firePoint: {fileID: 6805041357696237841}
   fireRate: 1
   shotRange: 12
-  shouldDropItems: 0
-  itemsToDrop: []
-  itemDropPercent: 0
+  shouldDropItems: 1
+  itemsToDrop:
+  - {fileID: 8383231325947368041, guid: 4cff39b8f59e1e64f8b2e8da9fcd8e5d, type: 3}
+  itemDropPercent: 10
+  theRB: {fileID: 8949826455138902238}
+  anim: {fileID: 8949826455138902239}
+  theBody: {fileID: 8949826454943950821}

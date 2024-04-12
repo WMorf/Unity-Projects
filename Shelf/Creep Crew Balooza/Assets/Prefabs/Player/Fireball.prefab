@@ -186,7 +186,7 @@ MonoBehaviour:
   explosionBits: []
   numberOfBitsMax: 0
   numberBitsMin: 0
-  damageToGive: 10
+  damageToGive: 5
   explosionDust: {fileID: 0}
 --- !u!61 &9212524601277962202
 BoxCollider2D:

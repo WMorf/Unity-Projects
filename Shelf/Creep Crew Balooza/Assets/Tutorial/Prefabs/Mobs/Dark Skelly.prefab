@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 2443219091291144942}
   - component: {fileID: 2443219091291144943}
   - component: {fileID: 2443219091291144848}
-  - component: {fileID: 2443219091291144849}
+  - component: {fileID: 8204371024527557084}
   - component: {fileID: 7036317862729233639}
   m_Layer: 10
   m_Name: Dark Skelly
@@ -133,7 +133,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5093619, y: 0.83642244}
   m_EdgeRadius: 0
---- !u!114 &2443219091291144849
+--- !u!114 &8204371024527557084
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,14 +142,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 2443219091291144850}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f3f512c86cb96349a97d3e68bec2c20, type: 3}
+  m_Script: {fileID: 11500000, guid: 61a37558e2ae2384d82dc2d159d66e96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
   moveSpeed: 2
   flipMax: 1
+  idleMax: 0
+  shouldIdlePick: 0
+  startIdle: 0
   shouldChase: 1
-  rangeToChasePlayer: 12
+  shouldfollowProphet: 0
+  rangeToChasePlayer: 10
   shouldRunaAway: 0
   runAwayRange: 0
   shouldWander: 0
@@ -168,14 +172,11 @@ MonoBehaviour:
   shouldShoot: 0
   bullet: {fileID: 5958462426956016207, guid: a84fdc5dd90bd1f4098516c67dcb8448, type: 3}
   firePoint: {fileID: 264718835452322592}
-  fireRate: 1
+  fireRate: 0
   shotRange: 0
-  shouldDropItems: 1
-  itemsToDrop:
-  - {fileID: 8383231325947368041, guid: 4cff39b8f59e1e64f8b2e8da9fcd8e5d, type: 3}
-  - {fileID: 8383231325947368041, guid: 4cff39b8f59e1e64f8b2e8da9fcd8e5d, type: 3}
-  - {fileID: 8383231325947368041, guid: 4cff39b8f59e1e64f8b2e8da9fcd8e5d, type: 3}
-  itemDropPercent: 20
+  shouldDropItems: 0
+  itemsToDrop: []
+  itemDropPercent: 0
   theRB: {fileID: 2443219091291144943}
   anim: {fileID: 2443219091291144942}
   theBody: {fileID: 2443219091469485524}

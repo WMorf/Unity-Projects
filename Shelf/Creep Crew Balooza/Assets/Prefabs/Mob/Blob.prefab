@@ -664,6 +664,7 @@ GameObject:
   - component: {fileID: 1501762444312356210}
   - component: {fileID: 2797547252708358230}
   - component: {fileID: 9156511228252781438}
+  - component: {fileID: 8802992460940590270}
   - component: {fileID: 1270743690276903014}
   - component: {fileID: 4402537322067264069}
   - component: {fileID: 7074950201302581940}
@@ -726,6 +727,52 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &8802992460940590270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4490906699798656584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a37558e2ae2384d82dc2d159d66e96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 75
+  moveSpeed: 1
+  flipMax: 0.25
+  idleMax: 0
+  shouldIdlePick: 0
+  startIdle: 0
+  shouldChase: 0
+  shouldfollowProphet: 0
+  rangeToChasePlayer: 0
+  shouldRunaAway: 0
+  runAwayRange: 0
+  shouldWander: 0
+  wanderLength: 0
+  pauseLength: 0
+  shouldPatrol: 0
+  patrolPoints: []
+  deathSplatters:
+  - {fileID: 3799041217737658795, guid: eb9f0f1186234e546a9f4d183b9140d8, type: 3}
+  hitEffect: {fileID: 1704697082995556924, guid: e9fcab220fc354d4ebb7070267ca0a1e,
+    type: 3}
+  blockWhenIdle: 0
+  shouldShoot: 0
+  bullet: {fileID: 4445302980514565572, guid: ffba9536ce2e9db4ba3422fc152bad90, type: 3}
+  firePoint: {fileID: 4025803168957608212}
+  fireRate: 4
+  shotRange: 10
+  shouldDropItems: 1
+  itemsToDrop:
+  - {fileID: 7883119418932473005, guid: d31febaccfba4e745b63639938c3a6cd, type: 3}
+  - {fileID: 1755809749575711, guid: 13db0f3441ba6894287b1850c93be6aa, type: 3}
+  itemDropPercent: 50
+  theRB: {fileID: 9156511228252781438}
+  anim: {fileID: 7074950201302581940}
+  theBody: {fileID: 2794103436367574290}
 --- !u!114 &1270743690276903014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -738,18 +785,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3f512c86cb96349a97d3e68bec2c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theRB: {fileID: 9156511228252781438}
-  anim: {fileID: 7074950201302581940}
-  theBody: {fileID: 2794103436367574290}
+  health: 75
   moveSpeed: 1
+  flipMax: 0.25
+  idleMax: 0
+  shouldIdlePick: 0
+  startIdle: 0
   shouldChase: 0
+  shouldfollowProphet: 0
   rangeToChasePlayer: 0
   shouldRunaAway: 0
   runAwayRange: 0
   shouldWander: 0
   wanderLength: 6
   pauseLength: 12
-  health: 75
+  shouldPatrol: 0
+  patrolPoints: []
   deathSplatters:
   - {fileID: 3799041217737658795, guid: eb9f0f1186234e546a9f4d183b9140d8, type: 3}
   hitEffect: {fileID: 1704697082995556924, guid: e9fcab220fc354d4ebb7070267ca0a1e,
@@ -760,11 +811,18 @@ MonoBehaviour:
   firePoint: {fileID: 4025803168957608212}
   fireRate: 4
   shotRange: 10
-  shouldDropItems: 0
+  shouldDropItems: 1
   itemsToDrop:
   - {fileID: 7883119418932473005, guid: d31febaccfba4e745b63639938c3a6cd, type: 3}
   - {fileID: 1755809749575711, guid: 13db0f3441ba6894287b1850c93be6aa, type: 3}
   itemDropPercent: 50
+  theRB: {fileID: 9156511228252781438}
+  anim: {fileID: 7074950201302581940}
+  theBody: {fileID: 2794103436367574290}
+  seekTarget: 1
+  Team: 0
+  bot1: Player
+  bot2: Mob2
 --- !u!114 &4402537322067264069
 MonoBehaviour:
   m_ObjectHideFlags: 0
