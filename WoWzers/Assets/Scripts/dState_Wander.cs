@@ -43,7 +43,7 @@ public class dState_Wander : dState
         float randomX = Random.Range(travelDistance, -travelDistance);
         float randomZ = Random.Range(travelDistance, -travelDistance);
 
-        Vector3 targetPosition = new Vector3(randomX,0,randomZ);
+        Vector3 targetPosition = new Vector3(randomX,-.1f,randomZ);
 
         newDirection = (targetPosition).normalized * speed;
     }

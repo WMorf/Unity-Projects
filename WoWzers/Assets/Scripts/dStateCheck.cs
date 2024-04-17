@@ -11,19 +11,17 @@ public class dStateCheck : MonoBehaviour
 
     [Header("Logic")]
     public float timer, threshold;
-    public float idleTime, wanderTime, panicTime, recoverTime;
+    public float idleTime, wanderTime, panicTime, recoverTime, stunTime;
     public float wanderDistance;
     public string stateMessage;
     public bool variedTime;
     public float variation;
-    public string mood;
     public bool hasTarget;
 
     public GameObject sightIndicator;
 
     void Awake()
     {
-        mood = mobInfo.mood;
         manager = mobInfo.manager;
         currentState = manager.currentState;
         if (variedTime)
@@ -32,12 +30,13 @@ public class dStateCheck : MonoBehaviour
             wanderTime = Random.Range(wanderTime + -variation, wanderTime + variation);
             panicTime = Random.Range(wanderTime + -variation, wanderTime + variation);
             recoverTime = Random.Range(wanderTime + -variation, wanderTime + variation);
+            stunTime = Random.Range(wanderTime + -variation, wanderTime + variation);
         }
     }
 
     void Update()
     {
-        switch (mood)
+        switch (mobInfo.mood)
         {
             case "normal":
                 switch (currentState)
@@ -107,12 +106,23 @@ public class dStateCheck : MonoBehaviour
                         {
                             timer = 0;
                             threshold = idleTime;
-                            mood = "normal";
+                            mobInfo.mood = "normal";
                             manager.ChangeState(manager.state_Idle);
                         }
                         break;
 
                     /*-------------------------------------------------------*/
+                    case dState_Stun:
+                        timer += Time.deltaTime;
+                        if (timer >= threshold)
+                        {
+                            timer = 0;
+                            threshold = recoverTime;
+                            manager.ChangeState(manager.state_Recover);
+                        }
+                        break;
+
+                        /*-------------------------------------------------------*/
                 }
                 break;
 
@@ -124,7 +134,15 @@ public class dStateCheck : MonoBehaviour
         if (mobInfo.debug) { print(mobInfo.mobName + " hit a " +  collision.gameObject.tag); }
         if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Mob")
         {
-            manager.ChangeState(manager.state_Wander);
+            if (mobInfo.mood == "panic") 
+            {
+                manager.ChangeState(manager.state_Stun);
+            }
+            else
+            {
+                manager.ChangeState(manager.state_Wander);
+            }
+
         }
     }
 
@@ -139,7 +157,7 @@ public class dStateCheck : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             hasTarget = true;
-            mood = "panic";
+            mobInfo.mood = "panic";
         }
     }
     private void OnTriggerExit(Collider other)

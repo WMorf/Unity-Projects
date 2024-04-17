@@ -10,6 +10,7 @@ public class dStateManager : MonoBehaviour
     public dState state_Wander;
     public dState state_Panic;
     public dState state_Recover;
+    public dState state_Stun;
 
     [Header("Scripts")]
     public dMobInfo mobInfo;
@@ -24,6 +25,7 @@ public class dStateManager : MonoBehaviour
         state_Wander = new dState_Wander(mobInfo.rb, mobInfo);
         state_Panic = new dState_Panic(mobInfo.rb, mobInfo);
         state_Recover = new dState_Recover(mobInfo.rb, mobInfo);
+        state_Stun = new dState_Recover(mobInfo.rb, mobInfo);
         if (mobInfo.debug) { Debug.Log(mobInfo.mobName + " : I am Awake!"); }
     }
 

@@ -106,12 +106,13 @@ MonoBehaviour:
   wanderTime: 3
   panicTime: 3
   recoverTime: 3
+  stunTime: 0
   wanderDistance: 3
   stateMessage: 
   variedTime: 1
   variation: 1.5
-  mood: normal
   hasTarget: 0
+  sightIndicator: {fileID: 794937847711362660, guid: b056cdb2e2c8329478ba101d950e21e7, type: 3}
 --- !u!114 &2240182974091198555
 MonoBehaviour:
   m_ObjectHideFlags: 0
