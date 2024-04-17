@@ -169,7 +169,13 @@ public class PlayerController : MonoBehaviour
                 Application.Quit();
             }
 
-            if(Input.GetKeyDown(KeyCode.Z))
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                Scene level = SceneManager.GetActiveScene();
+                SceneManager.LoadScene(level.name);
+            }
+
+            if (Input.GetKeyDown(KeyCode.Z))
             {
                 zoomCam.orthographicSize --;
                 if(zoomCam.orthographicSize < 1)

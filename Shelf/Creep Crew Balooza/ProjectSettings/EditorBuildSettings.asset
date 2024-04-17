@@ -6,14 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Tutorial/Scenes/TitleScreen.unity
-    guid: 424b9eb2512ceaf438795f1f63a17496
-  - enabled: 1
-    path: Assets/Tutorial/Scenes/Level Test.unity
-    guid: c1271fc4f39d12246980365145dee592
-  - enabled: 1
-    path: Assets/Tutorial/Scenes/Victory.unity
-    guid: 54a29deea338d8647a1f26f6db9ef532
+    path: Assets/Scenes/NewIsla.unity
+    guid: cbf79d61477e4d64c8b64c039d16e867
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: ae9110b94cbef0841a03ed33117c911e,
       type: 2}

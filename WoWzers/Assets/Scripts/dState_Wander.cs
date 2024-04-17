@@ -6,7 +6,8 @@ public class dState_Wander : dState
 {
     [Header("RunTime")]
     public float speed;
-    public Vector2 newDirection;
+    public Vector3 newDirection;
+    public float wanderDistance;
 
     public dState_Wander(Rigidbody rb, dMobInfo mobInfo) : base(rb, mobInfo) { }
 
@@ -16,6 +17,7 @@ public class dState_Wander : dState
         rb = mobInfo.rb;
         //mobInfo.anim.SetBool("Moving", true);
         speed = mobInfo.speed;
+        wanderDistance = mobInfo.manager.stateCheck.wanderDistance;
         ChangeDirection();
         active = true;
     }
@@ -30,21 +32,21 @@ public class dState_Wander : dState
 
     public override void Exit()
     {
-        try { rb.velocity = Vector2.zero; } catch { }
+        try { rb.velocity = Vector3.zero; } catch { }
         active = false;
     }
 
     public void ChangeDirection()
     {
-        newDirection = Random.insideUnitSphere * speed;
-        //newDirection.y = 0;
-    }
+        float travelDistance = Random.Range(wanderDistance, -wanderDistance);
 
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Mob")
-        {
-            ChangeDirection();
-        }
+        float randomX = Random.Range(travelDistance, -travelDistance);
+        float randomZ = Random.Range(travelDistance, -travelDistance);
+
+        Vector3 targetPosition = new Vector3(randomX,0,randomZ);
+
+        newDirection = (targetPosition).normalized * speed;
     }
+    
+
 }

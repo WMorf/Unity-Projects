@@ -383,8 +383,8 @@ MonoBehaviour:
   - {fileID: 2729371248950567832}
   - {fileID: 8225569218454248711}
   m_Bounds:
-    m_Center: {x: 0.0000019073486, y: -0.00089764595, z: 0}
-    m_Extent: {x: 0.41999808, y: 0.71635234, z: 0}
+    m_Center: {x: 0, y: -0.00089770555, z: 0}
+    m_Extent: {x: 0.41999996, y: 0.71635175, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &2890784124327478703
@@ -570,8 +570,8 @@ MonoBehaviour:
   - {fileID: 4783202907789634815}
   - {fileID: 8471759500811637555}
   m_Bounds:
-    m_Center: {x: -0.0023350716, y: -0.0014390498, z: 0}
-    m_Extent: {x: 0.29766494, y: 0.23810002, z: 0}
+    m_Center: {x: -0.002331227, y: -0.0014397651, z: 0}
+    m_Extent: {x: 0.29766494, y: 0.23810023, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &4173359155834454212
@@ -585,7 +585,7 @@ GameObject:
   - component: {fileID: 7173296210883781350}
   - component: {fileID: 489020760914535612}
   - component: {fileID: 1146571146678169120}
-  - component: {fileID: 5770236985732425414}
+  - component: {fileID: 509559987285120941}
   - component: {fileID: 4825202376116078724}
   - component: {fileID: 2839099358259014776}
   m_Layer: 0
@@ -657,7 +657,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4221804, y: 0.65369046}
   m_EdgeRadius: 0
---- !u!114 &5770236985732425414
+--- !u!114 &509559987285120941
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -666,17 +666,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 4173359155834454212}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f3f512c86cb96349a97d3e68bec2c20, type: 3}
+  m_Script: {fileID: 11500000, guid: 61a37558e2ae2384d82dc2d159d66e96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
   moveSpeed: 0.25
-  flipMax: 1
+  flipMax: 0.25
+  idleMax: 0
+  shouldIdlePick: 0
+  startIdle: 0
   shouldChase: 0
   shouldfollowProphet: 1
   rangeToChasePlayer: 10
   shouldRunaAway: 1
-  runAwayRange: 2
+  runAwayRange: 5
   shouldWander: 1
   wanderLength: 4
   pauseLength: 1
@@ -738,11 +741,16 @@ MonoBehaviour:
   shouldSmoke: 0
   itemsToDrop: []
   itemDropPercent: 0
-  smashPower: 1
   leaveBase: 0
+  shouldShatterBits: 0
   baseRemains: {fileID: 0}
   residue: {fileID: 0}
   breakSound: 0
+  shouldExplode: 0
+  explosionBits: []
+  numberOfBitsMax: 0
+  numberBitsMin: 0
+  explosionDust: {fileID: 0}
 --- !u!1 &4613772680730712097
 GameObject:
   m_ObjectHideFlags: 0
@@ -1082,8 +1090,8 @@ MonoBehaviour:
   - {fileID: 5719196954386862273}
   - {fileID: 6362204940818400180}
   m_Bounds:
-    m_Center: {x: 0.0114180595, y: -0.0020163506, z: 0}
-    m_Extent: {x: 0.20986912, y: 0.23510161, z: 0}
+    m_Center: {x: 0.011416137, y: -0.0020173043, z: 0}
+    m_Extent: {x: 0.20986718, y: 0.2351016, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &8562859158208153266

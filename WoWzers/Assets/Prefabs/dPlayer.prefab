@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2240182974091198556}
   - component: {fileID: 2240182974091198557}
   - component: {fileID: 2240182974091198558}
+  - component: {fileID: 354834314679020571}
   - component: {fileID: 2240182974091198559}
   m_Layer: 3
   m_Name: dPlayer
@@ -55,9 +56,10 @@ MonoBehaviour:
   rb: {fileID: 2240182974091198559}
   anim: {fileID: 0}
   render: {fileID: 0}
+  eyes: {fileID: 354834314679020571}
   manager: {fileID: 2240182974091198554}
-  eyes: {fileID: 0}
   nest: {fileID: 0}
+  mobName: 
   baseReward: 5
   speed: 2
   maxLifeTime: 60
@@ -102,10 +104,14 @@ MonoBehaviour:
   threshold: 0
   idleTime: 3
   wanderTime: 3
+  panicTime: 3
+  recoverTime: 3
+  wanderDistance: 3
   stateMessage: 
   variedTime: 1
-  variation: 0.5
+  variation: 1.5
   mood: normal
+  hasTarget: 0
 --- !u!114 &2240182974091198555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,6 +192,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &354834314679020571
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2240182974091198544}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 1, z: 5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &2240182974091198559
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -200,7 +219,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!1 &3972248146684505122
 GameObject:

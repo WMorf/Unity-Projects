@@ -8,6 +8,8 @@ public class dStateManager : MonoBehaviour
     public dState currentState;
     public dState state_Idle;
     public dState state_Wander;
+    public dState state_Panic;
+    public dState state_Recover;
 
     [Header("Scripts")]
     public dMobInfo mobInfo;
@@ -20,7 +22,9 @@ public class dStateManager : MonoBehaviour
     {
         state_Idle = new dState_Idle(mobInfo.rb, mobInfo);
         state_Wander = new dState_Wander(mobInfo.rb, mobInfo);
-        if (mobInfo.debug) { Debug.Log(gameObject.name + " : I am Awake!"); }
+        state_Panic = new dState_Panic(mobInfo.rb, mobInfo);
+        state_Recover = new dState_Recover(mobInfo.rb, mobInfo);
+        if (mobInfo.debug) { Debug.Log(mobInfo.mobName + " : I am Awake!"); }
     }
 
     void Start()

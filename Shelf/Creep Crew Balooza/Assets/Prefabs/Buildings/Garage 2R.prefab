@@ -134,12 +134,17 @@ MonoBehaviour:
   - {fileID: 4173359155834454212, guid: 69a50db54bd47c94b8492a2271187f71, type: 3}
   - {fileID: 4173359155834454212, guid: 69a50db54bd47c94b8492a2271187f71, type: 3}
   itemDropPercent: 20
-  smashPower: 0
   leaveBase: 1
+  shouldShatterBits: 1
   baseRemains: {fileID: 3366582163343692018, guid: 8248b0587c504e3429ab441c65055be0,
     type: 3}
   residue: {fileID: 2659532654010353871, guid: 6257bf9e8c6b5ad4e999774a65e7cdbf, type: 3}
   breakSound: 0
+  shouldExplode: 0
+  explosionBits: []
+  numberOfBitsMax: 0
+  numberBitsMin: 0
+  explosionDust: {fileID: 0}
 --- !u!114 &7817398261279777455
 MonoBehaviour:
   m_ObjectHideFlags: 0

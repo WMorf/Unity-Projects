@@ -10,16 +10,17 @@ public class dMobInfo : MonoBehaviour
     public Rigidbody rb;
     public Animator anim;
     public SpriteRenderer render;
+    public Collider eyes;
 
     [Header("Scripts")]
     public dStateManager manager;
 
     [Header("Objects")]
-    public GameObject eyes;
     public GameObject nest;
 
 
     [Header("Stats")]
+    public string mobName;
     [Tooltip("How much value a mob is worth when calculating rewardScore for an opposing mob")]
     public int baseReward;
     public float speed;
@@ -41,7 +42,10 @@ public class dMobInfo : MonoBehaviour
 
     private void Start()
     {
-
+        if (name == null)
+        {
+            name = gameObject.name;
+        }
     }
 
     private void Update()
