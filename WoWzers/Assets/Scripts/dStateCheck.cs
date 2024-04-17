@@ -19,6 +19,7 @@ public class dStateCheck : MonoBehaviour
     public string mood;
     public bool hasTarget;
 
+    public GameObject sightIndicator;
 
     void Awake()
     {
@@ -101,7 +102,6 @@ public class dStateCheck : MonoBehaviour
 
                     /*-------------------------------------------------------*/
                     case dState_Recover:
-                        print(1);
                         timer += Time.deltaTime;
                         if (timer >= threshold)
                         {
@@ -130,7 +130,12 @@ public class dStateCheck : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (mobInfo.debug) { print(mobInfo.mobName + " saw a " + other.gameObject.tag); }
+        if (mobInfo.debug) 
+        { 
+            print(mobInfo.mobName + " saw a " + other.gameObject.tag + " " + other.gameObject.name); 
+            GameObject dot = Instantiate(sightIndicator, other.transform);
+            dot.transform.parent = other.transform;
+        }
         if (other.gameObject.tag == "Player")
         {
             hasTarget = true;
@@ -139,7 +144,7 @@ public class dStateCheck : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if (mobInfo.debug) { print(mobInfo.mobName + " the " + other.gameObject.tag + " is gone now"); }
+        if (mobInfo.debug) { print(mobInfo.mobName + " the " + other.gameObject.tag + " " + other.gameObject.name + " is gone now"); }
         if (other.gameObject.tag == "Player")
         {
             hasTarget = false;
