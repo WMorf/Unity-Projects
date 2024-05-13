@@ -19,6 +19,7 @@ public class dState_Wander : dState
         speed = mobInfo.speed;
         wanderDistance = mobInfo.manager.stateCheck.wanderDistance;
         ChangeDirection();
+        mobInfo.anim.SetBool("Moving", true);
         active = true;
     }
 
@@ -33,6 +34,7 @@ public class dState_Wander : dState
     public override void Exit()
     {
         try { rb.velocity = Vector3.zero; } catch { }
+        mobInfo.anim.SetBool("Moving", false);
         active = false;
     }
 

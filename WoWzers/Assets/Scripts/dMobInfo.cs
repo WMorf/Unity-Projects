@@ -42,9 +42,9 @@ public class dMobInfo : MonoBehaviour
 
     private void Start()
     {
-        if (name == null)
+        if (mobName == null)
         {
-            name = gameObject.name;
+            mobName = gameObject.name;
         }
     }
 

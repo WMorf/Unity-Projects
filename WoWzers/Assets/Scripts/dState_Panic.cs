@@ -19,6 +19,7 @@ public class dState_Panic : dState
         //mobInfo.anim.SetBool("Moving", true);
         speed = mobInfo.speed;
         newDirection = (rb.position - target).normalized;
+        mobInfo.anim.SetBool("Moving", true);
         active = true;
     }
 
@@ -33,6 +34,7 @@ public class dState_Panic : dState
     public override void Exit()
     {
         try { rb.velocity = Vector3.zero; } catch { }
+        mobInfo.anim.SetBool("Moving",false);
         active = false;
     }
 
