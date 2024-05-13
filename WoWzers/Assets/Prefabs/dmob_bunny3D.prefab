@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 354834314679020571}
   - component: {fileID: 2240182974091198559}
   m_Layer: 3
-  m_Name: mob_bunny3D
+  m_Name: dmob_bunny3D
   m_TagString: Mob
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -223,7 +223,7 @@ Animator:
   m_GameObject: {fileID: 2240182974091198544}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6b63c71b6f9564e4fb9da564efb8947d, type: 2}
+  m_Controller: {fileID: 9100000, guid: a617570674a021b4d91cc067ad30a135, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
