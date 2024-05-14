@@ -48,6 +48,10 @@ public class dState_Wander : dState
         Vector3 targetPosition = new Vector3(randomX,-.1f,randomZ);
 
         newDirection = (targetPosition).normalized * speed;
+        if (newDirection.x < rb.transform.position.x)
+        {
+            mobInfo.Flip();
+        }
     }
     
 

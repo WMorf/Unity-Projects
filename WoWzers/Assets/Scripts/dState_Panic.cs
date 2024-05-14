@@ -19,6 +19,10 @@ public class dState_Panic : dState
         //mobInfo.anim.SetBool("Moving", true);
         speed = mobInfo.speed;
         newDirection = (rb.position - target).normalized;
+        if (newDirection.x < rb.transform.position.x)
+        {
+            mobInfo.Flip();
+        }
         mobInfo.anim.SetBool("Moving", true);
         active = true;
     }

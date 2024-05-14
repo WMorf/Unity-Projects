@@ -52,4 +52,9 @@ public class dMobInfo : MonoBehaviour
     {
         lifeTime += Time.deltaTime;
     }
+
+    public void Flip()
+    {
+        render.flipX = !render.flipX;
+    }
 }
