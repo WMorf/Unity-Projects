@@ -335,7 +335,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e617716a39ef2bc4389039266b954310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
+  rb: {fileID: 8490623254356833333}
+  anim: {fileID: 8870479169398514869}
   speed: 1
   movementDirection: {x: 0, y: 0, z: 1}
   moveSwitch: 0
