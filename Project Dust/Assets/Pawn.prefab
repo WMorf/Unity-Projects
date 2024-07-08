@@ -9755,7 +9755,7 @@ GameObject:
   - component: {fileID: 3342627431384946599}
   m_Layer: 0
   m_Name: Pawn
-  m_TagString: Untagged
+  m_TagString: Pawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9831,12 +9831,17 @@ MonoBehaviour:
   particleA: {fileID: 4140598106425799536}
   particleB: {fileID: 7998067545102452942}
   emotePoint: {fileID: 1571102119583688367}
-  emotes: []
+  emotes:
+  - {fileID: 7579539407878869319, guid: a98388295c47173458c6cfcb3f22dc4a, type: 3}
+  - {fileID: 7579539407878869319, guid: a98388295c47173458c6cfcb3f22dc4a, type: 3}
   speed: 0.5
   movementDirection: {x: 0, y: 0, z: 0}
   moveSwitch: 0
+  followProphet: 0
+  followPoint: {fileID: 0}
+  prophet: {fileID: 0}
   moveCount: 0
-  movethreshold: 3
+  movethreshold: 1.5
 --- !u!95 &3711147254315057391
 Animator:
   serializedVersion: 5
@@ -9847,7 +9852,7 @@ Animator:
   m_GameObject: {fileID: 8635831336990470804}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9c5f5bb073f03a844837d968c2840f21, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

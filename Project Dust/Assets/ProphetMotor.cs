@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PawnMotor : MonoBehaviour
+public class ProphetMotor : MonoBehaviour
 {
 
     // components
@@ -20,15 +20,12 @@ public class PawnMotor : MonoBehaviour
     public int moveSwitch;
     public bool followProphet;
 
-    public GameObject followPoint;
-    public GameObject prophet;
+    public List<GameObject> pawns = new List<GameObject>();
+    public GameObject crowdPoint;
+    public int pawnCount;
 
     //Movement change
     public float moveCount, movethreshold;
-
-
-
-
 
     // Start is called before the first frame update
     void Start()
@@ -44,12 +41,6 @@ public class PawnMotor : MonoBehaviour
         if (moveCount > movethreshold && !followProphet)
         {
             ChangeDirection();
-        }
-
-        if (followProphet)
-        {
-            movementDirection = transform.position - followPoint.transform.position;
-
         }
 
         transform.position += movementDirection * speed * Time.deltaTime;
@@ -129,7 +120,7 @@ public class PawnMotor : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Prophet")
+        if (collision.gameObject.tag == "Pawn")
         {
             movementDirection = new Vector3(0, 0, 0);
             anim.SetBool("isMoving", false);
@@ -137,10 +128,7 @@ public class PawnMotor : MonoBehaviour
             particleA.Stop();
             particleB.Stop();
             moveCount = 0;
-            prophet = collision.gameObject;
-            followPoint = prophet.GetComponent<ProphetMotor>().crowdPoint;
-            followProphet = true;
-            gameObject.tag = "Crowd";
+            pawns.Add(collision.gameObject);
         }
         else
         {
