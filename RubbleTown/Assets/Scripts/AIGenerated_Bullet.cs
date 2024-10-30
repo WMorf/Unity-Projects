@@ -12,7 +12,7 @@ public class AIGenerated_Bullet : MonoBehaviour
         if(collision.gameObject.CompareTag("Wall") )
         {
             // Spawn impact decal at the collision point
-            SpawnImpactDecal(collision.contacts[0].point, collision.contacts[0].normal);
+            SpawnImpactDecal(collision.contacts[0].point, collision.contacts[0].normal, collision);
 
             // Spawn particle emitter for smoke and debris
             SpawnParticleEmitter(collision.contacts[0].point, collision.contacts[0].normal);
@@ -23,7 +23,7 @@ public class AIGenerated_Bullet : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void SpawnImpactDecal(Vector3 position, Vector3 normal)
+    private void SpawnImpactDecal(Vector3 position, Vector3 normal, Collision collision)
     {
         // Spawn impact decal at the collision point with proper rotation
         Quaternion rotation = Quaternion.FromToRotation(Vector3.up, normal);
@@ -31,7 +31,11 @@ public class AIGenerated_Bullet : MonoBehaviour
 
         // Ensure the impact decal always appears slightly above the surface
         impactDecal.transform.Translate(Vector3.up * 0.01f, Space.Self);
+
+        // Attach the decal to the hit object
+        impactDecal.transform.SetParent(collision.gameObject.transform, true);
     }
+
 
     private void SpawnParticleEmitter(Vector3 position, Vector3 normal)
     {
