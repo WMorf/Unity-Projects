@@ -12,8 +12,8 @@ public class BasicGun : MonoBehaviour
 
 
     [Header("Points")]
-    public GameObject firePoint1, firePoint2, firePoint3;
-    public GameObject shellEjectionPoint1, shellEjectionPoint2, shellEjectionPoint3;
+    public GameObject firePoint1;
+    public GameObject shellEjectionPoint1;
 
     [Header("Gun Stats")]
     public float fireRate ;
@@ -50,32 +50,29 @@ public class BasicGun : MonoBehaviour
     public void Shoot()
     {
         // Apply bullet spread
-        Vector3 spread = Random.insideUnitCircle * gunAccuracy;
+        //Vector3 spread = Random.insideUnitCircle * gunAccuracy;
 
         // Spawn projectile at the fire point with spread
         Spawn(firePoint1);
         EjectShell(shellEjectionPoint1);
-        Spawn(firePoint2);
-        EjectShell(shellEjectionPoint2);
-        Spawn(firePoint3);
-        EjectShell(shellEjectionPoint3);
 
         //Destroy(bullet, debrisTime);
     }
 
     public void Spawn(GameObject firePoint)
     {
-        GameObject bullet;
         Vector3 spread = Random.insideUnitCircle * gunAccuracy;
+        //print(spread);
 
         Instantiate(muzzleFlash, firePoint.transform.position, firePoint.transform.rotation);
-        bullet = Instantiate(bulletePrefab, firePoint.transform.transform.position, firePoint.transform.rotation);
+        GameObject bullet = Instantiate(bulletePrefab, firePoint.transform.transform.position, firePoint.transform.rotation);
         bullet.transform.Rotate(spread.x, spread.y, 0f);
         Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
 
         if (bulletRb != null)
         {
-            bulletRb.velocity = bullet.transform.forward * bulletSpeed;
+            Vector3 directionWithSpread = bullet.transform.forward + new Vector3(spread.x, spread.y, 0f);
+            bulletRb.velocity = directionWithSpread.normalized * bulletSpeed;
         }
     }
 
@@ -101,6 +98,6 @@ public class BasicGun : MonoBehaviour
 
 
 
-        Destroy(shell, 2f);
+        Destroy(shell, debrisTime);
     }
 }

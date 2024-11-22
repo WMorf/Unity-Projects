@@ -132,6 +132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   impactDecalPrefab: {fileID: 1271377056462526640, guid: b1c947e9b1f065e4892d5e102d8aa817, type: 3}
   particleEmitterPrefab: {fileID: 5744454742530171426, guid: 5ba2074c3b193b84b910969522b5a0cb, type: 3}
+  damage: 10
 --- !u!54 &3147595518297054379
 Rigidbody:
   m_ObjectHideFlags: 0

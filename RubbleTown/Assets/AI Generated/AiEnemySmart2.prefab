@@ -40,14 +40,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7993951344925302631}
+  - component: {fileID: 4464406670418942475}
   - component: {fileID: 7584405215173443216}
   - component: {fileID: 7993951344925302624}
   - component: {fileID: 7993951344925302625}
   - component: {fileID: 7993951344925302626}
   - component: {fileID: 7993951344925302630}
   m_Layer: 0
-  m_Name: AiEnemySmart
-  m_TagString: Wall
+  m_Name: AiEnemySmart2
+  m_TagString: Team2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68,6 +69,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4464406670418942475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7993951344925302627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e39118f3e8e1e614b969e6e739adcca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 100
+  gibPrefab: {fileID: 5744454742530171426, guid: 677da45e1ff21444ab570f65a8f6d399, type: 3}
+  lootPrefab: {fileID: 5744454742530171426, guid: 6cc16dd81cae13543aa5e700b30f411e, type: 3}
 --- !u!114 &7584405215173443216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,6 +106,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 6279237114007075993, guid: 26f4c70784ba8c547a9ea8766f42da09, type: 3}
   firePoint: {fileID: 178407604508032156}
   fireRate: 1
+  targetTag: Team1
 --- !u!33 &7993951344925302624
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -118,7 +135,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 683b329cffe36424c9fd46b61b7e8cc9, type: 2}
+  - {fileID: 2100000, guid: 084bbe9cb5f270947b3aa561ea05d253, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -164,7 +181,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0

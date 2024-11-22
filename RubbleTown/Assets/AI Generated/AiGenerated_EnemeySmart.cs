@@ -14,18 +14,20 @@ public class AiGenerated_EnemeySmart : MonoBehaviour
     public float firingRange = 10f;
     public float hitscanInterval = 2f; // Time interval for hitscan
 
-    public GameObject projectilePrefab; // Projectile to shoot at player
+    public GameObject projectilePrefab; // Projectile to shoot at target
     public Transform firePoint; // Point where the projectile is fired from
     public float fireRate = 1f; // Delay between shots
 
-    private Transform player;
+    public string targetTag = "Player"; // Tag of the target to pursue and attack
+
+    private Transform target;
     private Vector3 wanderTarget;
     private float fireTimer = 0f;
     private float hitscanTimer = 0f;
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform; // Make sure player has "Player" tag
+        target = GameObject.FindGameObjectWithTag(targetTag).transform; // Make sure target has the specified tag
         SetRandomWanderTarget();
         StartCoroutine(StateMachine());
     }
@@ -61,7 +63,7 @@ public class AiGenerated_EnemeySmart : MonoBehaviour
             SetRandomWanderTarget();
         }
 
-        // Periodically perform hitscan for the player
+        // Periodically perform hitscan for the target
         hitscanTimer += Time.deltaTime;
         if (hitscanTimer >= hitscanInterval)
         {
@@ -72,11 +74,11 @@ public class AiGenerated_EnemeySmart : MonoBehaviour
 
     void Pursue()
     {
-        // Move towards the player
-        transform.position = Vector3.MoveTowards(transform.position, player.position, pursueSpeed * Time.deltaTime);
+        // Move towards the target
+        transform.position = Vector3.MoveTowards(transform.position, target.position, pursueSpeed * Time.deltaTime);
 
         // Switch to Attack if within firing range
-        if (Vector3.Distance(transform.position, player.position) <= firingRange)
+        if (Vector3.Distance(transform.position, target.position) <= firingRange)
         {
             currentState = State.Attack;
         }
@@ -84,10 +86,10 @@ public class AiGenerated_EnemeySmart : MonoBehaviour
 
     void Attack()
     {
-        // Look at player
-        transform.LookAt(player);
+        // Look at target
+        transform.LookAt(target);
 
-        // Fire at player if fire timer has elapsed
+        // Fire at target if fire timer has elapsed
         fireTimer += Time.deltaTime;
         if (fireTimer >= fireRate)
         {
@@ -95,8 +97,8 @@ public class AiGenerated_EnemeySmart : MonoBehaviour
             FireProjectile();
         }
 
-        // Switch to Pursue if the player moves out of firing range
-        if (Vector3.Distance(transform.position, player.position) > firingRange)
+        // Switch to Pursue if the target moves out of firing range
+        if (Vector3.Distance(transform.position, target.position) > firingRange)
         {
             currentState = State.Pursue;
         }
@@ -110,13 +112,13 @@ public class AiGenerated_EnemeySmart : MonoBehaviour
 
     void PerformHitscan()
     {
-        // Check if player is within detection range using a raycast
-        Vector3 directionToPlayer = (player.position - transform.position).normalized;
-        if (Vector3.Distance(transform.position, player.position) <= detectionRange)
+        // Check if target is within detection range using a raycast
+        Vector3 directionToTarget = (target.position - transform.position).normalized;
+        if (Vector3.Distance(transform.position, target.position) <= detectionRange)
         {
-            if (Physics.Raycast(transform.position, directionToPlayer, out RaycastHit hit, detectionRange))
+            if (Physics.Raycast(transform.position, directionToTarget, out RaycastHit hit, detectionRange))
             {
-                if (hit.transform.CompareTag("Player"))
+                if (hit.transform.CompareTag(targetTag))
                 {
                     currentState = State.Pursue;
                 }
@@ -126,15 +128,15 @@ public class AiGenerated_EnemeySmart : MonoBehaviour
 
     void FireProjectile()
     {
-        // Instantiate and shoot the projectile towards the player
+        // Instantiate and shoot the projectile towards the target
         GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
-        projectile.transform.LookAt(player);
+        projectile.transform.LookAt(target);
 
         // Optional: Add force to the projectile if it has Rigidbody
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
         if (rb != null)
         {
-            rb.AddForce((player.position - firePoint.position).normalized * 10f, ForceMode.VelocityChange);
+            rb.AddForce((target.position - firePoint.position).normalized * 10f, ForceMode.VelocityChange);
         }
     }
 

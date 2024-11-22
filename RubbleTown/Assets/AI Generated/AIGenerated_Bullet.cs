@@ -7,9 +7,13 @@ public class AIGenerated_Bullet : MonoBehaviour
     public GameObject impactDecalPrefab; // Prefab for the impact decal
     public GameObject particleEmitterPrefab; // Prefab for the particle emitter
 
+    public float damage;
+
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Wall") )
+        try { collision.gameObject.GetComponent<AIGenerated_Destroy>().ReceiveDamage(damage); }
+        catch { }
+        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Team1") || collision.gameObject.CompareTag("Team2"))
         {
             // Spawn impact decal at the collision point
             SpawnImpactDecal(collision.contacts[0].point, collision.contacts[0].normal, collision);
