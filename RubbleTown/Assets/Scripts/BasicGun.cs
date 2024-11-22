@@ -11,9 +11,9 @@ public class BasicGun : MonoBehaviour
     public GameObject muzzleFlash;
 
 
-    [Header("Transforms")]
-    public Transform firePoint;
-    public Transform shellEjectionPoint;
+    [Header("Points")]
+    public GameObject firePoint1, firePoint2, firePoint3;
+    public GameObject shellEjectionPoint1, shellEjectionPoint2, shellEjectionPoint3;
 
     [Header("Gun Stats")]
     public float fireRate ;
@@ -22,6 +22,7 @@ public class BasicGun : MonoBehaviour
     public float bulletSpeed;
     public float debrisTime;
     public bool triggerDown;
+    public float shellEjectionForce;
 
     void Start()
     {
@@ -32,7 +33,7 @@ public class BasicGun : MonoBehaviour
     {
         if (triggerDown)
         {
-            if(delay <= fireRate)
+            if(delay >= fireRate)
             {
                 Shoot();
                 delay = 0f;
@@ -52,18 +53,23 @@ public class BasicGun : MonoBehaviour
         Vector3 spread = Random.insideUnitCircle * gunAccuracy;
 
         // Spawn projectile at the fire point with spread
-        Instantiate(muzzleFlash, firePoint.position, firePoint.rotation);
-        Spawn(out GameObject bullet);
-        EjectShell();
+        Spawn(firePoint1);
+        EjectShell(shellEjectionPoint1);
+        Spawn(firePoint2);
+        EjectShell(shellEjectionPoint2);
+        Spawn(firePoint3);
+        EjectShell(shellEjectionPoint3);
 
-        Destroy(bullet, debrisTime);
+        //Destroy(bullet, debrisTime);
     }
 
-    public void Spawn(out GameObject bullet)
+    public void Spawn(GameObject firePoint)
     {
+        GameObject bullet;
         Vector3 spread = Random.insideUnitCircle * gunAccuracy;
 
-        bullet = Instantiate(bulletePrefab, firePoint.position, firePoint.rotation);
+        Instantiate(muzzleFlash, firePoint.transform.position, firePoint.transform.rotation);
+        bullet = Instantiate(bulletePrefab, firePoint.transform.transform.position, firePoint.transform.rotation);
         bullet.transform.Rotate(spread.x, spread.y, 0f);
         Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
 
@@ -73,17 +79,27 @@ public class BasicGun : MonoBehaviour
         }
     }
 
-    private void EjectShell()
+    private void EjectShell(GameObject ejectPoint)
     {
-        GameObject shell = Instantiate(shellPrefab, shellEjectionPoint.position, shellEjectionPoint.rotation);
+        GameObject shell = Instantiate(shellPrefab, ejectPoint.transform.transform.transform.position, ejectPoint.transform.transform.rotation);
 
-        Rigidbody shellRb = shell.GetComponent<Rigidbody>();
-        if (shellRb != null)
+        try
         {
-            float forcePower = Random.Range(2f, 10f);
-            Vector3 forceDirection = Quaternion.Euler(Random.Range(-30f, 30f), Random.Range(-30f, 30f), Random.Range(-30f, 30f)) * shellEjectionPoint.forward;
-            shellRb.AddForce(forceDirection * forcePower, ForceMode.Impulse);
+            Rigidbody shellRb = shell.GetComponent<Rigidbody>();
+            shell.GetComponent<Rigidbody>().AddForce(ejectPoint.transform.forward * shellEjectionForce, ForceMode.Impulse);
+            if (shellRb != null)
+            {
+                float forcePower = Random.Range(shellEjectionForce * .5f, shellEjectionForce * 1.5f);
+                Vector3 forceDirection = Quaternion.Euler(Random.Range(-30f, 30f), Random.Range(-30f, 30f), Random.Range(-30f, 30f)) * ejectPoint.transform.forward;
+                shellRb.AddForce(forceDirection * forcePower, ForceMode.Impulse);
+            }
         }
+        catch
+        {
+            Debug.LogError("Shell prefab does not have a Rigidbody component.");
+        }
+
+
 
         Destroy(shell, 2f);
     }

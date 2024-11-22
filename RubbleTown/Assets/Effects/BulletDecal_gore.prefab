@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1349116235998250954}
   m_Layer: 0
-  m_Name: BulletDecal
+  m_Name: BulletDecal_gore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,7 +106,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.09433961, g: 0.0734247, b: 0.0734247, a: 1}
+  m_Color: {r: 0.2924528, g: 0.103462085, b: 0.103462085, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
