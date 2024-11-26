@@ -156,7 +156,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4114689326815693889}
   - component: {fileID: 5921543466749247498}
-  - component: {fileID: 2977901151238899025}
   - component: {fileID: 5289736709446069859}
   - component: {fileID: 4097870550392626707}
   - component: {fileID: 3623541533584827560}
@@ -206,29 +205,6 @@ MonoBehaviour:
   muzzleFLash: {fileID: 5744454742530171426, guid: 677da45e1ff21444ab570f65a8f6d399, type: 3}
   projectileSpeed: 20
   fireRate: 0.5
-  accuracy: 0
-  gunObject: {fileID: 7703516736405933395}
---- !u!114 &2977901151238899025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4677688919784197533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 544612a5ca45a1b4e89aa995b714e5c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementSpeed: 5
-  rotationSpeed: 3
-  projectilePrefab: {fileID: 6279237114007075993, guid: 26f4c70784ba8c547a9ea8766f42da09, type: 3}
-  firePoint: {fileID: 2246296867479868487}
-  shellEjectionPoint: {fileID: 8148641664189350896}
-  shellPrefab: {fileID: 3478286342781473120, guid: 727dea39d9455304395f2b5c4a76350d, type: 3}
-  muzzleFLash: {fileID: 5744454742530171426, guid: 677da45e1ff21444ab570f65a8f6d399, type: 3}
-  projectileSpeed: 20
-  fireRate: 0.1
   accuracy: 0
   gunObject: {fileID: 7703516736405933395}
 --- !u!54 &5289736709446069859
