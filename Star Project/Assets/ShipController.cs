@@ -4,10 +4,8 @@ public class ShipController : MonoBehaviour
 {
     public Rigidbody2D rb;
     public SpriteRenderer spriteRenderer;
-    public bool thrustOn = false;
 
-
-    public float speed;
+    public float speedThrust,speedSpin;
 
 
     void Start()
@@ -21,30 +19,50 @@ public class ShipController : MonoBehaviour
 
     void FixedUpdate()
     {
-        Thrust();
+
     }
 
     void CheckKey()
     {
+        //Thrust
         if (Input.GetKeyDown(KeyCode.W))
         {
-            thrustOn = true;
+            Thrust(1f);
             spriteRenderer.color = Color.red;
         }
         if (Input.GetKeyUp(KeyCode.W))
         {
-            thrustOn = false;
             spriteRenderer.color = Color.grey;
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            Thrust(-1f);
+            spriteRenderer.color = Color.red;
+        }
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            spriteRenderer.color = Color.grey;
+        }
+
+        //Rotate
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            Rotate(1f);
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            Rotate(-1f);
         }
 
     }
 
-    void Thrust()
+    void Thrust(float i)
     {
-        if (thrustOn)
-        {
-            rb.AddForce(transform.up * speed, ForceMode2D.Force);
-        }
+        rb.AddForce(transform.up * speedThrust  * i, ForceMode2D.Force);
+    }
 
+    void Rotate(float i)
+    {
+        rb.AddTorque(speedSpin * i);
     }
 }
