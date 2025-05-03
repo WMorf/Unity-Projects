@@ -368,7 +368,7 @@ GameObject:
   - component: {fileID: 8010858019720276528}
   - component: {fileID: 1832904310941778491}
   m_Layer: 0
-  m_Name: Thruster
+  m_Name: ThrustBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -585,10 +585,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 8440708727398188642}
   spriteRenderer: {fileID: 1832904310941778491}
-  shipSystem: {fileID: 0}
+  shipSystem: {fileID: 5492696349541264267}
   playerControl: 0
   speedThrust: 5
   speedSpin: 2
+  projectile: {fileID: 6654064849612394699, guid: 9a0484780f2fa4a44b40aa326bd6a460, type: 3}
+  firePoint: {fileID: 1175274227976540801}
 --- !u!114 &5492696349541264267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -601,13 +603,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0857493a82c2f564780a5c322b2cfda1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrusterForward: {fileID: 0}
-  thrusterLeft: {fileID: 0}
-  thrusterRight: {fileID: 0}
-  powerComp: {fileID: 0}
-  oxyComp: {fileID: 0}
-  cockpit: {fileID: 0}
-  gunPort: {fileID: 0}
+  thrusterForward: {fileID: 2252930167372944507}
+  thrusterLeft: {fileID: 1527446014444533011}
+  thrusterRight: {fileID: 2340465316445893761}
+  powerComp: {fileID: 3381566647511474658}
+  oxyComp: {fileID: 1132024865941283252}
+  cockpit: {fileID: 8304695904449057840}
+  gunPort: {fileID: 5033576699839746681}
 --- !u!50 &8440708727398188642
 Rigidbody2D:
   serializedVersion: 5
@@ -1188,7 +1190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6927480636913212106, guid: eda9d7f62d4cfd144b1ebdec05578f1b, type: 3}
       propertyPath: m_Name
-      value: Weapons
+      value: GunPort
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1201,6 +1203,11 @@ PrefabInstance:
 --- !u!4 &2224917477833146861 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4258715371151280478, guid: eda9d7f62d4cfd144b1ebdec05578f1b, type: 3}
+  m_PrefabInstance: {fileID: 2736360882056087731}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5033576699839746681 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6927480636913212106, guid: eda9d7f62d4cfd144b1ebdec05578f1b, type: 3}
   m_PrefabInstance: {fileID: 2736360882056087731}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3041889771844706419
@@ -1346,6 +1353,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eda9d7f62d4cfd144b1ebdec05578f1b, type: 3}
+--- !u!1 &2340465316445893761 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6927480636913212106, guid: eda9d7f62d4cfd144b1ebdec05578f1b, type: 3}
+  m_PrefabInstance: {fileID: 4636554916380995147}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8881561567952185109 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4258715371151280478, guid: eda9d7f62d4cfd144b1ebdec05578f1b, type: 3}
@@ -1487,13 +1499,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6927480636913212106, guid: eda9d7f62d4cfd144b1ebdec05578f1b, type: 3}
       propertyPath: m_Name
-      value: Component (5)
+      value: PowerComp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eda9d7f62d4cfd144b1ebdec05578f1b, type: 3}
+--- !u!1 &3381566647511474658 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6927480636913212106, guid: eda9d7f62d4cfd144b1ebdec05578f1b, type: 3}
+  m_PrefabInstance: {fileID: 5678729190487178024}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8491283168443691638 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4258715371151280478, guid: eda9d7f62d4cfd144b1ebdec05578f1b, type: 3}
@@ -1659,7 +1676,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6927480636913212106, guid: eda9d7f62d4cfd144b1ebdec05578f1b, type: 3}
       propertyPath: m_Name
-      value: Component (6)
+      value: Wire
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1893,13 +1910,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6927480636913212106, guid: eda9d7f62d4cfd144b1ebdec05578f1b, type: 3}
       propertyPath: m_Name
-      value: Component (3)
+      value: OxyComp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eda9d7f62d4cfd144b1ebdec05578f1b, type: 3}
+--- !u!1 &1132024865941283252 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6927480636913212106, guid: eda9d7f62d4cfd144b1ebdec05578f1b, type: 3}
+  m_PrefabInstance: {fileID: 8040781798982892414}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6093202486028071456 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4258715371151280478, guid: eda9d7f62d4cfd144b1ebdec05578f1b, type: 3}
@@ -1962,6 +1984,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eda9d7f62d4cfd144b1ebdec05578f1b, type: 3}
+--- !u!1 &1527446014444533011 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6927480636913212106, guid: eda9d7f62d4cfd144b1ebdec05578f1b, type: 3}
+  m_PrefabInstance: {fileID: 8435751043460411353}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5622799042303059591 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4258715371151280478, guid: eda9d7f62d4cfd144b1ebdec05578f1b, type: 3}
@@ -2041,7 +2068,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6927480636913212106, guid: eda9d7f62d4cfd144b1ebdec05578f1b, type: 3}
       propertyPath: m_Name
-      value: Component (8)
+      value: Wire
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2127,7 +2154,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6927480636913212106, guid: eda9d7f62d4cfd144b1ebdec05578f1b, type: 3}
       propertyPath: m_Name
-      value: Component (7)
+      value: Wire
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2213,7 +2240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6927480636913212106, guid: eda9d7f62d4cfd144b1ebdec05578f1b, type: 3}
       propertyPath: m_Name
-      value: Component (9)
+      value: Wire
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2282,6 +2309,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eda9d7f62d4cfd144b1ebdec05578f1b, type: 3}
+--- !u!1 &2252930167372944507 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6927480636913212106, guid: eda9d7f62d4cfd144b1ebdec05578f1b, type: 3}
+  m_PrefabInstance: {fileID: 9180410696307658417}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4935560304234498031 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4258715371151280478, guid: eda9d7f62d4cfd144b1ebdec05578f1b, type: 3}
