@@ -4,6 +4,8 @@ public class ShipController : MonoBehaviour
 {
     public Rigidbody2D rb;
     public SpriteRenderer spriteRenderer;
+    public ShipSystems shipSystem;
+    public bool playerControl;
 
     public float speedThrust,speedSpin;
 
@@ -14,7 +16,10 @@ public class ShipController : MonoBehaviour
     }
     void Update()
     {
-       CheckKey();
+        if (playerControl)
+        {
+            CheckKey();
+        }
     }
 
     void FixedUpdate()
@@ -32,6 +37,7 @@ public class ShipController : MonoBehaviour
         }
         if (Input.GetKeyUp(KeyCode.W))
         {
+            Thrust(0f);
             spriteRenderer.color = Color.grey;
         }
         if (Input.GetKeyDown(KeyCode.S))
@@ -41,6 +47,7 @@ public class ShipController : MonoBehaviour
         }
         if (Input.GetKeyUp(KeyCode.S))
         {
+            Thrust(0f);
             spriteRenderer.color = Color.grey;
         }
 
