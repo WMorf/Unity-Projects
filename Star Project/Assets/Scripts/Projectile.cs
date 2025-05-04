@@ -4,7 +4,7 @@ public class Projectile : MonoBehaviour
 {
     public float speed;
     public float lifeTime;
-    public int damage, health;
+    public int damage, armorP;
     public Rigidbody2D rb;
 
     void Start()
@@ -16,9 +16,15 @@ public class Projectile : MonoBehaviour
 
     void Update()
     {
-        if (health <= 0)
+        if (armorP <= 0)
         {
             Destroy(gameObject);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        armorP -= 1;
+    }
+
 }
