@@ -294,7 +294,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 0.70211816, g: 0.9110615, b: 0.9245283, a: 1}
+  m_Color: {r: 0.43916747, g: 0.9528302, b: 0.373042, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -545,7 +545,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.4339623, g: 0.16580635, b: 0.16580635, a: 1}
+  m_Color: {r: 0.5188679, g: 0.45768064, b: 0.45768064, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -650,7 +650,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 0.70211816, g: 0.9110615, b: 0.9245283, a: 1}
+  m_Color: {r: 0.43916747, g: 0.9528302, b: 0.373042, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -746,11 +746,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1572261671990233872}
-  - component: {fileID: 7803384438233262369}
+  - component: {fileID: 2502100155279563230}
   - component: {fileID: 5492696349541264267}
   - component: {fileID: 8440708727398188642}
   m_Layer: 0
-  m_Name: ship_Scout
+  m_Name: ship_Dummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -777,7 +777,7 @@ Transform:
   - {fileID: 4139823085453553734}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7803384438233262369
+--- !u!114 &2502100155279563230
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -786,16 +786,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 5320495780953839964}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b42ee5aeb1cb1d044a31a3b7885affd7, type: 3}
+  m_Script: {fileID: 11500000, guid: ada2269547624074f88e2b691240d8d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 8440708727398188642}
-  spriteRenderer: {fileID: 1832904310941778491}
+  thrustBar: {fileID: 1832904310941778491}
   shipSystem: {fileID: 5492696349541264267}
   playerControl: 0
-  dummyDrive: 0
-  speedThrust: 5
+  dummyDrive: 1
+  thrustTrue: 0
+  speedThrust: 2
   speedSpin: 2
+  speedMax: 2
   projectile: {fileID: 6654064849612394699, guid: 9a0484780f2fa4a44b40aa326bd6a460, type: 3}
   firePoint: {fileID: 1175274227976540801}
 --- !u!114 &5492696349541264267
