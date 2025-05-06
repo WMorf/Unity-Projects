@@ -5,6 +5,8 @@ public class Breakable : MonoBehaviour
     public int hp;
 
     public bool vanish, report;
+
+    public GameObject breakFX;
     void Start()
     {
         
@@ -18,6 +20,8 @@ public class Breakable : MonoBehaviour
             {
                 Debug.Log(gameObject.name + " is destroyed");
             }
+            Instantiate(breakFX, gameObject.transform);
+            Debug.Log("hit");
             Destroy(gameObject);
         }
     }

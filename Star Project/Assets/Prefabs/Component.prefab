@@ -50,6 +50,7 @@ MonoBehaviour:
   hp: 3
   vanish: 0
   report: 1
+  breakFX: {fileID: 7192823438181658503, guid: eadc11983a97e4f41b0460e0e53e0d18, type: 3}
 --- !u!212 &6008886506081122168
 SpriteRenderer:
   m_ObjectHideFlags: 0

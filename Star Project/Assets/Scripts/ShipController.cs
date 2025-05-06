@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class ShipControllerTest : MonoBehaviour
+public class ShipController : MonoBehaviour
 {
 
     public Rigidbody2D rb;
@@ -14,10 +14,15 @@ public class ShipControllerTest : MonoBehaviour
     public GameObject projectile;
     public Transform firePoint;
 
+    public Camera cam;
+
 
     void Start()
     {
-
+        if (playerControl)
+        {
+            //main cam
+        }
     }
     void Update()
     {
@@ -58,7 +63,7 @@ public class ShipControllerTest : MonoBehaviour
         {
             thrustTrue = true;
             thrustBar.color = Color.red;
-            Debug.Log("hit");
+            //Debug.Log("hit");
         }
 
         //if (Input.GetKeyDown(KeyCode.W))
@@ -77,7 +82,7 @@ public class ShipControllerTest : MonoBehaviour
         //Rotate
         if (shipSystem.thrusterLeft != null)
         {
-            if (Input.GetKeyDown(KeyCode.A))
+            if (Input.GetKey(KeyCode.A))
             {
                 Rotate(1f);
             }
@@ -85,7 +90,7 @@ public class ShipControllerTest : MonoBehaviour
 
         if (shipSystem.thrusterRight != null)
         {
-            if (Input.GetKeyDown(KeyCode.D))
+            if (Input.GetKey(KeyCode.D))
             {
                 Rotate(-1f);
             }

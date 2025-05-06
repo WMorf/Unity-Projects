@@ -50,6 +50,7 @@ MonoBehaviour:
   hp: 1
   vanish: 0
   report: 0
+  breakFX: {fileID: 7192823438181658503, guid: eadc11983a97e4f41b0460e0e53e0d18, type: 3}
 --- !u!212 &4022508183091158175
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -249,6 +250,7 @@ MonoBehaviour:
   hp: 5
   vanish: 0
   report: 0
+  breakFX: {fileID: 7192823438181658503, guid: eadc11983a97e4f41b0460e0e53e0d18, type: 3}
 --- !u!212 &3573634594909241448
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -605,6 +607,7 @@ MonoBehaviour:
   hp: 5
   vanish: 0
   report: 0
+  breakFX: {fileID: 7192823438181658503, guid: eadc11983a97e4f41b0460e0e53e0d18, type: 3}
 --- !u!212 &8331973540944154616
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -796,10 +799,11 @@ MonoBehaviour:
   dummyDrive: 0
   thrustTrue: 0
   speedThrust: 2
-  speedSpin: 2
+  speedSpin: 1
   speedMax: 2
   projectile: {fileID: 6654064849612394699, guid: 9a0484780f2fa4a44b40aa326bd6a460, type: 3}
   firePoint: {fileID: 1175274227976540801}
+  cam: {fileID: 0}
 --- !u!114 &5492696349541264267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -833,7 +837,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_AngularDamping: 0.2
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -937,6 +941,7 @@ MonoBehaviour:
   hp: 1
   vanish: 0
   report: 0
+  breakFX: {fileID: 7192823438181658503, guid: eadc11983a97e4f41b0460e0e53e0d18, type: 3}
 --- !u!212 &7928652641903440766
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1138,6 +1143,7 @@ MonoBehaviour:
   hp: 3
   vanish: 0
   report: 0
+  breakFX: {fileID: 7192823438181658503, guid: eadc11983a97e4f41b0460e0e53e0d18, type: 3}
 --- !u!212 &8326322603940225630
 SpriteRenderer:
   m_ObjectHideFlags: 0
